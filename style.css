@@ -1,0 +1,52 @@
+body 
+{
+    background-color: #181b1b;
+    color: #c1c0cc;
+}
+
+.ListSection 
+{
+    background-color: #272727;
+    border: 1px solid #474747;
+    border-radius: 0.25rem;
+    margin: 0.8rem;
+    padding: 2rem;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+}
+
+.ListSection .video {
+    flex: 1;
+}
+
+.ListSection .text {
+    flex: 2;
+    margin-left: 20px;
+}
+
+.list
+{
+    display: flex;
+    justify-content: center;
+}
+
+
+.centeredElement
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.centeredElement .credits 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 100%;
+    margin-top: 0;
+}
