@@ -28,7 +28,7 @@ fetch('leveldata.json')
         textDiv.innerHTML = '<h2>' + data[i].position_lvl + '. ' + data[i].name_lvl + '</h2>' +
                             '<p>Criador: ' + data[i].creator_lvl + '</p>' +
                             '<p>Verificado por: ' + data[i].verifier_lvl + '</p>';
-                            if (data[i].publisher_lvl !== "") 
+                            if ((data[i].publisher_lvl !== "") && (data[i].publisher_lvl !== null))
                             {
                                 textDiv.innerHTML += '<p class="fw-lighter">Publicado por: ' + data[i].publisher_lvl + '</p>';
                             }
