@@ -1,7 +1,8 @@
 fetch('leveldata.json')
 .then(response => response.json())
-.then(data => {
-    data.sort(function(a, b) {
+.then(data => 
+    {
+        data.sort(function(a, b) {
         return a.position_lvl - b.position_lvl;
     });
 
@@ -14,16 +15,22 @@ fetch('leveldata.json')
 
         var videoDiv = document.createElement('div');
         videoDiv.className = 'video';
-        videoDiv.innerHTML = '<iframe width="320" height="180" src="' + data[i].video_lvl + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
+        var videoId = data[i].video_lvl.split('https://youtu.be/')[1];
+        var thumbnailUrl = 'https://img.youtube.com/vi/' + videoId + '/0.jpg';
+        var videoUrl = 'https://youtu.be/' + videoId;
+        
+        videoDiv.innerHTML = '<a href="' + videoUrl + '" target="_blank"><img src="' + thumbnailUrl + '"style="width:320px; height:180px; object-fit:cover;"></a>';
         section.appendChild(videoDiv);
 
         var textDiv = document.createElement('div');
         textDiv.className = 'text';
         textDiv.innerHTML = '<h2>' + data[i].position_lvl + '. ' + data[i].name_lvl + '</h2>' +
-                            '<p>Criador: ' + data[i].creator_lvl + '</p>';
+                            '<p>Criador: ' + data[i].creator_lvl + '</p>' +
+                            '<p>Verificado por: ' + data[i].verifier_lvl + '</p>';
                             if (data[i].publisher_lvl !== "") 
                             {
-                                textDiv.innerHTML += '<p>Publicado por: ' + data[i].publisher_lvl + '</p>';
+                                textDiv.innerHTML += '<p class="fw-lighter">Publicado por: ' + data[i].publisher_lvl + '</p>';
                             }
         section.appendChild(textDiv);
 
