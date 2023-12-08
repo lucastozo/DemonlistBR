@@ -14,13 +14,17 @@ fetch('leveldata.json')
 
         var videoDiv = document.createElement('div');
         videoDiv.className = 'video';
-        videoDiv.innerHTML = '<iframe width="320" height="180" src="' + data[i].video_url + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        videoDiv.innerHTML = '<iframe width="320" height="180" src="' + data[i].video_lvl + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
         section.appendChild(videoDiv);
 
         var textDiv = document.createElement('div');
         textDiv.className = 'text';
         textDiv.innerHTML = '<h2>' + data[i].position_lvl + '. ' + data[i].name_lvl + '</h2>' +
                             '<p>Criador: ' + data[i].creator_lvl + '</p>';
+                            if (data[i].publisher_lvl !== "") 
+                            {
+                                textDiv.innerHTML += '<p>Publicado por: ' + data[i].publisher_lvl + '</p>';
+                            }
         section.appendChild(textDiv);
 
         contentDiv.appendChild(section);
