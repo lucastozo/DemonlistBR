@@ -1,7 +1,8 @@
 fetch('leveldata.json')
 .then(response => response.json())
-.then(data => 
+.then(json => 
     {
+        var data = json.Data;
         data.sort(function(a, b) {
         return a.position_lvl - b.position_lvl;
     });
