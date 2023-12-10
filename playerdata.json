@@ -1,5 +1,5 @@
 {
-  "GeradoEm": "10/12/2023 02:48:29",
+  "GeradoEm": "10/12/2023 19:05:08",
   "Data": [
     {
       "level_name": "arcturus",
@@ -210,6 +210,12 @@
       "player_name": "MrTompson",
       "progress": 100,
       "video": "https://www.youtube.com/watch?v=Lyyz9o6rJZ4"
+    },
+    {
+      "level_name": "Glacial Edge",
+      "player_name": "yuuchouze",
+      "progress": 100,
+      "video": "https://www.youtube.com/watch?v=zI7CKOtUaqY"
     },
     {
       "level_name": "HellGate",
