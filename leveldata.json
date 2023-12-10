@@ -1,9 +1,9 @@
 {
-  "GeradoEm": "09/12/2023 04:32:00",
+  "GeradoEm": "09/12/2023 15:31:55",
   "Data": [
     {
       "position_lvl": 1,
-      "name_lvl": "Arcturus",
+      "name_lvl": "arcturus",
       "creator_lvl": "maxfs",
       "verifier_lvl": "ultracauahd",
       "video_lvl": "https://youtu.be/a_Bqa8l9Xtc",
@@ -51,6 +51,14 @@
     },
     {
       "position_lvl": 7,
+      "name_lvl": "FODASE",
+      "creator_lvl": "Jobalho",
+      "verifier_lvl": "Jobalho",
+      "video_lvl": "https://youtu.be/tsfSfdV1yqI",
+      "publisher_lvl": ""
+    },
+    {
+      "position_lvl": 8,
       "name_lvl": "Super Probably Dash",
       "creator_lvl": "Laranjoo",
       "verifier_lvl": "Draquito",
@@ -58,7 +66,7 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 8,
+      "position_lvl": 9,
       "name_lvl": "Factory Realm X",
       "creator_lvl": "HelpegasuS",
       "verifier_lvl": "Enzeux",
@@ -66,7 +74,7 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 9,
+      "position_lvl": 10,
       "name_lvl": "Astronaut Vortex",
       "creator_lvl": "yuuchouze",
       "verifier_lvl": "SeptaGon7",
@@ -74,7 +82,7 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 10,
+      "position_lvl": 11,
       "name_lvl": "Dolos",
       "creator_lvl": "Enzeux",
       "verifier_lvl": "Enzeux",
@@ -106,7 +114,7 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 14,
+      "position_lvl": 15,
       "name_lvl": "ILOVECYAN",
       "creator_lvl": "AVRG",
       "verifier_lvl": "iRaily",
@@ -114,7 +122,7 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 15,
+      "position_lvl": 16,
       "name_lvl": "The Ultimate Demon",
       "creator_lvl": "Vit12",
       "verifier_lvl": "LordVaderCraft",
@@ -122,7 +130,7 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 16,
+      "position_lvl": 17,
       "name_lvl": "Elusions",
       "creator_lvl": "Dynamis96",
       "verifier_lvl": "Enzeux",
@@ -130,7 +138,7 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 17,
+      "position_lvl": 18,
       "name_lvl": "The Green",
       "creator_lvl": "yuuchouze/maxfs",
       "verifier_lvl": "DibiiziCookie",
@@ -138,7 +146,7 @@
       "publisher_lvl": "insist"
     },
     {
-      "position_lvl": 18,
+      "position_lvl": 19,
       "name_lvl": "Extermination Nation",
       "creator_lvl": "yuuchouze",
       "verifier_lvl": "fakeblast",
@@ -146,7 +154,7 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 19,
+      "position_lvl": 20,
       "name_lvl": "Underground",
       "creator_lvl": "HugoLa",
       "verifier_lvl": "MrTompson",
@@ -154,7 +162,7 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 20,
+      "position_lvl": 21,
       "name_lvl": "Eraser",
       "creator_lvl": "LChaseR",
       "verifier_lvl": "LChaseR",
@@ -162,7 +170,7 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 21,
+      "position_lvl": 22,
       "name_lvl": "Death Machine",
       "creator_lvl": "yuuchouze",
       "verifier_lvl": "RyuDieDragon",
@@ -170,7 +178,7 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 22,
+      "position_lvl": 23,
       "name_lvl": "Memory Zone",
       "creator_lvl": "yuuchouze",
       "verifier_lvl": "ultracauahd",
@@ -178,7 +186,7 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 23,
+      "position_lvl": 24,
       "name_lvl": "Black Tourmaline",
       "creator_lvl": "OverDCE",
       "verifier_lvl": "ItzClover",
@@ -186,7 +194,7 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 24,
+      "position_lvl": 25,
       "name_lvl": "Intention",
       "creator_lvl": "yuuchouze",
       "verifier_lvl": "Akane",
@@ -194,7 +202,7 @@
       "publisher_lvl": "Akane"
     },
     {
-      "position_lvl": 25,
+      "position_lvl": 26,
       "name_lvl": "CHALLUNGA FINALE",
       "creator_lvl": "RafaBirds",
       "verifier_lvl": "RafaBirds",
@@ -202,7 +210,7 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 26,
+      "position_lvl": 27,
       "name_lvl": "Doideira",
       "creator_lvl": "Jobalho",
       "verifier_lvl": "Jobalho",
@@ -210,7 +218,7 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 27,
+      "position_lvl": 28,
       "name_lvl": "Underwater Caves",
       "creator_lvl": "RafaBirds",
       "verifier_lvl": "Jobalho",
@@ -218,7 +226,7 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 28,
+      "position_lvl": 29,
       "name_lvl": "Rolas Tortas e Lisas",
       "creator_lvl": "Jobalho",
       "verifier_lvl": "DibiiziCookie",
@@ -226,7 +234,7 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 29,
+      "position_lvl": 30,
       "name_lvl": "Setesh",
       "creator_lvl": "Nar247",
       "verifier_lvl": "tayrr",
@@ -234,12 +242,140 @@
       "publisher_lvl": null
     },
     {
-      "position_lvl": 30,
+      "position_lvl": 31,
       "name_lvl": "Glacial Edge",
       "creator_lvl": "HelpegasuS",
       "verifier_lvl": "Enzeux",
       "video_lvl": "https://youtu.be/yFG2HOp_nb4",
       "publisher_lvl": "Legoyoshi3"
+    },
+    {
+      "position_lvl": 32,
+      "name_lvl": "HellGate",
+      "creator_lvl": "Firy",
+      "verifier_lvl": "ToastyPanda",
+      "video_lvl": "https://youtu.be/L52J7vVfQyk",
+      "publisher_lvl": ""
+    },
+    {
+      "position_lvl": 33,
+      "name_lvl": "Creeper Force",
+      "creator_lvl": "CreeperMILK",
+      "verifier_lvl": "CreeperMILK",
+      "video_lvl": "https://youtu.be/l2Kk2re3rJo",
+      "publisher_lvl": ""
+    },
+    {
+      "position_lvl": 34,
+      "name_lvl": "SOOO CRAZY",
+      "creator_lvl": "RafaBirds",
+      "verifier_lvl": "RafaBirds",
+      "video_lvl": "https://youtu.be/K_fLj1QqxMY",
+      "publisher_lvl": ""
+    },
+    {
+      "position_lvl": 35,
+      "name_lvl": "HuShErr",
+      "creator_lvl": "Johh01",
+      "verifier_lvl": "Johh01",
+      "video_lvl": "https://youtu.be/-hOKSbdGfWo",
+      "publisher_lvl": ""
+    },
+    {
+      "position_lvl": 36,
+      "name_lvl": "Necrodynamix",
+      "creator_lvl": "HelpegasuS",
+      "verifier_lvl": "DemonMasterBR",
+      "video_lvl": "https://youtu.be/1SpA7qCicSQ",
+      "publisher_lvl": ""
+    },
+    {
+      "position_lvl": 37,
+      "name_lvl": "Rebirth II",
+      "creator_lvl": "HelpegasuS",
+      "verifier_lvl": "MrTompson",
+      "video_lvl": "https://youtu.be/VU-2i9PD7xc",
+      "publisher_lvl": ""
+    },
+    {
+      "position_lvl": 38,
+      "name_lvl": "Zacarias",
+      "creator_lvl": "Vit12",
+      "verifier_lvl": "Mxteus",
+      "video_lvl": "https://youtu.be/0-QS385ttLc",
+      "publisher_lvl": ""
+    },
+    {
+      "position_lvl": 39,
+      "name_lvl": "MUSSUM",
+      "creator_lvl": "Nidroo",
+      "verifier_lvl": "Ivanpercie",
+      "video_lvl": "https://youtu.be/kI8jBlRLMKo",
+      "publisher_lvl": ""
+    },
+    {
+      "position_lvl": 40,
+      "name_lvl": "Ascension",
+      "creator_lvl": "LChaseR",
+      "verifier_lvl": "MrTompson",
+      "video_lvl": "https://youtu.be/Q6bB5WRsmY0",
+      "publisher_lvl": ""
+    },
+    {
+      "position_lvl": 41,
+      "name_lvl": "Cursed Nightmare",
+      "creator_lvl": "GhostTav",
+      "verifier_lvl": "SirLouco",
+      "video_lvl": "https://youtu.be/Clt-sEpJ0v0",
+      "publisher_lvl": ""
+    },
+    {
+      "position_lvl": 42,
+      "name_lvl": "eu tenho probleminha",
+      "creator_lvl": "Jobalho",
+      "verifier_lvl": "Jobalho",
+      "video_lvl": "https://youtu.be/LmrYrq6S4r0",
+      "publisher_lvl": ""
+    },
+    {
+      "position_lvl": 43,
+      "name_lvl": "The Ultimate Party",
+      "creator_lvl": "Dynamis96",
+      "verifier_lvl": "Ale708",
+      "video_lvl": "https://youtu.be/RZuM9MYXxKA",
+      "publisher_lvl": ""
+    },
+    {
+      "position_lvl": 44,
+      "name_lvl": "EHrebus",
+      "creator_lvl": "Knali2001",
+      "verifier_lvl": "Jobalho",
+      "video_lvl": "https://youtu.be/R-gFn9JYzvY",
+      "publisher_lvl": "Jobalho"
+    },
+    {
+      "position_lvl": 45,
+      "name_lvl": "AbacaxiDosSRozeira",
+      "creator_lvl": "Jobalho",
+      "verifier_lvl": "Jobalho",
+      "video_lvl": "https://youtu.be/xTLWi4sHXKE",
+      "publisher_lvl": ""
+    },
+    {
+      "position_lvl": 46,
+      "name_lvl": "Tormenta",
+      "creator_lvl": "SawiArtz",
+      "verifier_lvl": "Luyzdume",
+      "video_lvl": "https://youtu.be/509Th77agCk",
+      "publisher_lvl": ""
+    },
+    {
+      "position_lvl": 47,
+      "name_lvl": "Gusta Cyclone",
+      "creator_lvl": "TheRealGusta",
+      "verifier_lvl": "Pedro64",
+      "video_lvl": "https://youtu.be/MQ6XT4VcMr4",
+      "publisher_lvl": ""
     }
   ]
 }
