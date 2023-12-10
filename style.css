@@ -50,3 +50,25 @@ body
     min-width: 100%;
     margin-top: 0;
 }
+
+.PlayerSection {
+    background-color: #202020; /* Cor de fundo da seção */
+    border: 1px solid #363636;
+    max-width: 1200px;
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+}
+
+.playerRecord {
+    font-size: 16px; /* Tamanho da fonte */
+    line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+.playerRecord a {
+    color: #fff; /* Cor do link */
+}
+
+.playerRecord a:hover {
+    color: #008cff; /* Cor do link quando o mouse passa por cima */
+    transition: 0.2s;
+}
