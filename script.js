@@ -14,7 +14,19 @@ Promise.all
         var videoDiv = document.createElement('div');
         videoDiv.className = 'video';
 
-        var videoId = levelData.Data[i].video_lvl.split('https://youtu.be/')[1];
+        // Adicione o código de extração do ID do vídeo aqui
+        var videoUrl = levelData.Data[i].video_lvl;
+        var videoId;
+
+        if (videoUrl.includes('https://www.youtube.com/watch?v=')) 
+        {
+            videoId = videoUrl.split('https://www.youtube.com/watch?v=')[1];
+        } 
+        else if (videoUrl.includes('https://youtu.be/')) 
+        {
+            videoId = videoUrl.split('https://youtu.be/')[1];
+        }
+
         var thumbnailUrl = 'https://img.youtube.com/vi/' + videoId + '/0.jpg';
         var videoUrl = 'https://youtu.be/' + videoId;
 
@@ -35,6 +47,7 @@ Promise.all
 
         //playerdata
         var playerRecords = playerData.Data.filter(record => record.level_name.toLowerCase() === levelData.Data[i].name_lvl.toLowerCase());
+        playerRecords.sort((a, b) => b.progress - a.progress);
         if (playerRecords.length > 0) {
             var playerSection = document.createElement('section');
             playerSection.className = 'PlayerSection container text-center';
