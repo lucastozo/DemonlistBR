@@ -43,7 +43,15 @@ Promise.all
             playerRecords.forEach(playerRecord => {
                 var playerDiv = document.createElement('div');
                 playerDiv.className = 'playerRecord';
-                playerDiv.innerHTML = '<p><a href="' + playerRecord.video + '" target="_blank">' + playerRecord.player_name + '</a> - ' + playerRecord.progress + '%</p>';
+
+                //adição do record com link de video e sem link de video
+                if (playerRecord.video && playerRecord.video.trim() !== '') 
+                {
+                    playerDiv.innerHTML = '<p><a href="' + playerRecord.video + '" target="_blank">' + playerRecord.player_name + '</a> - ' + playerRecord.progress + '%</p>';
+                } else 
+                {
+                    playerDiv.innerHTML = '<p>' + playerRecord.player_name + ' - ' + playerRecord.progress + '%</p>';
+                }
                 playerSection.appendChild(playerDiv);
             });
 
