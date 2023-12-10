@@ -34,7 +34,7 @@ Promise.all
         contentDiv.appendChild(section);
 
         //playerdata
-        var playerRecords = playerData.filter(record => record.level_name.toLowerCase() === levelData.Data[i].name_lvl.toLowerCase());
+        var playerRecords = playerData.Data.filter(record => record.level_name.toLowerCase() === levelData.Data[i].name_lvl.toLowerCase());
         if (playerRecords.length > 0) {
             var playerSection = document.createElement('section');
             playerSection.className = 'PlayerSection container text-center';
