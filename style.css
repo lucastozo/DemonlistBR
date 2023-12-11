@@ -72,3 +72,21 @@ body
     color: #008cff; /* Cor do link quando o mouse passa por cima */
     transition: 0.2s;
 }
+
+.navbar-brand
+{
+    color: #d4d4d4;
+    transition: 0.2s;
+}
+
+.list a
+{
+    text-decoration: none;
+    color: #c1c0cc;
+}
+
+.list a:hover
+{
+    color: #f1f1f1;
+    transition: 0.2s;
+}

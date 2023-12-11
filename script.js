@@ -35,7 +35,7 @@ Promise.all
 
         var textDiv = document.createElement('div');
         textDiv.className = 'text';
-        textDiv.innerHTML = '<h2>' + levelData.Data[i].position_lvl + '. ' + levelData.Data[i].name_lvl + '</h2>' +
+        textDiv.innerHTML = '<a href="' + videoUrl + '" target="_blank"><h2>' + levelData.Data[i].position_lvl + '. ' + levelData.Data[i].name_lvl + '</h2></a>' +
                             '<p>Criador: ' + levelData.Data[i].creator_lvl + '</p>' +
                             '<p>Verificado por: ' + levelData.Data[i].verifier_lvl + '</p>';
         if ((levelData.Data[i].publisher_lvl !== "") && (levelData.Data[i].publisher_lvl !== null)) {
