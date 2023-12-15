@@ -37,9 +37,14 @@ Promise.all
         textDiv.className = 'text';
         textDiv.innerHTML = '<a href="' + videoUrl + '" target="_blank"><h2>' + levelData.Data[i].position_lvl + '. ' + levelData.Data[i].name_lvl + '</h2></a>' +
                             '<p>Criador: ' + levelData.Data[i].creator_lvl + '</p>' +
-                            '<p>Verificado por: ' + levelData.Data[i].verifier_lvl + '</p>';
-        if ((levelData.Data[i].publisher_lvl !== "") && (levelData.Data[i].publisher_lvl !== null)) {
+                            '<p>Verificador: ' + levelData.Data[i].verifier_lvl + '</p>';
+        if (levelData.Data[i].publisher_lvl) 
+        {
             textDiv.innerHTML += '<p class="fw-lighter">Publicado por: ' + levelData.Data[i].publisher_lvl + '</p>';
+        }
+        if (levelData.Data[i].listpct_lvl && levelData.Data[i].listpct_lvl >= 0 && levelData.Data[i].listpct_lvl <= 100) 
+        {
+            textDiv.innerHTML += '<p class="fw-lighter">List%: ' + levelData.Data[i].listpct_lvl + '%</p>';
         }
 
         section.appendChild(textDiv);
