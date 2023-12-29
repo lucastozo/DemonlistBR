@@ -1,7 +1,7 @@
 Promise.all
 ([
-    fetch('leveldata.json').then(response => response.json()),
-    fetch('playerdata.json').then(response => response.json())
+    fetch('data/leveldata.json').then(response => response.json()),
+    fetch('data/playerdata.json').then(response => response.json())
 ]).then(([levelData, playerData]) => {
     levelData.Data.sort((a, b) => a.position_lvl - b.position_lvl);
 
