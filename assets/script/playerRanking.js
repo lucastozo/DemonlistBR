@@ -1,6 +1,6 @@
 // EQUAÇÂO DE PONTUAÇÂO ABAIXO, IMPORTANTE
 function getScore(position) {
-    var score = 100 / Math.log(position + 1);
+    var score = 100 / Math.pow(position, 0.5);
     return score;
 }
 
@@ -11,13 +11,15 @@ let scores = {};
 let ignoredNames = [
                     'Luqualizer',
                     'Atomic',
-                    'Motor',
+                    'Motor8',
                     'ItzClover',
                     'RyuDieDragon',
                     'Realiosteelio',
                     'LordVaderCraft',
                     'iRaily',
                     'SeptaGon7',
+                    'Ale708', //remover depois, darkbbt será o verifier de ultimate party
+                    'Draquito'
                     ].map(name => name.toLowerCase());
 
 let originalNames = {};
