@@ -24,7 +24,7 @@ Promise.all
         } 
         else if (videoUrl.includes('https://youtu.be/')) 
         {
-            videoId = videoUrl.split('https://youtu.be/')[1];
+            videoId = videoUrl.split('https://youtu.be/')[1].split('?')[0];
         }
 
         var thumbnailUrl = 'https://img.youtube.com/vi/' + videoId + '/0.jpg';
