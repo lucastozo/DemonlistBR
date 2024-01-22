@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+<head>
+    <title>Demonlist BR</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Lista de fases brasileiras mais difíceis de Geometry Dash.">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <script src="/assets/script/playerRanking.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <img class="align-content-center" src="/assets/img/iconDLBR.png" style="width: 30px; margin-right: 0.5em;"></img>
+            <a class="navbar-brand" href="/index.html">Demonlist BR</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="levelsubmit.html">Envio de Level</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recordsubmit.html">Envio de Record</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container-fluid text-center" id="ranking-header">
+            <h1>Ranking de Jogadores</h1>
+            <p class="fs-5 fw-light">Aqui você pode ver os jogadores com as maiores pontuações na Demonlist BR.</p>
+        </div>
+        <div id="table-container">
+            <table id="ranking-table" class="table table-striped table-hover align-middle">
+                <thead>
+                    <tr>
+                        <th class="text-center" scope="col">Posição</th>
+                        <th class="text-center" scope="col">Jogador</th>
+                        <th class="text-center" scope="col">Pontos</th>
+                        <th class="text-center" scope="col">Detalhes</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- modal -->
+
+    
+</body>
+</html>
