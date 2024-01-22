@@ -10,7 +10,14 @@ let scores = {};
 // ignorar não brasileiros
 let ignoredNames = [
                     'Luqualizer',
-                    'Atomic'
+                    'Atomic',
+                    'Motor',
+                    'ItzClover',
+                    'RyuDieDragon',
+                    'Realiosteelio',
+                    'LordVaderCraft',
+                    'iRaily',
+                    'SeptaGon7',
                     ].map(name => name.toLowerCase());
 
 fetch('/data/leveldata.json')
@@ -67,7 +74,10 @@ fetch('/data/leveldata.json')
         let detailsCell = document.createElement('td');
         detailsCell.classList.add('text-center');
         let detailsButton = document.createElement('button');
-        detailsButton.innerText = 'placeholder';
+        detailsButton.innerHTML = '<i class="fas fa-eye"></i>';
+        detailsButton.setAttribute('data-bs-toggle', 'tooltip');
+        detailsButton.setAttribute('data-bs-placement', 'top');
+        detailsButton.setAttribute('title', 'Ver detalhes');
         detailsButton.classList.add('btn', 'btn-primary', 'btn-sm');
         detailsButton.setAttribute('data-bs-toggle', 'modal');
         detailsButton.setAttribute('data-bs-target', '#playerDetails-modal');
@@ -77,17 +87,33 @@ fetch('/data/leveldata.json')
             playerDetailsLabel.innerText = score[0];
 
             //adicionar levels completados
-            // TODO: conseguir ordenar por posição
+            let levelDataLowercase = levelData.map(l => ({...l, name_lvl: l.name_lvl.toLowerCase()}));
             let playerLevels = playerData.Data.filter(p => p.player_name === score[0] && p.progress === 100);
+
             if (playerLevels.length > 0) {
+                playerLevels.sort((a, b) => {
+                    let aLevelData = levelDataLowercase.find(l => l.name_lvl === a.level_name.toLowerCase());
+                    let bLevelData = levelDataLowercase.find(l => l.name_lvl === b.level_name.toLowerCase());
+                    if (aLevelData && bLevelData) {
+                        return aLevelData.position_lvl - bLevelData.position_lvl;
+                    } else {
+                        return 0;
+                    }
+                });
+                console.log(playerLevels);
                 let levelsCompleted = document.createElement('h3');
                 levelsCompleted.innerText = 'Demons completados:';
                 modalBody.appendChild(levelsCompleted);
                 playerLevels.forEach(level => {
-                    let levelElement = document.createElement('p');
-                    level.position_lvl = levelData.find(l => l.name_lvl === level.level_name).position_lvl;
-                    levelElement.textContent = '#' + level.position_lvl + '. ' + level.level_name;
-                    modalBody.appendChild(levelElement);
+                    let levelDataItem = levelDataLowercase.find(l => l.name_lvl === level.level_name.toLowerCase());
+                    if (levelDataItem) {
+                        level.position_lvl = levelDataItem.position_lvl;
+                        let levelElement = document.createElement('p');
+                        levelElement.textContent = '#' + level.position_lvl + '. ' + level.level_name;
+                        modalBody.appendChild(levelElement);
+                    } else {
+                        console.log('Nenhum nível correspondente encontrado para:', level.level_name);
+                    }
                 });
             }
 
