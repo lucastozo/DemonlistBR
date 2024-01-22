@@ -20,13 +20,15 @@ let ignoredNames = [
                     'SeptaGon7',
                     ].map(name => name.toLowerCase());
 
+let originalNames = {};
 fetch('/data/leveldata.json')
 .then(response => response.json())
 .then(data => {
     levelData = data.Data;
     levelData.forEach(level => {
-        let verifier = level.verifier_lvl;
-        if (!ignoredNames.includes(verifier.toLowerCase())) {
+        let verifier = level.verifier_lvl.toLowerCase();
+        originalNames[verifier] = level.verifier_lvl;
+        if (!ignoredNames.includes(verifier)) {
             let score = getScore(level.position_lvl);
             if (verifier in scores) {
                 scores[verifier] += score;
@@ -40,14 +42,16 @@ fetch('/data/leveldata.json')
 .then(response => response.json())
 .then(playerData => {
     playerData.Data.forEach(player => {
-        if (!ignoredNames.includes(player.player_name.toLowerCase())) {
+        let playerName = player.player_name.toLowerCase();
+        originalNames[playerName] = player.player_name;
+        if (!ignoredNames.includes(playerName)) {
             let level = levelData.find(l => l.name_lvl === player.level_name);
             if (level) {
                 let score = getScore(level.position_lvl);
-                if (player.player_name in scores) {
-                    scores[player.player_name] += score;
+                if (playerName in scores) {
+                    scores[playerName] += score;
                 } else {
-                    scores[player.player_name] = score;
+                    scores[playerName] = score;
                 }
             }
         }
@@ -64,7 +68,7 @@ fetch('/data/leveldata.json')
         positionCell.classList.add('text-center');
         row.appendChild(positionCell);
         let playerCell = document.createElement('td');
-        playerCell.innerText = score[0];
+        playerCell.innerText = originalNames[score[0]];
         playerCell.classList.add('text-center');
         row.appendChild(playerCell);
         let scoreCell = document.createElement('td');
@@ -84,11 +88,15 @@ fetch('/data/leveldata.json')
         detailsButton.addEventListener('click', () => {
             modalBody.innerHTML = '';
             var playerDetailsLabel = document.getElementById('playerDetailsLabel');
-            playerDetailsLabel.innerText = score[0];
+            playerDetailsLabel.innerText = originalNames[score[0]];
 
             //adicionar levels completados
             let levelDataLowercase = levelData.map(l => ({...l, name_lvl: l.name_lvl.toLowerCase()}));
-            let playerLevels = playerData.Data.filter(p => p.player_name === score[0] && p.progress === 100);
+            let playerLevels = playerData.Data.filter(p => {
+                let playerName = p.player_name.toLowerCase();
+                originalNames[playerName] = p.player_name;
+                return playerName === score[0].toLowerCase() && p.progress === 100;
+            });
 
             if (playerLevels.length > 0) {
                 playerLevels.sort((a, b) => {
@@ -118,7 +126,11 @@ fetch('/data/leveldata.json')
             }
 
             //adicionar levels verificados
-            let playerVerifiedLevels = levelData.filter(l => l.verifier_lvl === score[0]);
+            let playerVerifiedLevels = levelData.filter(l => {
+                let verifier = l.verifier_lvl.toLowerCase();
+                originalNames[verifier] = l.verifier_lvl;
+                return verifier === score[0].toLowerCase();
+            });
             playerVerifiedLevels.sort((a, b) => a.position_lvl - b.position_lvl);
             if (playerVerifiedLevels.length > 0) {
                 let levelsVerified = document.createElement('h3');
