@@ -46,9 +46,9 @@ fetch('/data/leveldata.json')
         }
     });
     let sortedScores = Object.entries(scores).sort((a, b) => b[1] - a[1]);
-    console.log(sortedScores);
 
     let tableBody = document.getElementById('table-body');
+    let modalBody = document.querySelector('.modal-body');
     let position = 1;
     sortedScores.forEach(score => {
         let row = document.createElement('tr');
@@ -69,11 +69,45 @@ fetch('/data/leveldata.json')
         let detailsButton = document.createElement('button');
         detailsButton.innerText = 'placeholder';
         detailsButton.classList.add('btn', 'btn-primary', 'btn-sm');
+        detailsButton.setAttribute('data-bs-toggle', 'modal');
+        detailsButton.setAttribute('data-bs-target', '#playerDetails-modal');
         detailsButton.addEventListener('click', () => {
-            alert('Em breve');
+            modalBody.innerHTML = '';
+            var playerDetailsLabel = document.getElementById('playerDetailsLabel');
+            playerDetailsLabel.innerText = score[0];
+
+            //adicionar levels completados
+            // TODO: conseguir ordenar por posição
+            let playerLevels = playerData.Data.filter(p => p.player_name === score[0] && p.progress === 100);
+            if (playerLevels.length > 0) {
+                let levelsCompleted = document.createElement('h3');
+                levelsCompleted.innerText = 'Demons completados:';
+                modalBody.appendChild(levelsCompleted);
+                playerLevels.forEach(level => {
+                    let levelElement = document.createElement('p');
+                    level.position_lvl = levelData.find(l => l.name_lvl === level.level_name).position_lvl;
+                    levelElement.textContent = '#' + level.position_lvl + '. ' + level.level_name;
+                    modalBody.appendChild(levelElement);
+                });
+            }
+
+            //adicionar levels verificados
+            let playerVerifiedLevels = levelData.filter(l => l.verifier_lvl === score[0]);
+            playerVerifiedLevels.sort((a, b) => a.position_lvl - b.position_lvl);
+            if (playerVerifiedLevels.length > 0) {
+                let levelsVerified = document.createElement('h3');
+                levelsVerified.innerText = 'Demons verificados:';
+                modalBody.appendChild(levelsVerified);
+                playerVerifiedLevels.forEach(level => {
+                    let levelElement = document.createElement('p');
+                    levelElement.textContent = '#' + level.position_lvl + '. ' + level.name_lvl;
+                    modalBody.appendChild(levelElement);
+                });
+            }
         });
         detailsCell.appendChild(detailsButton);
         row.appendChild(detailsCell);
+        
         tableBody.appendChild(row);
         position++;
     });
