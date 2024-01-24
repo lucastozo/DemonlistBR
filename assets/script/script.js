@@ -1,4 +1,4 @@
-// vc encontrou o easter egg!
+// example message
 Promise.all
 ([
     fetch('data/leveldata.json').then(response => response.json()),
