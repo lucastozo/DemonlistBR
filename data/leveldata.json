@@ -1,17 +1,9 @@
 {
-  "GeradoEm": "24/1/2024 3:33:33",
+  "GeradoEm": "23/1/2024 23:22:50",
   "TipoData": "level",
   "Data": [
     {
       "position_lvl": 1,
-      "name_lvl": "Eso Tilin Circles",
-      "creator_lvl": "PegasusZ",
-      "verifier_lvl": "PegasusZ",
-      "video_lvl": "https://www.youtube.com/watch?v=t83icodjX7c",
-      "listpct_lvl": 45
-    },
-    {
-      "position_lvl": 2,
       "name_lvl": "arcturus",
       "creator_lvl": "maxfs",
       "verifier_lvl": "ultracauahd",
@@ -19,7 +11,7 @@
       "listpct_lvl": 45
     },
     {
-      "position_lvl": 3,
+      "position_lvl": 2,
       "name_lvl": "abicto",
       "creator_lvl": "Jobalho",
       "verifier_lvl": "Jobalho",
@@ -27,7 +19,7 @@
       "listpct_lvl": 92
     },
     {
-      "position_lvl": 4,
+      "position_lvl": 3,
       "name_lvl": "Thinking Space",
       "creator_lvl": "HidekiX",
       "verifier_lvl": "Atomic",
@@ -36,7 +28,7 @@
       "listpct_lvl": 76
     },
     {
-      "position_lvl": 5,
+      "position_lvl": 4,
       "name_lvl": "unasse",
       "creator_lvl": "pirocona",
       "verifier_lvl": "Jobalho",
@@ -44,7 +36,7 @@
       "listpct_lvl": 82
     },
     {
-      "position_lvl": 6,
+      "position_lvl": 5,
       "name_lvl": "Tenkai",
       "creator_lvl": "HidekiX",
       "verifier_lvl": "Motor8",
@@ -52,7 +44,7 @@
       "listpct_lvl": 68
     },
     {
-      "position_lvl": 7,
+      "position_lvl": 6,
       "name_lvl": "Alphabet Letter Q",
       "creator_lvl": "Jobalho",
       "verifier_lvl": "Jobalho",
@@ -60,7 +52,7 @@
       "listpct_lvl": 48
     },
     {
-      "position_lvl": 8,
+      "position_lvl": 7,
       "name_lvl": "RIOT for caua",
       "creator_lvl": "ultracauahd",
       "verifier_lvl": "ultracauahd",
@@ -68,7 +60,7 @@
       "listpct_lvl": 59
     },
     {
-      "position_lvl": 9,
+      "position_lvl": 8,
       "name_lvl": "Beyond Hell",
       "creator_lvl": "fakeblast",
       "verifier_lvl": "fakeblast",
