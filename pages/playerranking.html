@@ -46,6 +46,7 @@
             <div>
                 <p class="fs-5 fw-light">Aqui você pode ver os jogadores com as maiores pontuações na Demonlist BR.</p>
                 <p class="fs-6 fw-light">(progressos não incluídos por enquanto)</p>
+                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#aboutRanking-modal">Sobre</button>
             </div>
         </div>
         <div id="table-container">
@@ -67,20 +68,63 @@
     <!-- modal -->
     <div class="modal fade" id="playerDetails-modal">
         <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="playerDetailsLabel">Player name</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="playerDetailsLabel">Player name</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    levels
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
             </div>
-            <div class="modal-body">
-                levels
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-            </div>
-        </div>
         </div>
     </div>
-    
+
+    <div class="modal fade" id="aboutRanking-modal">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <h2>Sobre o Ranking</h2>
+                    <p>O ranking é baseado na pontuação dos jogadores, que é calculada da seguinte forma:</p>
+                    <img src="/assets/img/scoreFormula.svg" style="width: 20%; margin-top: 20px; margin-bottom: 5px;"></img>
+                    <p class="fw-light">onde
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>P</mi>
+                            <mo>i</mo>
+                        </math>
+                        é a posição do level.</p>
+                    <p class="fw-light">Ou seja, a pontuação de um level é dada por</p>
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mtext>Pontos do level = </mtext>
+                            <mfrac>
+                              <mn>100</mn>
+                              <msqrt>
+                                <mi>P</mi>
+                                <mo>i</mo>
+                              </msqrt>
+                            </mfrac>
+                        </math>
+                    <p class="fw-light">A pontuação de um progresso é dada por
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mtext>Pontos do level</mtext>
+                            <mo>∗</mo>
+                            <mfrac>
+                                <mi>p</mi>
+                                <mn>100</mn>
+                            </mfrac>
+                          </math>
+                        , onde p é o progresso feito.</p>                            
+                    <p>Os jogadores são ordenados por pontuação, e em caso de empate, por ordem alfabética.</p>
+                    <p>Vale lembrar que o ranking não necessariamente reflete a habilidade dos jogadores, mas sim a quantidade de levels que eles completaram.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
