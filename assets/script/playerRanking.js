@@ -1,6 +1,11 @@
 // EQUAÇÂO DE PONTUAÇÂO ABAIXO, IMPORTANTE
+// latex pontuação geral: P = \sum_{i \in L} \frac{100}{\sqrt{p_i}}
 function getScore(position) {
-    var score = 100 / Math.pow(position, 0.5);
+    var score = 100 / Math.sqrt(position);
+    return score;
+}
+function getScoreProgress(position, progress) {
+    var score = getScore(position) * (progress / 100);
     return score;
 }
 
@@ -46,16 +51,28 @@ fetch('/data/leveldata.json')
 .then(playerData => {
     playerData.Data.forEach(player => {
         let playerName = player.player_name.toLowerCase();
+        let levelDataLowercase = levelData.map(l => ({...l, name_lvl: l.name_lvl.toLowerCase()}));
         originalNames[playerName] = player.player_name;
         if (!ignoredNames.includes(playerName)) {
-            let level = levelData.find(l => l.name_lvl === player.level_name);
+            let level = levelDataLowercase.find(l => l.name_lvl === player.level_name.toLowerCase());
             if (level) {
-                let score = getScore(level.position_lvl);
-                if (playerName in scores) {
-                    scores[playerName] += score;
-                } else {
-                    scores[playerName] = score;
+                if (player.progress >= 100) {
+                    let score = getScore(level.position_lvl);
+                    if (playerName in scores) {
+                        scores[playerName] += score;
+                    } else {
+                        scores[playerName] = score;
+                    }
+                } // senão se progresso >= list% adicionar score progress 
+                else if(player.progress >= levelData.find(l => l.name_lvl === player.level_name).listpct_lvl) {
+                    let score = getScoreProgress(level.position_lvl, player.progress);
+                    if (playerName in scores) {
+                        scores[playerName] += score;
+                    } else {
+                        scores[playerName] = score;
+                    }
                 }
+
             }
         }
     });
@@ -112,8 +129,10 @@ fetch('/data/leveldata.json')
                     }
                 });
                 console.log(playerLevels);
+                var i = 0;
+                playerLevels.forEach(level => {i++;});
                 let levelsCompleted = document.createElement('h3');
-                levelsCompleted.innerText = 'Demons completados:';
+                levelsCompleted.innerText = 'Demons completados (' + i + '):';
                 modalBody.appendChild(levelsCompleted);
                 playerLevels.forEach(level => {
                     let levelDataItem = levelDataLowercase.find(l => l.name_lvl === level.level_name.toLowerCase());
@@ -134,16 +153,45 @@ fetch('/data/leveldata.json')
                 originalNames[verifier] = l.verifier_lvl;
                 return verifier === score[0].toLowerCase();
             });
+
             playerVerifiedLevels.sort((a, b) => a.position_lvl - b.position_lvl);
             if (playerVerifiedLevels.length > 0) {
+                var i = 0;
+                playerVerifiedLevels.forEach(level => {i++;});
                 let levelsVerified = document.createElement('h3');
-                levelsVerified.innerText = 'Demons verificados:';
+                levelsVerified.innerText = 'Demons verificados (' + i + '):';
                 modalBody.appendChild(levelsVerified);
                 playerVerifiedLevels.forEach(level => {
                     let levelElement = document.createElement('p');
                     levelElement.textContent = '#' + level.position_lvl + '. ' + level.name_lvl;
                     modalBody.appendChild(levelElement);
                 });
+            }
+
+            //adicionar levels em progresso
+            let playerProgressLevels = playerData.Data.filter(p => {
+                let playerName = p.player_name.toLowerCase();
+                originalNames[playerName] = p.player_name;
+                return playerName === score[0].toLowerCase() && p.progress < 100;
+            });
+            if (playerProgressLevels.length > 0) {
+                var listpct = levelDataLowercase.find(l => l.name_lvl === playerProgressLevels[0].level_name.toLowerCase()).listpct_lvl;
+                if (playerProgressLevels.some(p => p.progress >= listpct)) {
+                    let levelsProgress = document.createElement('h3');
+                    levelsProgress.innerText = 'Progressos:';
+                    modalBody.appendChild(levelsProgress);
+                    playerProgressLevels.forEach(level => {
+                        let levelDataItem = levelDataLowercase.find(l => l.name_lvl === level.level_name.toLowerCase());
+                        if (levelDataItem) {
+                            level.position_lvl = levelDataItem.position_lvl;
+                            let levelElement = document.createElement('p');
+                            levelElement.textContent = '#' + level.position_lvl + '. ' + level.level_name + ', ' + level.progress + '%';
+                            modalBody.appendChild(levelElement);
+                        } else {
+                            console.log('Nenhum nível correspondente encontrado para:', level.level_name);
+                        }
+                    });
+                }
             }
         });
         detailsCell.appendChild(detailsButton);
