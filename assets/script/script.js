@@ -1,3 +1,5 @@
+// isso é um teste de commit
+
 Promise.all
 ([
     fetch('data/leveldata.json').then(response => response.json()),
