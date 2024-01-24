@@ -1,3 +1,4 @@
+// vc encontrou o easter egg!
 Promise.all
 ([
     fetch('data/leveldata.json').then(response => response.json()),
