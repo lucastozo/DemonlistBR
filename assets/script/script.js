@@ -1,4 +1,3 @@
-// example message
 Promise.all
 ([
     fetch('data/leveldata.json').then(response => response.json()),
@@ -7,30 +6,15 @@ Promise.all
     levelData.Data.sort((a, b) => a.position_lvl - b.position_lvl);
 
     var contentDiv = document.getElementById('ListContent');
-
     for (var i = 0; i < levelData.Data.length; i++) {
         var section = document.createElement('section');
         section.className = 'ListSection';
 
         var videoDiv = document.createElement('div');
         videoDiv.className = 'video';
-
-        // Adicione o código de extração do ID do vídeo aqui
-        var videoUrl = levelData.Data[i].video_lvl;
-        var videoId;
-
-        if (videoUrl.includes('https://www.youtube.com/watch?v=')) 
-        {
-            videoId = videoUrl.split('https://www.youtube.com/watch?v=')[1];
-        } 
-        else if (videoUrl.includes('https://youtu.be/')) 
-        {
-            videoId = videoUrl.split('https://youtu.be/')[1].split('?')[0];
-        }
-
+        var videoId = ExtractVideoId(levelData.Data[i].video_lvl);
         var thumbnailUrl = 'https://img.youtube.com/vi/' + videoId + '/0.jpg';
         var videoUrl = 'https://youtu.be/' + videoId;
-
         videoDiv.innerHTML = '<a href="' + videoUrl + '" target="_blank"><img src="' + thumbnailUrl + '"style="width:320px; height:180px; object-fit:cover;"></a>';
         section.appendChild(videoDiv);
 
@@ -58,7 +42,6 @@ Promise.all
             var playerSection = document.createElement('section');
             playerSection.className = 'PlayerSection container text-center';
             playerSection.style.display = 'none';
-
             playerRecords.forEach(playerRecord => {
                 var playerDiv = document.createElement('div');
                 playerDiv.className = 'playerRecord';
@@ -73,7 +56,6 @@ Promise.all
                 }
                 playerSection.appendChild(playerDiv);
             });
-
             contentDiv.appendChild(playerSection);
 
             //records btn
@@ -89,9 +71,7 @@ Promise.all
             button.style.right = '0';
             button.onclick = createToggleHandler(playerSection);
 
-
             buttonContainer.appendChild(button);
-
             section.appendChild(buttonContainer);
         }
     }
@@ -103,4 +83,21 @@ function createToggleHandler(playerSection)
     {
         playerSection.style.display = playerSection.style.display === 'none' ? 'block' : 'none';
     };
+}
+
+function ExtractVideoId(videoUrl){
+    var videoId;
+    if(videoUrl == null || videoUrl == undefined || videoUrl == ''){
+        return null;
+    }
+    if(videoUrl.includes('https://www.youtube.com/watch?v=')){
+        videoId = videoUrl.split('https://www.youtube.com/watch?v=')[1];
+    } else if(videoUrl.includes('https://youtu.be/')){
+        videoId = videoUrl.split('https://youtu.be/')[1].split('?')[0];
+    } else if(videoUrl.includes('https://m.youtube.com/watch?v=')){
+        videoId = videoUrl.split('https://m.youtube.com/watch?v=')[1];
+    } else if(videoUrl.includes('https://youtu.be/')){
+        videoId = videoUrl.split('https://youtu.be/')[1];
+    }
+    return videoId;
 }
