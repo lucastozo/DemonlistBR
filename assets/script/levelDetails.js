@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     //chamada GDBrowser
     async function getLevelInfo(levelId) {
         try {
-            HideContentLoading(0);
+            HideContentLoading(0); //flag 0 = loading, flag 1 = content
 
             const response = await fetch(`https://gdbrowser.com/api/level/${levelId}`);
             const data = await response.json();
@@ -30,10 +30,9 @@ function LoadLevelInfo(data){
     levelName.innerHTML = data.name;
     //se não existir publisher: criado por: creator, se existir: criado por: creator, publicado por: publisher
     var levelCreator = document.getElementById("level-creator");
+    levelCreator.innerHTML = 'Criado por: ' + data.author;
     if(data.publisher_lvl){
-        levelCreator.innerHTML = 'Criado por: ' + data.author + ', publicado por: ' + data.publisher_lvl;
-    } else {
-        levelCreator.innerHTML = 'Criado por: ' + data.author;
+        levelCreator.innerHTML = levelCreator.innerHTML + ', publicado por: ' + data.publisher_lvl;
     }
     var levelDescription = document.getElementById("level-description");
     levelDescription.innerHTML = "\"" + data.description + "\"";
@@ -69,10 +68,12 @@ function HideContentLoading(flag){
         document.getElementById('level-header').style.display = 'none';
         document.getElementById('level-video').style.display = 'none';
         document.getElementById('horizontal-line').style.display = 'none';
+        document.getElementById('level-info').style.display = 'none';
     } else {
         document.getElementById('level-header').style.display = 'block';
         document.getElementById('level-video').style.display = 'block';
         document.getElementById('horizontal-line').style.display = 'block';
+        document.getElementById('level-info').style.display = 'block';
 
         document.getElementById('loading-spinner').style.display = 'none';
     }
