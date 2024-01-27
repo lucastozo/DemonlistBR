@@ -1,5 +1,5 @@
 {
-  "GeradoEm": "26/1/2024 23:1:57",
+  "GeradoEm": "27/1/2024 0:32:55",
   "TipoData": "level",
   "Data": [
     {
@@ -135,7 +135,8 @@
       "name_lvl": "Elusions",
       "creator_lvl": "Cloud76",
       "verifier_lvl": "Enzeux",
-      "video_lvl": "https://youtu.be/VfyIl85Kh-g"
+      "video_lvl": "https://youtu.be/VfyIl85Kh-g",
+      "listpct_lvl": 57
     },
     {
       "position_lvl": 16,
@@ -234,8 +235,7 @@
       "name_lvl": "Blood Attack",
       "creator_lvl": "LChaseR",
       "verifier_lvl": "akaanee",
-      "video_lvl": "https://youtu.be/D-dBM5O52Ks",
-      "listpct_lvl": 58
+      "video_lvl": "https://youtu.be/D-dBM5O52Ks"
     },
     {
       "position_lvl": 27,
