@@ -48,7 +48,12 @@ function LoadLevelInfo(data){
         levelCreator.innerHTML = levelCreator.innerHTML + ', publicado por: ' + data.publisher_lvl;
     }
     var levelDescription = document.getElementById("level-description");
-    levelDescription.innerHTML = "\"" + data.description + "\"";
+    if(data.description != "(No description provided)")
+    {
+        levelDescription.innerHTML = "\"" + data.description + "\"";
+    } else {
+        levelDescription.style.display = 'none';
+    }
 
     var videoIframe = document.getElementById("level-video-iframe");
     videoIframe.src = "https://www.youtube.com/embed/" + ExtractVideoId(data.video_lvl);
@@ -57,18 +62,22 @@ function LoadLevelInfo(data){
     var id = document.getElementById("level-id");
     id.innerHTML = data.id;
     var difficulty = document.getElementById("level-difficulty");
-    difficulty.innerHTML = data.difficulty;
+    if(data.cp != 0){
+        difficulty.innerHTML = data.difficulty;
+    } else {
+        difficulty.innerHTML = data.difficulty + " (unrated)";
+    }
     if(data.demonList){
-        var demonlist = document.getElementById("level-demonlist");
+        var demonlist = document.getElementById("level-pointercrate");
         demonlist.innerHTML = "<a href='https://pointercrate.com/demonlist/" + data.demonList + "' target='_blank'>#" + data.demonList + "</a>";
-        document.getElementById("level-demonlist-div").style.display = 'block';
+        document.getElementById("level-pointercrate-div").style.display = 'block';
     }
     var song = document.getElementById("level-song");
     var songAdd;
     if(data.songID && typeof data.songID === 'string' && data.songID.includes('Level')){
         songAdd = "<p>"+ data.songName + "</p>";
     } else {
-        songAdd = "<a href='https://www.newgrounds.com/audio/listen/" + data.songID + "' target='_blank'>" + data.songAuthor + ' - ' + data.songName + "</a>";
+        songAdd = "<a href='https://www.newgrounds.com/audio/listen/" + data.songID + "' target='_blank'>" + data.songName + "</a>";
     }
     song.innerHTML = songAdd;
 }
