@@ -140,3 +140,46 @@ body
     display: none;
     border-radius: 50%;
 }
+
+#iconDLBR
+{
+    width: 150px;
+    margin-top: 25px;
+}
+
+.credits p
+{
+    margin-bottom: 0;
+}
+
+.btn-custom {
+    width: 200px;
+}
+
+@media (max-width: 600px) {
+    #iconDLBR {
+        width: 100px;
+    }
+    .credits {
+        flex-direction: column !important;
+    }
+    .credits-div {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    #about-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #iconDLBR {
+        width: 80px;
+    }
+    .btn-custom {
+        width: 40px;
+    }
+    .btn-text {
+        display: none;
+    }
+}
