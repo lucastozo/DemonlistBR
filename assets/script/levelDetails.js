@@ -73,26 +73,38 @@ function LoadLevelInfo(data){
     song.innerHTML = songAdd;
 }
 
-function LoadProgress(data){
-    var scoreCompletion = document.getElementById("score-completion");
-    scoreCompletion.innerHTML = getScore(data.position_lvl).toFixed(2);
-    var scoreListpctTitle = document.getElementById("score-listpct-title");
-    scoreListpctTitle.innerHTML = "Pontos em Ranking (" + data.listpct_lvl + "%)";
-    var scoreListpct = document.getElementById("score-listpct");
-    scoreListpct.innerHTML = getScoreProgress(data.position_lvl, data.listpct_lvl).toFixed(2);
-    //buscar progressos que possuem o mesmo nome do level data.Name
-    var playerRecords = data.Data.filter(record => record.level_name.toLowerCase() === data.name.toLowerCase());
+function LoadProgress(data) {
+    const scoreCompletion = document.getElementById("score-completion");
+    const scoreListpctTitle = document.getElementById("score-listpct-title");
+    const scoreListpct = document.getElementById("score-listpct");
+    const scoreCompletionDiv = document.getElementById("score-completion-div");
+    const scoreListpctDiv = document.getElementById("score-listpct-div");
+    const tableBody = document.getElementById('table-body');
+
+    if (data.position_lvl <= 100) {
+        scoreCompletion.textContent = getScore(data.position_lvl).toFixed(2);
+        if (data.listpct_lvl) {
+            scoreListpctTitle.textContent = `Pontos em Ranking (${data.listpct_lvl}%)`;
+            scoreListpct.textContent = getScoreProgress(data.position_lvl, data.listpct_lvl).toFixed(2);
+        } else {
+            scoreListpctDiv.style.display = 'none';
+        }
+    } else {
+        scoreCompletionDiv.style.display = 'none';
+        scoreListpctDiv.style.display = 'none';
+    }
+
+    const playerRecords = data.Data.filter(record => record.level_name.toLowerCase() === data.name.toLowerCase());
     playerRecords.sort((a, b) => b.progress - a.progress);
-    //adicionar progressos na tabela
-    var tableBody = document.getElementById('table-body');
+
     playerRecords.forEach(record => {
         if(record.progress >= data.listpct_lvl){
-            var row = document.createElement('tr');
-            var playerNameCell = document.createElement('td');
-            playerNameCell.innerHTML = record.player_name;
+            const row = document.createElement('tr');
+            const playerNameCell = document.createElement('td');
+            playerNameCell.textContent = record.player_name;
             row.appendChild(playerNameCell);
-            var progressCell = document.createElement('td');
-            progressCell.innerHTML = "<a href='" + record.video + "' target='_blank'>" + record.progress + "%</a>";
+            const progressCell = document.createElement('td');
+            progressCell.innerHTML = `<a href='${record.video}' target='_blank'>${record.progress}%</a>`;
             row.appendChild(progressCell);
             tableBody.appendChild(row);
         }
