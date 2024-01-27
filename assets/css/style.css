@@ -4,6 +4,11 @@ body
     color: #c1c0cc;
 }
 
+#ListContent
+{
+    width: 75%;
+}
+
 .ListSection 
 {
     background-color: #212529;
@@ -11,13 +16,28 @@ body
     border-radius: 0.25rem;
     margin: 0.8rem;
     padding: 2rem;
-    width: 1200px;
+    max-width: 100%;
     display: flex;
     align-items: center;
 }
 
 .ListSection .video {
-    flex: 1;
+    flex: 0.75;
+}
+@media (max-width: 760px) {
+    #ListContent
+    {
+        width: 100%;
+    }
+    .ListSection .video {
+        display: none;
+    }
+}
+@media (max-width: 1280px) {
+    #ListContent
+    {
+        width: 100%;
+    }
 }
 
 .ListSection .text {
