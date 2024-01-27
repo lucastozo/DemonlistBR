@@ -6,7 +6,7 @@ body
 
 #ListContent
 {
-    width: 75%;
+    width: 80%;
 }
 
 .ListSection 
@@ -22,15 +22,26 @@ body
 }
 
 .ListSection .video {
-    flex: 0.75;
+    flex: 1;
+}
+
+.ListSection .text {
+    flex: 3;
+    margin-left: 40px;
 }
 @media (max-width: 760px) {
     #ListContent
     {
         width: 100%;
     }
+    .ListSection {
+        padding: 1rem;
+    }
     .ListSection .video {
         display: none;
+    }
+    .ListSection .text {
+        margin-left: 0;
     }
 }
 @media (max-width: 1280px) {
@@ -38,11 +49,6 @@ body
     {
         width: 100%;
     }
-}
-
-.ListSection .text {
-    flex: 2;
-    margin-left: 20px;
 }
 
 .list
