@@ -21,7 +21,7 @@ Promise.all
         //levelDetailPage = 'pages/levelDetails.html'
         var textDiv = document.createElement('div');
         textDiv.className = 'text';
-        textDiv.innerHTML = '<a href="pages/levelDetails.html?id=' + levelData.Data[i].id_lvl + '"><h2>' + levelData.Data[i].position_lvl + '. ' + levelData.Data[i].name_lvl + '</h2></a>' +
+        textDiv.innerHTML = '<a href="pages/leveldetails.html?id=' + levelData.Data[i].id_lvl + '"><h2>' + levelData.Data[i].position_lvl + '. ' + levelData.Data[i].name_lvl + '</h2></a>' +
                             '<p>Criador: ' + levelData.Data[i].creator_lvl + '</p>' +
                             '<p>Verificador: ' + levelData.Data[i].verifier_lvl + '</p>';
         if (levelData.Data[i].publisher_lvl) 
