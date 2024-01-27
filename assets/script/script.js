@@ -18,72 +18,21 @@ Promise.all
         videoDiv.innerHTML = '<a href="' + videoUrl + '" target="_blank"><img src="' + thumbnailUrl + '"style="width:320px; height:180px; object-fit:cover;"></a>';
         section.appendChild(videoDiv);
 
+        //levelDetailPage = 'pages/levelDetails.html'
         var textDiv = document.createElement('div');
         textDiv.className = 'text';
-        textDiv.innerHTML = '<a href="' + videoUrl + '" target="_blank"><h2>' + levelData.Data[i].position_lvl + '. ' + levelData.Data[i].name_lvl + '</h2></a>' +
+        textDiv.innerHTML = '<a href="pages/levelDetails.html?id=' + levelData.Data[i].id_lvl + '"><h2>' + levelData.Data[i].position_lvl + '. ' + levelData.Data[i].name_lvl + '</h2></a>' +
                             '<p>Criador: ' + levelData.Data[i].creator_lvl + '</p>' +
                             '<p>Verificador: ' + levelData.Data[i].verifier_lvl + '</p>';
         if (levelData.Data[i].publisher_lvl) 
         {
             textDiv.innerHTML += '<p class="fw-lighter">Publicado por: ' + levelData.Data[i].publisher_lvl + '</p>';
         }
-        if (levelData.Data[i].listpct_lvl && levelData.Data[i].listpct_lvl >= 0 && levelData.Data[i].listpct_lvl <= 100) 
-        {
-            textDiv.innerHTML += '<p class="fw-lighter">List%: ' + levelData.Data[i].listpct_lvl + '%</p>';
-        }
 
         section.appendChild(textDiv);
         contentDiv.appendChild(section);
-
-        //playerdata
-        var playerRecords = playerData.Data.filter(record => record.level_name.toLowerCase() === levelData.Data[i].name_lvl.toLowerCase());
-        playerRecords.sort((a, b) => b.progress - a.progress);
-        if (playerRecords.length > 0) {
-            var playerSection = document.createElement('section');
-            playerSection.className = 'PlayerSection container text-center';
-            playerSection.style.display = 'none';
-            playerRecords.forEach(playerRecord => {
-                var playerDiv = document.createElement('div');
-                playerDiv.className = 'playerRecord';
-
-                //adição do record com link de video e sem link de video
-                if (playerRecord.video && playerRecord.video.trim() !== '') 
-                {
-                    playerDiv.innerHTML = '<p><a href="' + playerRecord.video + '" target="_blank">' + playerRecord.player_name + '</a> - ' + playerRecord.progress + '%</p>';
-                } else 
-                {
-                    playerDiv.innerHTML = '<p>' + playerRecord.player_name + ' - ' + playerRecord.progress + '%</p>';
-                }
-                playerSection.appendChild(playerDiv);
-            });
-            contentDiv.appendChild(playerSection);
-
-            //records btn
-            var buttonContainer = document.createElement('div');
-            buttonContainer.style.position = 'relative';
-            buttonContainer.style.display = 'flex';
-            buttonContainer.style.alignItems = 'center';
-
-            var button = document.createElement('button');
-            button.className = 'btn btn-primary';
-            button.innerHTML = 'Records';
-            button.style.position = 'absolute';
-            button.style.right = '0';
-            button.onclick = createToggleHandler(playerSection);
-
-            buttonContainer.appendChild(button);
-            section.appendChild(buttonContainer);
-        }
     }
 });
-
-function createToggleHandler(playerSection) 
-{
-    return function() 
-    {
-        playerSection.style.display = playerSection.style.display === 'none' ? 'block' : 'none';
-    };
-}
 
 function ExtractVideoId(videoUrl){
     var videoId;

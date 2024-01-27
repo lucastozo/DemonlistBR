@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+<head>
+    <title>Demonlist BR</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Lista de fases brasileiras mais difíceis de Geometry Dash.">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/levelDetails.css" rel="stylesheet">
+</head>
+<body>
+    <script src="/assets/script/levelDetails.js"></script>
+    <script src="/assets/script/getScore.js"></script>
+
+    <script src="/assets/script/addNavbar.js"></script>
+    <section id="navbar"></section>
+    
+    <section id="levelDetails">
+        <div class="text-center">
+            <div id="loading-spinner" class="spinner-border" role="status">
+                <span class="sr-only"></span>
+            </div>
+            <div id="level-div" style="display: none;">
+                <div id="level-header">
+                    <h1 id="level-name"></h1>
+                    <p id="level-creator" class="fs-5 fw-light"></p>
+                    <p id="level-description" class="fs-6 fst-italic"></p>
+                </div>
+                <hr id="horizontal-line">
+                <div id="level-video" class="container col-xs-1 text-center">
+                    <iframe id="level-video-iframe" class="responsive-iframe"></iframe>
+                </div>
+                <div id="level-info" class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <p class="fw-bold">ID</p>
+                            <p id="level-id">id_level</p>
+                        </div>
+                        <div class="col text-center">
+                            <p class="fw-bold">Dificuldade</p>
+                            <p id="level-difficulty">difficulty_level</p>
+                        </div>
+                        <div id="level-demonlist-div" class="col text-center" style="display: none;">
+                            <p class="fw-bold">Demonlist #</p>
+                            <p id="level-demonlist">demonlist_level</p>
+                        </div>
+                        <div class="col text-center">
+                            <p class="fw-bold">Música</p>
+                            <p id="level-song">song_level</p>
+                        </div>
+                    </div>
+                </div>
+                <section id="progress-section">
+                    <hr id="horizontal-line">
+                    <div class="container">
+                        <h2 class="text-center">Progressos</h2>
+                        <div class="row justify-content-center">
+                            <div class="col-3 p-3 mb-2 text-center">
+                                <p class="fw-bold">Pontos em Ranking (100%)</p>
+                                <p id="score-completion">score-completion</p>
+                            </div>
+                            <div class="col-3 p-3 mb-2 text-center">
+                                <p id="score-listpct-title" class="fw-bold">Pontos em Ranking (x%)</p>
+                                <p id="score-listpct">score-listpct</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="table-progress">
+                        <table id="progress" class="table table-striped table-hover align-middle">
+                            <thead>
+                                <tr>
+                                    <th class="text-center" scope="col">Jogador</th>
+                                    <th class="text-center" scope="col">Progresso</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-body"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
