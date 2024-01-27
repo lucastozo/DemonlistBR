@@ -65,7 +65,14 @@ fetch('/data/leveldata.json')
             }
         }
     });
-    let sortedScores = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+    let sortedScores = Object.entries(scores).sort((a, b) => {
+        // First, compare the scores
+        if (b[1] !== a[1]) {
+            return b[1] - a[1];
+        }
+        // If the scores are equal, compare the player names
+        return originalNames[a[0]].localeCompare(originalNames[b[0]]);
+    });
 
     let tableBody = document.getElementById('table-body');
     let modalBody = document.querySelector('.modal-body');
