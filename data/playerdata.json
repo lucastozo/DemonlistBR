@@ -1,36 +1,24 @@
 {
-  "GeradoEm": "26/1/2024 13:30:41",
+  "GeradoEm": "28/1/2024 15:10:18",
   "TipoData": "record",
   "Data": [
     {
-      "level_name": "Ascension",
-      "player_name": "Jobalho",
+      "level_name": "Gusta Cyclone",
+      "player_name": "Gabryelsz",
       "progress": 100,
-      "video": "https://www.youtube.com/watch?v=2G48PqxFEH0"
-    },
-    {
-      "level_name": "Blood Attack",
-      "player_name": "Jobalho",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=P1gWVUCTLEg"
-    },
-    {
-      "level_name": "Extermination Nation",
-      "player_name": "Jobalho",
-      "progress": 100,
-      "video": "https://youtu.be/izJBNXoQrJQ"
-    },
-    {
-      "level_name": "Elusions",
-      "player_name": "Jobalho",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=iaeqdTpaYnY"
+      "video": "https://youtu.be/9pB6l9veiWo?si=u_uKyi_BrmIPELpv"
     },
     {
       "level_name": "arcturus",
       "player_name": "DibiiziCookie",
       "progress": 100,
       "video": "https://youtu.be/AqKBny7eX5Q"
+    },
+    {
+      "level_name": "Ascension",
+      "player_name": "Jobalho",
+      "progress": 100,
+      "video": "https://www.youtube.com/watch?v=2G48PqxFEH0"
     },
     {
       "level_name": "Ascension",
@@ -49,6 +37,12 @@
       "player_name": "DibiiziCookie",
       "progress": 100,
       "video": "https://youtu.be/m4P-tlpIv6s"
+    },
+    {
+      "level_name": "Blood Attack",
+      "player_name": "Jobalho",
+      "progress": 100,
+      "video": "https://www.youtube.com/watch?v=P1gWVUCTLEg"
     },
     {
       "level_name": "CHALLUNGA FINALE",
@@ -207,10 +201,22 @@
       "video": "https://www.youtube.com/watch?v=n4JMgWEgwWU"
     },
     {
+      "level_name": "Elusions",
+      "player_name": "Jobalho",
+      "progress": 100,
+      "video": "https://www.youtube.com/watch?v=iaeqdTpaYnY"
+    },
+    {
       "level_name": "Eraser",
       "player_name": "L3on14az",
       "progress": 100,
       "video": "https://www.youtube.com/watch?v=NBYNAZfi0SI"
+    },
+    {
+      "level_name": "Extermination Nation",
+      "player_name": "Jobalho",
+      "progress": 100,
+      "video": "https://youtu.be/izJBNXoQrJQ"
     },
     {
       "level_name": "Factory Realm X",
