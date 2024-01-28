@@ -29,27 +29,6 @@ body
     flex: 3;
     margin-left: 40px;
 }
-@media (max-width: 760px) {
-    #ListContent
-    {
-        width: 100%;
-    }
-    .ListSection {
-        padding: 1rem;
-    }
-    .ListSection .video {
-        display: none;
-    }
-    .ListSection .text {
-        margin-left: 0;
-    }
-}
-@media (max-width: 1280px) {
-    #ListContent
-    {
-        width: 100%;
-    }
-}
 
 .list
 {
@@ -77,24 +56,24 @@ body
 }
 
 .PlayerSection {
-    background-color: #17191b; /* Cor de fundo da seção */
+    background-color: #17191b;
     border: 1px solid #363636;
     max-width: 1200px;
-    border-radius: 5px; /* Bordas arredondadas */
-    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .playerRecord {
-    font-size: 16px; /* Tamanho da fonte */
-    line-height: 1.5; /* Espaçamento entre linhas */
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .playerRecord a {
-    color: #fff; /* Cor do link */
+    color: #fff;
 }
 
 .playerRecord a:hover {
-    color: #008cff; /* Cor do link quando o mouse passa por cima */
+    color: #008cff;
     transition: 0.2s;
 }
 
@@ -121,10 +100,29 @@ body
     margin-bottom: 50px;
 }
 
+#score-formula-img
+{
+    width: 20%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
 #ranking-header
 {
     margin-top: 30px;
     margin-bottom: 50px;
+}
+
+#table-container
+{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#table-container table
+{
+    width: 100%;
+    border: 1px solid #474747;
 }
 
 .modal-body p
@@ -156,6 +154,42 @@ body
     width: 200px;
 }
 
+@media (max-width: 1280px) {
+    #ListContent
+    {
+        width: 100%;
+    }
+    #table-container
+    {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #score-formula-img {
+        width: 30%;
+    }
+}
+
+@media (max-width: 760px) {
+    #ListContent
+    {
+        width: 100%;
+    }
+    .ListSection {
+        padding: 1rem;
+    }
+    .ListSection .video {
+        display: none;
+    }
+    .ListSection .text {
+        margin-left: 0;
+    }
+    #table-container
+    {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 @media (max-width: 600px) {
     #iconDLBR {
         width: 100px;
@@ -181,5 +215,8 @@ body
     }
     .btn-text {
         display: none;
+    }
+    #score-formula-img {
+        width: 50%;
     }
 }
