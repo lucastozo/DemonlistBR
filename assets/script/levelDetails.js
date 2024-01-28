@@ -101,14 +101,17 @@ function LoadProgress(data) {
     const scoreCompletionDiv = document.getElementById("score-completion-div");
     const scoreListpctDiv = document.getElementById("score-listpct-div");
     const tableBody = document.getElementById('table-body');
+    var listpct;
 
     if (data.position_lvl <= 100) {
         scoreCompletion.textContent = getScore(data.position_lvl).toFixed(2);
         if (data.listpct_lvl) {
             scoreListpctTitle.textContent = `Pontos em Ranking (${data.listpct_lvl}%)`;
             scoreListpct.textContent = getScoreProgress(data.position_lvl, data.listpct_lvl).toFixed(2);
+            listpct = data.listpct_lvl;
         } else {
             scoreListpctDiv.style.display = 'none';
+            listpct = 100;
         }
     } else {
         scoreCompletionDiv.style.display = 'none';
@@ -119,7 +122,7 @@ function LoadProgress(data) {
     playerRecords.sort((a, b) => b.progress - a.progress);
 
     playerRecords.forEach(record => {
-        if(record.progress >= data.listpct_lvl){
+        if(record.progress >= listpct){
             const row = document.createElement('tr');
             const playerNameCell = document.createElement('td');
             playerNameCell.textContent = record.player_name;
