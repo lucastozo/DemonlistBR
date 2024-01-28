@@ -55,9 +55,9 @@ function LoadLevelInfo(data){
     levelName.innerHTML = data.name;
     //se não existir publisher: criado por: creator, se existir: criado por: creator, publicado por: publisher
     var levelCreator = document.getElementById("level-creator");
-    levelCreator.innerHTML = 'Criado por: ' + data.author;
+    levelCreator.innerHTML = 'Criado por: ' + data.creator_lvl;
     if(data.publisher_lvl){
-        levelCreator.innerHTML = levelCreator.innerHTML + ', publicado por: ' + data.publisher_lvl;
+        levelCreator.innerHTML = levelCreator.innerHTML + ', publicado por: ' + data.author;
     }
     var levelDescription = document.getElementById("level-description");
     if(data.description != "(No description provided)")
