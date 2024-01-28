@@ -1,4 +1,4 @@
-#levelDetails
+#levelDetails, #error-id-section
 {
     padding: 50px;
     margin: 50px;
@@ -49,6 +49,13 @@
 {
     padding: 30px;
 }
+
+#error-id-img
+{
+    width: 20%;
+    object-fit: cover;
+}
+
 @media (max-width: 550px) {
     #level-info .row
     {
@@ -78,5 +85,13 @@
         /* remover col-3 e p-3 */
         width: 100%;
         padding: 0 !important;
+    }
+    #error-id-section
+    {
+        margin: 0;
+    }
+    #error-id-img
+    {
+        width: 50%;
     }
 }

@@ -1,6 +1,18 @@
 document.addEventListener('DOMContentLoaded', (event) => {    
     let params = new URLSearchParams(window.location.search);
     let levelId = params.get('id');
+
+    //percorrer json e ver se existe o id, se não, mostrar mensagem de erro
+    fetch('/data/leveldata.json')
+    .then(response => response.json())
+    .then(levelDataJson => {
+        const levelData = levelDataJson.Data.find(level => level.id_lvl == levelId)
+        if(levelData == null || levelData == undefined){
+            idNotFound();
+        }
+    })
+    .catch(error => console.error(error));
+
     //chamada GDBrowser
     getLevelInfo(levelId);
     async function getLevelInfo(levelId) {
@@ -148,4 +160,18 @@ function HideContentLoading(flag){
 
         document.getElementById('loading-spinner').style.display = 'none';
     }
+}
+
+function idNotFound(){
+    levelDetails = document.getElementById("levelDetails");
+    levelDetails.style.display = 'none';
+
+    // sortear um número pra decidir qual gif de erro mostrar, por que não?
+    var errorIdImg = document.getElementById("error-id-img");
+    if(Math.random() < 0.5){
+        errorIdImg.src = "https://media1.tenor.com/m/qBbREqnOqtkAAAAC/fatal-error-turn-it-off.gif";
+    }
+
+    var errorIdSection = document.getElementById("error-id-section");
+    errorIdSection.style.display = 'block';
 }
