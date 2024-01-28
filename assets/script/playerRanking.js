@@ -12,9 +12,12 @@ let ignoredNames = [
                     'LordVaderCraft',
                     'iRaily',
                     'SeptaGon7',
-                    'Ale708', //remover depois, darkbbt será o verifier de ultimate party
                     'Draquito',
-                    'blankb'
+                    'blankb',
+                    'SpeedTheWeeb',
+                    'Teno',
+                    'Bedziu',
+                    'Victurkey'
                     ].map(name => name.toLowerCase());
 
 let originalNames = {};
