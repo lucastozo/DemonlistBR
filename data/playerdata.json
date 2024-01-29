@@ -1,12 +1,12 @@
 {
-  "GeradoEm": "28/1/2024 15:10:18",
+  "GeradoEm": "29/1/2024 3:41:58",
   "TipoData": "record",
   "Data": [
     {
-      "level_name": "Gusta Cyclone",
+      "level_name": "Power Surge",
       "player_name": "Gabryelsz",
       "progress": 100,
-      "video": "https://youtu.be/9pB6l9veiWo"
+      "video": "https://youtu.be/supjNWvitG8"
     },
     {
       "level_name": "arcturus",
@@ -247,6 +247,12 @@
       "player_name": "yuuchouze",
       "progress": 100,
       "video": "https://www.youtube.com/watch?v=zI7CKOtUaqY"
+    },
+    {
+      "level_name": "Gusta Cyclone",
+      "player_name": "Gabryelsz",
+      "progress": 100,
+      "video": "https://youtu.be/9pB6l9veiWo"
     },
     {
       "level_name": "HellGate",
