@@ -1,5 +1,5 @@
 {
-  "GeradoEm": "29/1/2024 18:53:34",
+  "GeradoEm": "29/1/2024 22:15:39",
   "TipoData": "level",
   "Data": [
     {
@@ -681,6 +681,14 @@
       "creator_lvl": "Fusi0n",
       "verifier_lvl": "RalucaGranola",
       "video_lvl": "https://youtu.be/oOWr4q-_9rQ"
+    },
+    {
+      "position_lvl": 82,
+      "id_lvl": "94563744",
+      "name_lvl": "tipo B",
+      "creator_lvl": "classic10",
+      "verifier_lvl": "classic10",
+      "video_lvl": "https://youtu.be/KIb8mqjvxqM"
     }
   ]
 }
