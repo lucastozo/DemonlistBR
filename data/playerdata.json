@@ -1,12 +1,18 @@
 {
-  "GeradoEm": "29/1/2024 3:41:58",
+  "GeradoEm": "29/1/2024 22:24:57",
   "TipoData": "record",
   "Data": [
     {
-      "level_name": "Power Surge",
-      "player_name": "Gabryelsz",
+      "level_name": "tipo B",
+      "player_name": "Yuuchouze",
       "progress": 100,
-      "video": "https://youtu.be/supjNWvitG8"
+      "video": "https://youtu.be/mxThhliRDj4"
+    },
+    {
+      "level_name": "Collapse",
+      "player_name": "DibiiziCookie",
+      "progress": 100,
+      "video": "https://youtu.be/UGnvXgJx3Zk"
     },
     {
       "level_name": "arcturus",
@@ -361,6 +367,12 @@
       "player_name": "fakeblast",
       "progress": 100,
       "video": "https://youtu.be/rBzwfEy6Y9Q?si=3u6Dd9s6UyE_Y7Cc "
+    },
+    {
+      "level_name": "Power Surge",
+      "player_name": "Gabryelsz",
+      "progress": 100,
+      "video": "https://youtu.be/supjNWvitG8"
     },
     {
       "level_name": "Rebirth II",
