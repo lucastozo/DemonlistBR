@@ -1,4 +1,6 @@
-fetch('data/leveldata.json')
+const mainListMaxPosition = 100;
+
+fetch('/data/leveldata.json')
 .then(response => response.json())
 .then(levelData => {
     levelData.Data.sort((a, b) => a.position_lvl - b.position_lvl);
@@ -18,7 +20,7 @@ fetch('data/leveldata.json')
 
         const textDiv = document.createElement('div');
         textDiv.className = 'text';
-        textDiv.innerHTML = `<a href="pages/leveldetails.html?id=${level.id_lvl}"><h2>${level.position_lvl}. ${level.name_lvl}</h2></a>
+        textDiv.innerHTML = `<a href="/pages/leveldetails.html?id=${level.id_lvl}"><h2>${level.position_lvl}. ${level.name_lvl}</h2></a>
                             <p>Criador: ${level.creator_lvl}</p>
                             <p>Verificador: ${level.verifier_lvl}</p>`;
         if (level.publisher_lvl) {
@@ -28,8 +30,21 @@ fetch('data/leveldata.json')
             textDiv.appendChild(publisherParagraph);
         }
 
-        section.appendChild(textDiv);
-        contentDiv.appendChild(section);
+        const path = window.location.pathname;
+        const page = path.split("/").pop();
+        if(page == "legacylist.html") {
+            if(level.position_lvl > mainListMaxPosition){
+                // esconder error
+                var errorIdSection = document.getElementById("error-id-section");
+                errorIdSection.style.display = 'none';
+
+                section.appendChild(textDiv);
+                contentDiv.appendChild(section);
+            }
+        } else {
+            section.appendChild(textDiv);
+            contentDiv.appendChild(section);
+        }
     });
 });
 

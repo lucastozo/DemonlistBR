@@ -154,6 +154,19 @@ body
     width: 200px;
 }
 
+#legacy-header
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #212529;
+}
+
+#legacy-header p
+{
+    margin-bottom: 0;
+}
+
 @media (max-width: 1280px) {
     #ListContent
     {
@@ -166,6 +179,15 @@ body
     }
     #score-formula-img {
         width: 30%;
+    }
+}
+
+@media (min-width: 992px)
+{
+    .navbar-expand-lg .navbar-nav .dropdown-menu 
+    {
+        position: absolute;
+        left: -60px;
     }
 }
 
