@@ -1,37 +1,36 @@
-Promise.all
-([
-    fetch('data/leveldata.json').then(response => response.json()),
-    fetch('data/playerdata.json').then(response => response.json())
-]).then(([levelData, playerData]) => {
+fetch('data/leveldata.json')
+.then(response => response.json())
+.then(levelData => {
     levelData.Data.sort((a, b) => a.position_lvl - b.position_lvl);
 
-    var contentDiv = document.getElementById('ListContent');
-    for (var i = 0; i < levelData.Data.length; i++) {
-        var section = document.createElement('section');
+    const contentDiv = document.getElementById('ListContent');
+    levelData.Data.forEach(level => {
+        const section = document.createElement('section');
         section.className = 'ListSection';
 
-        var videoDiv = document.createElement('div');
+        const videoDiv = document.createElement('div');
         videoDiv.className = 'video';
-        var videoId = ExtractVideoId(levelData.Data[i].video_lvl);
-        var thumbnailUrl = 'https://img.youtube.com/vi/' + videoId + '/0.jpg';
-        var videoUrl = 'https://youtu.be/' + videoId;
-        videoDiv.innerHTML = '<a href="' + videoUrl + '" target="_blank"><img src="' + thumbnailUrl + '"style="width:320px; height:180px; object-fit:cover;"></a>';
+        const videoId = ExtractVideoId(level.video_lvl);
+        const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/0.jpg`;
+        const videoUrl = `https://youtu.be/${videoId}`;
+        videoDiv.innerHTML = `<a href="${videoUrl}" target="_blank"><img src="${thumbnailUrl}" style="width:320px; height:180px; object-fit:cover;"></a>`;
         section.appendChild(videoDiv);
 
-        //levelDetailPage = 'pages/levelDetails.html'
-        var textDiv = document.createElement('div');
+        const textDiv = document.createElement('div');
         textDiv.className = 'text';
-        textDiv.innerHTML = '<a href="pages/leveldetails.html?id=' + levelData.Data[i].id_lvl + '"><h2>' + levelData.Data[i].position_lvl + '. ' + levelData.Data[i].name_lvl + '</h2></a>' +
-                            '<p>Criador: ' + levelData.Data[i].creator_lvl + '</p>' +
-                            '<p>Verificador: ' + levelData.Data[i].verifier_lvl + '</p>';
-        if (levelData.Data[i].publisher_lvl) 
-        {
-            textDiv.innerHTML += '<p class="fw-lighter">Publicado por: ' + levelData.Data[i].publisher_lvl + '</p>';
+        textDiv.innerHTML = `<a href="pages/leveldetails.html?id=${level.id_lvl}"><h2>${level.position_lvl}. ${level.name_lvl}</h2></a>
+                            <p>Criador: ${level.creator_lvl}</p>
+                            <p>Verificador: ${level.verifier_lvl}</p>`;
+        if (level.publisher_lvl) {
+            const publisherParagraph = document.createElement('p');
+            publisherParagraph.className = 'fw-lighter';
+            publisherParagraph.textContent = `Publicado por: ${level.publisher_lvl}`;
+            textDiv.appendChild(publisherParagraph);
         }
 
         section.appendChild(textDiv);
         contentDiv.appendChild(section);
-    }
+    });
 });
 
 function ExtractVideoId(videoUrl){
@@ -51,25 +50,20 @@ function ExtractVideoId(videoUrl){
     return videoId;
 }
 
-//back to top button
-document.addEventListener('DOMContentLoaded', (event) => {
-    let backToTopButton = document.querySelector("#btn-back-to-top");
+// Botão voltar ao topo
+document.addEventListener('DOMContentLoaded', () => {
+    const backToTopButton = document.querySelector("#btn-back-to-top");
 
-    window.onscroll = function(){
-        scrollFunction();
-    };
-
-    function scrollFunction(){
-        if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+    window.onscroll = () => {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             backToTopButton.style.display = "block";
         } else {
             backToTopButton.style.display = "none";
         }
-    }
+    };
 
-    backToTopButton.addEventListener("click", backToTop);
-    function backToTop(){
+    backToTopButton.addEventListener("click", () => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
-    }
+    });
 });
