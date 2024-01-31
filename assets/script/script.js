@@ -41,7 +41,7 @@ fetch('/data/leveldata.json')
                 section.appendChild(textDiv);
                 contentDiv.appendChild(section);
             }
-        } else {
+        } else if(level.position_lvl <= mainListMaxPosition){
             section.appendChild(textDiv);
             contentDiv.appendChild(section);
         }
