@@ -1,5 +1,5 @@
 {
-  "GeradoEm": "29/1/2024 22:15:39",
+  "GeradoEm": "2/2/2024 19:54:22",
   "TipoData": "level",
   "Data": [
     {
@@ -676,6 +676,14 @@
     },
     {
       "position_lvl": 81,
+      "id_lvl": "91261175",
+      "name_lvl": "Nuclear Flash",
+      "creator_lvl": "TeamFodase",
+      "verifier_lvl": "CyronicalGD",
+      "video_lvl": "https://youtu.be/Rwzeri_MSUs"
+    },
+    {
+      "position_lvl": 82,
       "id_lvl": "14594318",
       "name_lvl": "Power Surge",
       "creator_lvl": "Fusi0n",
@@ -683,12 +691,20 @@
       "video_lvl": "https://youtu.be/oOWr4q-_9rQ"
     },
     {
-      "position_lvl": 82,
+      "position_lvl": 83,
       "id_lvl": "94563744",
       "name_lvl": "tipo B",
       "creator_lvl": "classic10",
       "verifier_lvl": "classic10",
       "video_lvl": "https://youtu.be/KIb8mqjvxqM"
+    },
+    {
+      "position_lvl": 84,
+      "id_lvl": "44282966",
+      "name_lvl": "The Abstract Rocket",
+      "creator_lvl": "fakeblast",
+      "verifier_lvl": "fakeblast",
+      "video_lvl": "https://youtu.be/LS4tNEjE-Ik"
     }
   ]
 }
