@@ -70,7 +70,10 @@
                     <p class="fw-light">onde
                         <math xmlns="http://www.w3.org/1998/Math/MathML">
                             <mi>P</mi>
-                            <mo>i</mo>
+                        </math>
+                        são os pontos totais,
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>X</mi>
                         </math>
                         é a posição do level e
                         <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -78,17 +81,25 @@
                         </math>
                         é o conjunto de levels que o jogador completou.
                     </p>
-                    <p class="fw-light">Ou seja, a pontuação de um level é dada por</p>
+                    <div>
+                        <iframe id="desmos-iframe" src="https://www.desmos.com/calculator/skm2djaush?embed" width="75%" height="30%"></iframe>
+                    </div>
+                    <p class="fw-light">Ou seja, a pontuação de um level é dada por
                         <math xmlns="http://www.w3.org/1998/Math/MathML">
-                            <mtext>Pontos do level = </mtext>
                             <mfrac>
-                              <mn>100</mn>
-                              <msqrt>
-                                <mi>P</mi>
-                                <mo>i</mo>
-                              </msqrt>
+                                <mn>200</mn>
+                                <mrow>
+                                    <msup>
+                                        <mi>e</mi>
+                                        <mfrac>
+                                            <mi>X</mi>
+                                            <mn>20</mn>
+                                        </mfrac>
+                                    </msup>
+                                </mrow>
                             </mfrac>
                         </math>
+                    </p>
                     <p class="fw-light">A pontuação de um progresso é dada por
                         <math xmlns="http://www.w3.org/1998/Math/MathML">
                             <mtext>Pontos do level</mtext>
@@ -101,7 +112,7 @@
                         , onde p é o progresso feito.</p>        
                     <hr>                    
                     <p>Os jogadores são ordenados por pontuação, e em caso de empate, por ordem alfabética.</p>
-                    <p>Vale lembrar que o ranking não necessariamente reflete a habilidade dos jogadores, mas sim a quantidade de levels que eles completaram.</p>
+                    <p>Vale lembrar que o ranking não necessariamente reflete a habilidade dos jogadores.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
