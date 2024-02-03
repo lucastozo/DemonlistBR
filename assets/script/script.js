@@ -15,7 +15,7 @@ fetch('/data/leveldata.json')
         const videoId = ExtractVideoId(level.video_lvl);
         const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/0.jpg`;
         const videoUrl = `https://youtu.be/${videoId}`;
-        videoDiv.innerHTML = `<a href="${videoUrl}" target="_blank"><img src="${thumbnailUrl}" style="width:320px; height:180px; object-fit:cover;"></a>`;
+        videoDiv.innerHTML = `<a href="${videoUrl}" target="_blank"><img src="${thumbnailUrl}" style="width:320px; height:180px; object-fit:cover;" alt="Video Thumbnail"></a>`;
         section.appendChild(videoDiv);
 
         const textDiv = document.createElement('div');
@@ -32,7 +32,7 @@ fetch('/data/leveldata.json')
 
         const path = window.location.pathname;
         const page = path.split("/").pop();
-        if(page == "legacylist.html") {
+        if(page === "legacylist.html") {
             if(level.position_lvl > mainListMaxPosition){
                 // esconder error
                 var errorIdSection = document.getElementById("error-id-section");
@@ -50,7 +50,7 @@ fetch('/data/leveldata.json')
 
 function ExtractVideoId(videoUrl){
     var videoId;
-    if(videoUrl == null || videoUrl == undefined || videoUrl == ''){
+    if(videoUrl == null || videoUrl === ''){
         return null;
     }
     if(videoUrl.includes('https://www.youtube.com/watch?v=')){

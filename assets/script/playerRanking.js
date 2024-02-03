@@ -105,8 +105,9 @@ fetch('/data/leveldata.json')
         detailsButton.setAttribute('data-bs-toggle', 'modal');
         detailsButton.setAttribute('data-bs-target', '#playerDetails-modal');
         detailsButton.addEventListener('click', () => {
+            let i;
             modalBody.innerHTML = '';
-            var playerDetailsLabel = document.getElementById('playerDetailsLabel');
+            const playerDetailsLabel = document.getElementById('playerDetailsLabel');
             playerDetailsLabel.innerText = originalNames[score[0]];
 
             //adicionar levels completados
@@ -128,8 +129,8 @@ fetch('/data/leveldata.json')
                     }
                 });
                 console.log(playerLevels);
-                var i = 0;
-                playerLevels.forEach(level => {i++;});
+                i = 0;
+                playerLevels.forEach(() => {i++;});
                 let levelsCompleted = document.createElement('h3');
                 levelsCompleted.innerText = 'Demons completados (' + i + '):';
                 modalBody.appendChild(levelsCompleted);
@@ -155,8 +156,8 @@ fetch('/data/leveldata.json')
 
             playerVerifiedLevels.sort((a, b) => a.position_lvl - b.position_lvl);
             if (playerVerifiedLevels.length > 0) {
-                var i = 0;
-                playerVerifiedLevels.forEach(level => {i++;});
+                i = 0;
+                playerVerifiedLevels.forEach(() => {i++;});
                 let levelsVerified = document.createElement('h3');
                 levelsVerified.innerText = 'Demons verificados (' + i + '):';
                 modalBody.appendChild(levelsVerified);
@@ -174,7 +175,7 @@ fetch('/data/leveldata.json')
                 return playerName === score[0].toLowerCase() && p.progress < 100;
             });
             if (playerProgressLevels.length > 0) {
-                var listpct = levelDataLowercase.find(l => l.name_lvl === playerProgressLevels[0].level_name.toLowerCase()).listpct_lvl;
+                const listpct = levelDataLowercase.find(l => l.name_lvl === playerProgressLevels[0].level_name.toLowerCase()).listpct_lvl;
                 if (playerProgressLevels.some(p => p.progress >= listpct)) {
                     let levelsProgress = document.createElement('h3');
                     levelsProgress.innerText = 'Progressos:';
