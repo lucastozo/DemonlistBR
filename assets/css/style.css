@@ -113,6 +113,18 @@ body
     margin-bottom: 50px;
 }
 
+#playerDetails-modal a
+{
+    text-decoration: none;
+    color: #c1c0cc;
+}
+
+#playerDetails-modal a:hover
+{
+    color: #f1f1f1;
+    transition: 0.2s;
+}
+
 #table-container
 {
     padding-left: 50px;

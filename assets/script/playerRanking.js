@@ -10,7 +10,7 @@ async function main() {
     processLevelData();
 }
 
-async function processLevelData()
+function processLevelData()
 {
     let levelData;
     let scores = {};
@@ -123,7 +123,7 @@ async function processLevelData()
                             return 0;
                         }
                     });
-                    console.log(playerLevels);
+
                     i = 0;
                     playerLevels.forEach(() => {i++;});
                     let levelsCompleted = document.createElement('h3');
@@ -132,10 +132,16 @@ async function processLevelData()
                     playerLevels.forEach(level => {
                         let levelDataItem = levelDataLowercase.find(l => l.name_lvl === level.level_name.toLowerCase());
                         if (levelDataItem) {
+                            //get id_lvl
+                            level.id_lvl = levelDataItem.id_lvl;
+
                             level.position_lvl = levelDataItem.position_lvl;
-                            let levelElement = document.createElement('p');
+                            let levelElement = document.createElement('a');
                             levelElement.textContent = '#' + level.position_lvl + '. ' + level.level_name;
-                            modalBody.appendChild(levelElement);
+                            levelElement.href = '/pages/levelDetails.html?id=' + level.id_lvl;
+                            let pElement = document.createElement('p');
+                            pElement.appendChild(levelElement);
+                            modalBody.appendChild(pElement);
                         } else {
                             console.log('Nenhum nível correspondente encontrado para:', level.level_name);
                         }
@@ -157,9 +163,15 @@ async function processLevelData()
                     levelsVerified.innerText = 'Demons verificados (' + i + '):';
                     modalBody.appendChild(levelsVerified);
                     playerVerifiedLevels.forEach(level => {
-                        let levelElement = document.createElement('p');
+                        //get id_lvl
+                        level.id_lvl = levelDataLowercase.find(l => l.name_lvl === level.name_lvl.toLowerCase()).id_lvl;
+
+                        let levelElement = document.createElement('a');
                         levelElement.textContent = '#' + level.position_lvl + '. ' + level.name_lvl;
-                        modalBody.appendChild(levelElement);
+                        levelElement.href = '/pages/levelDetails.html?id=' + level.id_lvl;
+                        let pElement = document.createElement('p');
+                        pElement.appendChild(levelElement);
+                        modalBody.appendChild(pElement);
                     });
                 }
 
@@ -178,10 +190,16 @@ async function processLevelData()
                         playerProgressLevels.forEach(level => {
                             let levelDataItem = levelDataLowercase.find(l => l.name_lvl === level.level_name.toLowerCase());
                             if (levelDataItem) {
+                                //get id_lvl
+                                level.id_lvl = levelDataItem.id_lvl;
+
                                 level.position_lvl = levelDataItem.position_lvl;
-                                let levelElement = document.createElement('p');
+                                let levelElement = document.createElement('a');
                                 levelElement.textContent = '#' + level.position_lvl + '. ' + level.level_name + ', ' + level.progress + '%';
-                                modalBody.appendChild(levelElement);
+                                levelElement.href = '/pages/levelDetails.html?id=' + level.id_lvl;
+                                let pElement = document.createElement('p');
+                                pElement.appendChild(levelElement);
+                                modalBody.appendChild(pElement);
                             } else {
                                 console.log('Nenhum nível correspondente encontrado para:', level.level_name);
                             }
