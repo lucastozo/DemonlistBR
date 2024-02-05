@@ -138,7 +138,7 @@ function processLevelData()
                             level.position_lvl = levelDataItem.position_lvl;
                             let levelElement = document.createElement('a');
                             levelElement.textContent = '#' + level.position_lvl + '. ' + level.level_name;
-                            levelElement.href = '/pages/levelDetails.html?id=' + level.id_lvl;
+                            levelElement.href = '/pages/leveldetails.html?id=' + level.id_lvl;
                             let pElement = document.createElement('p');
                             pElement.appendChild(levelElement);
                             modalBody.appendChild(pElement);
@@ -168,7 +168,7 @@ function processLevelData()
 
                         let levelElement = document.createElement('a');
                         levelElement.textContent = '#' + level.position_lvl + '. ' + level.name_lvl;
-                        levelElement.href = '/pages/levelDetails.html?id=' + level.id_lvl;
+                        levelElement.href = '/pages/leveldetails.html?id=' + level.id_lvl;
                         let pElement = document.createElement('p');
                         pElement.appendChild(levelElement);
                         modalBody.appendChild(pElement);
@@ -196,7 +196,7 @@ function processLevelData()
                                 level.position_lvl = levelDataItem.position_lvl;
                                 let levelElement = document.createElement('a');
                                 levelElement.textContent = '#' + level.position_lvl + '. ' + level.level_name + ', ' + level.progress + '%';
-                                levelElement.href = '/pages/levelDetails.html?id=' + level.id_lvl;
+                                levelElement.href = '/pages/leveldetails.html?id=' + level.id_lvl;
                                 let pElement = document.createElement('p');
                                 pElement.appendChild(levelElement);
                                 modalBody.appendChild(pElement);
