@@ -20,13 +20,29 @@ fetch('/data/leveldata.json')
 
         const textDiv = document.createElement('div');
         textDiv.className = 'text';
-        textDiv.innerHTML = `<a href="/pages/leveldetails.html?id=${level.id_lvl}"><h2>${level.position_lvl}. ${level.name_lvl}</h2></a>
-                            <p>Criador: ${level.creator_lvl}</p>
-                            <p>Verificador: ${level.verifier_lvl}</p>`;
+        textDiv.id = 'textDiv';
+
+        const levelLink = document.createElement('a');
+        levelLink.href = `/pages/leveldetails.html?id=${level.id_lvl}`;
+        levelLink.id = 'levelLink';
+        const levelName = document.createElement('h2');
+        levelName.textContent = `${level.position_lvl}. ${level.name_lvl}`;
+        levelName.id = 'levelName';
+        levelLink.appendChild(levelName);
+        textDiv.appendChild(levelLink);
+        const creatorParagraph = document.createElement('p');
+        creatorParagraph.textContent = `Criador: ${level.creator_lvl}`;
+        creatorParagraph.id = 'creatorParagraph';
+        textDiv.appendChild(creatorParagraph);
+        const verifierParagraph = document.createElement('p');
+        verifierParagraph.textContent = `Verificador: ${level.verifier_lvl}`;
+        verifierParagraph.id = 'verifierParagraph';
+        textDiv.appendChild(verifierParagraph);
         if (level.publisher_lvl) {
             const publisherParagraph = document.createElement('p');
             publisherParagraph.className = 'fw-lighter';
             publisherParagraph.textContent = `Publicado por: ${level.publisher_lvl}`;
+            publisherParagraph.id = 'publisherParagraph';
             textDiv.appendChild(publisherParagraph);
         }
 

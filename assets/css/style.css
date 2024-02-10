@@ -30,6 +30,10 @@ body
     margin-left: 40px;
 }
 
+.ListSection p {
+    margin-bottom: 7px;
+}
+
 .list
 {
     display: flex;
@@ -189,6 +193,10 @@ body
         padding-left: 15px;
         padding-right: 15px;
     }
+    .ListSection {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
     #score-formula-img {
         width: 30%;
     }
@@ -221,6 +229,18 @@ body
     {
         padding-left: 0;
         padding-right: 0;
+    }
+    #verifierParagraph, #publisherParagraph
+    {
+        display: none;
+    }
+    .text h2
+    {
+        font-size: 20px;
+    }
+    .text p
+    {
+        font-size: 14px;
     }
 }
 
