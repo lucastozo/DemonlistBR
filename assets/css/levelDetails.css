@@ -1,7 +1,7 @@
 #levelDetails, #error-id-section
 {
     padding: 50px;
-    margin: 50px;
+    margin: 20px;
     border-radius: 10px;
     border: 1px solid #474747;
     background-color: #212529;
@@ -10,7 +10,7 @@
     #levelDetails
     {
         padding: 30px;
-        margin: 30px;
+        margin: 10px;
     }
 }
 @media (max-width: 760px) {

@@ -55,8 +55,11 @@ function LoadLevelInfo(data){
     levelName.innerHTML = data.name;
     //se não existir publisher: criado por: creator, se existir: criado por: creator, publicado por: publisher
     const levelCreator = document.getElementById("level-creator");
-    levelCreator.innerHTML = 'Criado por: ' + data.creator_lvl;
-    if(data.publisher_lvl){
+    if(data.creator_lvl === data.verifier_lvl){
+        levelCreator.innerHTML = 'Criado por: ' + data.creator_lvl;
+    } else {
+        levelCreator.innerHTML = 'Criado por: ' + data.creator_lvl + ', verificado por: ' + data.verifier_lvl;
+    } if(data.publisher_lvl){
         levelCreator.innerHTML = levelCreator.innerHTML + ', publicado por: ' + data.author;
     }
     const levelDescription = document.getElementById("level-description");
