@@ -1,4 +1,5 @@
 const mainListMaxPosition = 100;
+let legacyListHasLevels = false;
 
 fetch('/data/leveldata.json')
 .then(response => response.json())
@@ -40,18 +41,20 @@ fetch('/data/leveldata.json')
         const page = path.split("/").pop();
         if(page === "legacylist.html") {
             if(level.position_lvl > mainListMaxPosition){
-                // esconder error
-                var errorIdSection = document.getElementById("error-id-section");
-                errorIdSection.style.display = 'none';
-
                 section.appendChild(textDiv);
                 contentDiv.appendChild(section);
+                legacyListHasLevels = true;
             }
         } else if(level.position_lvl <= mainListMaxPosition){
             section.appendChild(textDiv);
             contentDiv.appendChild(section);
         }
     });
+    if(!legacyListHasLevels){
+        const errorSection = document.getElementById('error-id-section');
+        errorSection.style.display = 'block';
+    }
+
 });
 
 function ExtractVideoId(videoUrl){
