@@ -1,12 +1,12 @@
 {
-  "GeradoEm": "3/2/2024 21:9:20",
+  "GeradoEm": "14/2/2024 16:39:48",
   "TipoData": "record",
   "Data": [
     {
-      "level_name": "Nuclear Flash",
-      "player_name": "Yuuchouze",
+      "level_name": "Summer Breeze",
+      "player_name": "Petalite",
       "progress": 100,
-      "video": "https://youtu.be/4_iniWCXqF0"
+      "video": "https://www.youtube.com/watch?v=EslZazE5rYY"
     },
     {
       "level_name": "arcturus",
@@ -367,6 +367,12 @@
       "player_name": "fakeblast",
       "progress": 100,
       "video": "https://youtu.be/rBzwfEy6Y9Q?si=3u6Dd9s6UyE_Y7Cc "
+    },
+    {
+      "level_name": "Nuclear Flash",
+      "player_name": "Yuuchouze",
+      "progress": 100,
+      "video": "https://youtu.be/4_iniWCXqF0"
     },
     {
       "level_name": "Power Surge",
