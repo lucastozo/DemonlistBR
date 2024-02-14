@@ -19,14 +19,8 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="text-center" style="margin-bottom: 30px; margin-top: 30px;">
-                    <h1>Envio de levels</h1>
-                    <p>Regras:</p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">O level deve ter sido feito/hosteado por um brasileiro, isto é, somente pessoas que nasceram no Brasil</li>
-                        <li class="list-group-item">O level deve ter sido verificado legitimamente (qualquer nacionalidade)</li>
-                        <li class="list-group-item">O level deve estar disponível nos servidores oficiais do jogo (excluindo private servers)</li>
-                        <li class="list-group-item">Levels de piada mal-feitos ou essencialmente layouts sem decoração serão ignorados</li>
-                      </ul>
+                    <h1 style="margin-bottom: 1rem;">Envio de levels</h1>
+                    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalRules">Regras</button>
                 </div>
                 <form action="https://docs.google.com/forms/d/e/1FAIpQLSfCMxt_b52-KFSZ1Pps2H21-Qlb7uL9Uw9AfcjazABIJjWluQ/formResponse" class="g-3">
 
@@ -59,6 +53,33 @@
                         <button type="submit" formtarget="_blank" class="btn btn-primary">Enviar</button>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalRules" tabindex="-1" aria-labelledby="modalRulesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRulesLabel">Regras para levels</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">O level deve ter sido feito/hosteado por um brasileiro, isto é, somente pessoas que nasceram no Brasil</li>
+                        <li class="list-group-item">O level deve ter sido verificado legitimamente (qualquer nacionalidade)</li>
+                        <li class="list-group-item">O level deve estar disponível nos servidores oficiais do jogo (excluindo private servers)</li>
+                        <li class="list-group-item">Levels não classificáveis:
+                            <ul>
+                                <li>Plataforma</li>
+                                <li>Layouts ou levels sem decoração relevante</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
             </div>
         </div>
     </div>

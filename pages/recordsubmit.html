@@ -19,13 +19,8 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="text-center" style="margin-bottom: 30px; margin-top: 30px;">
-                    <h1>Envio de records</h1>
-                    <p>Regras:</p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Vídeo obrigatório para qualquer level da lista</li>
-                        <li class="list-group-item">Clicks obrigatórios para levels do top 20 ou abaixo</li>
-                        <li class="list-group-item">RAW Footage obrigatória para levels do top 10 ou abaixo</li>
-                      </ul>
+                    <h1 style="margin-bottom: 1rem;">Envio de records</h1>
+                    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalRules">Regras</button>
                 </div>
                 <form action="https://docs.google.com/forms/d/e/1FAIpQLSdznu2KnlWwS4hxyDoFNor-euzIhLIeOCFzqLQfVlzA_6mslg/formResponse" class="g-3">
 
@@ -57,6 +52,28 @@
                         <button type="submit" formtarget="_blank" class="btn btn-primary">Enviar</button>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalRules" tabindex="-1" aria-labelledby="modalRulesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRulesLabel">Regras para records</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Vídeo obrigatório para qualquer level da lista</li>
+                        <li class="list-group-item">Clicks obrigatórios para levels do top 20 ou abaixo</li>
+                        <li class="list-group-item">RAW Footage obrigatória para levels do top 10 ou abaixo</li>
+                        <li class="list-group-item">Levels 2P precisam ser passados sozinho e ter handcam no vídeo</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
             </div>
         </div>
     </div>
