@@ -1,3 +1,5 @@
+import { mainListMaxPosition } from "./script.js";
+
 document.addEventListener('DOMContentLoaded', () => {
     let params = new URLSearchParams(window.location.search);
     let levelId = params.get('id');
@@ -104,9 +106,9 @@ function LoadProgress(data) {
     const scoreCompletionDiv = document.getElementById("score-completion-div");
     const scoreListpctDiv = document.getElementById("score-listpct-div");
     const tableBody = document.getElementById('table-body');
-    let listpct;
+    let listpct = 100;
 
-    if (data.position_lvl <= 100) {
+    if (data.position_lvl <= mainListMaxPosition) {
         scoreCompletion.textContent = getScore(data.position_lvl).toFixed(2);
         if (data.listpct_lvl) {
             scoreListpctTitle.textContent = `Pontos em Ranking (${data.listpct_lvl}%)`;
@@ -114,7 +116,6 @@ function LoadProgress(data) {
             listpct = data.listpct_lvl;
         } else {
             scoreListpctDiv.style.display = 'none';
-            listpct = 100;
         }
     } else {
         scoreCompletionDiv.style.display = 'none';

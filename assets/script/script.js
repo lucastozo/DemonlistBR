@@ -1,4 +1,4 @@
-const mainListMaxPosition = 100;
+export const mainListMaxPosition = 100;
 let legacyListHasLevels = false;
 
 fetch('/data/leveldata.json')
