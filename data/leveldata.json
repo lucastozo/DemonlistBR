@@ -1,5 +1,5 @@
 {
-  "GeradoEm": "18/2/2024 19:17:59",
+  "GeradoEm": "23/2/2024 13:18:18",
   "TipoData": "level",
   "Data": [
     {
@@ -31,6 +31,15 @@
     },
     {
       "position_lvl": 4,
+      "id_lvl": "64100176",
+      "name_lvl": "Tenkai",
+      "creator_lvl": "HidekiX",
+      "verifier_lvl": "Motor8",
+      "video_lvl": "https://youtu.be/AM2KHSZkjcc",
+      "listpct_lvl": 68
+    },
+    {
+      "position_lvl": 5,
       "id_lvl": "54953085",
       "name_lvl": "Thinking Space",
       "creator_lvl": "HidekiX",
@@ -40,22 +49,13 @@
       "listpct_lvl": 76
     },
     {
-      "position_lvl": 5,
+      "position_lvl": 6,
       "id_lvl": "15579416",
       "name_lvl": "unasse",
       "creator_lvl": "pirocona",
       "verifier_lvl": "RalucaGranola",
       "video_lvl": "https://youtu.be/UhC4IpC03U0",
       "listpct_lvl": 82
-    },
-    {
-      "position_lvl": 6,
-      "id_lvl": "64100176",
-      "name_lvl": "Tenkai",
-      "creator_lvl": "HidekiX",
-      "verifier_lvl": "Motor8",
-      "video_lvl": "https://youtu.be/AM2KHSZkjcc",
-      "listpct_lvl": 68
     },
     {
       "position_lvl": 7,
@@ -140,24 +140,6 @@
     },
     {
       "position_lvl": 16,
-      "id_lvl": "48091316",
-      "name_lvl": "Elusions",
-      "creator_lvl": "Cloud76",
-      "verifier_lvl": "Enzeux",
-      "video_lvl": "https://youtu.be/VfyIl85Kh-g",
-      "listpct_lvl": 57
-    },
-    {
-      "position_lvl": 17,
-      "id_lvl": "58417850",
-      "name_lvl": "Dolos",
-      "creator_lvl": "Enzeux",
-      "verifier_lvl": "Enzeux",
-      "video_lvl": "https://youtu.be/velFCMli60A",
-      "listpct_lvl": 51
-    },
-    {
-      "position_lvl": 18,
       "id_lvl": "99604264",
       "name_lvl": "ABOROTERETA",
       "creator_lvl": "RalucaGranola",
@@ -166,22 +148,40 @@
       "listpct_lvl": 54
     },
     {
-      "position_lvl": 19,
-      "id_lvl": "96290402",
-      "name_lvl": "Ultra Deadlocked",
-      "creator_lvl": "vit12",
-      "verifier_lvl": "Daniel TMOG",
-      "video_lvl": "https://www.youtube.com/watch?v=60NfroF9920",
-      "listpct_lvl": 55
+      "position_lvl": 17,
+      "id_lvl": "48091316",
+      "name_lvl": "Elusions",
+      "creator_lvl": "Cloud76",
+      "verifier_lvl": "Enzeux",
+      "video_lvl": "https://youtu.be/VfyIl85Kh-g",
+      "listpct_lvl": 57
     },
     {
-      "position_lvl": 20,
+      "position_lvl": 18,
+      "id_lvl": "58417850",
+      "name_lvl": "Dolos",
+      "creator_lvl": "Enzeux",
+      "verifier_lvl": "Enzeux",
+      "video_lvl": "https://youtu.be/velFCMli60A",
+      "listpct_lvl": 51
+    },
+    {
+      "position_lvl": 19,
       "id_lvl": "79660012",
       "name_lvl": "Purple Light ",
       "creator_lvl": "fellipe123446f",
       "verifier_lvl": "RalucaGranola",
       "video_lvl": "https://www.youtube.com/watch?v=n1G8E0PegP4",
       "listpct_lvl": 45
+    },
+    {
+      "position_lvl": 20,
+      "id_lvl": "96290402",
+      "name_lvl": "Ultra Deadlocked",
+      "creator_lvl": "vit12",
+      "verifier_lvl": "Daniel TMOG",
+      "video_lvl": "https://www.youtube.com/watch?v=60NfroF9920",
+      "listpct_lvl": 55
     },
     {
       "position_lvl": 21,
@@ -352,6 +352,14 @@
     },
     {
       "position_lvl": 41,
+      "id_lvl": "97091006",
+      "name_lvl": "Doideira",
+      "creator_lvl": "RalucaGranola",
+      "verifier_lvl": "RalucaGranola",
+      "video_lvl": "https://youtu.be/h1X5jKJ14_E"
+    },
+    {
+      "position_lvl": 42,
       "id_lvl": "66477646",
       "name_lvl": "Black Tourmaline",
       "creator_lvl": "OverDCE",
@@ -359,7 +367,7 @@
       "video_lvl": "https://youtu.be/lKTeVum3xjw"
     },
     {
-      "position_lvl": 42,
+      "position_lvl": 43,
       "id_lvl": "55489425",
       "name_lvl": "Intention",
       "creator_lvl": "yuuchouze",
@@ -368,7 +376,15 @@
       "publisher_lvl": "akaanee"
     },
     {
-      "position_lvl": 43,
+      "position_lvl": 44,
+      "id_lvl": "89819173",
+      "name_lvl": "Underwater Caves",
+      "creator_lvl": "rafabirds",
+      "verifier_lvl": "RalucaGranola",
+      "video_lvl": "https://youtu.be/DwvCjaSpknI"
+    },
+    {
+      "position_lvl": 45,
       "id_lvl": "90451473",
       "name_lvl": "CHALLUNGA FINALE",
       "creator_lvl": "rafabirds",
@@ -376,15 +392,7 @@
       "video_lvl": "https://youtu.be/fFiIamH3Qxs"
     },
     {
-      "position_lvl": 44,
-      "id_lvl": "97091006",
-      "name_lvl": "Doideira",
-      "creator_lvl": "RalucaGranola",
-      "verifier_lvl": "RalucaGranola",
-      "video_lvl": "https://youtu.be/h1X5jKJ14_E"
-    },
-    {
-      "position_lvl": 45,
+      "position_lvl": 46,
       "id_lvl": "100928011",
       "name_lvl": "Darkness Blood X",
       "creator_lvl": "robsonedu",
@@ -393,21 +401,13 @@
       "publisher_lvl": "RalucaGranola"
     },
     {
-      "position_lvl": 46,
+      "position_lvl": 47,
       "id_lvl": "92837602",
       "name_lvl": "Tio Desconhecido XVI",
       "creator_lvl": "HankAlemao",
       "verifier_lvl": "RalucaGranola",
       "video_lvl": "https://www.youtube.com/watch?v=6Z_E3ocoPfs",
       "publisher_lvl": "RalucaGranola"
-    },
-    {
-      "position_lvl": 47,
-      "id_lvl": "89819173",
-      "name_lvl": "Underwater Caves",
-      "creator_lvl": "rafabirds",
-      "verifier_lvl": "RalucaGranola",
-      "video_lvl": "https://youtu.be/DwvCjaSpknI"
     },
     {
       "position_lvl": 48,
