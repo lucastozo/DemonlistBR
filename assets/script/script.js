@@ -28,10 +28,18 @@ fetch('/data/leveldata.json')
         levelLink.href = `/pages/leveldetails.html?id=${level.id_lvl}`;
         levelLink.id = 'levelLink';
         const levelName = document.createElement('h2');
-        levelName.textContent = `${level.position_lvl}. ${level.name_lvl}`;
+
+        // adicionar posição do level no texto apenas se não for da legacylist
+        if(level.position_lvl <= mainListMaxPosition) {
+            levelName.textContent = `${level.position_lvl}. ${level.name_lvl}`;
+        } else {
+            levelName.textContent = level.name_lvl;
+        }
         levelName.id = 'levelName';
         levelLink.appendChild(levelName);
+
         textDiv.appendChild(levelLink);
+        
         const creatorParagraph = document.createElement('p');
         creatorParagraph.textContent = `Criador: ${level.creator_lvl}`;
         creatorParagraph.id = 'creatorParagraph';
