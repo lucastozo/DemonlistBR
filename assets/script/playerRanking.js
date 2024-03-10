@@ -1,3 +1,5 @@
+import { mainListMaxPosition } from "./script.js";
+
 async function loadIgnoredNames() {
     const response = await fetch('/data/ignoredNames.txt');
     const data = await response.text();
@@ -23,8 +25,18 @@ function processLevelData()
         levelData.forEach(level => {
             let verifier = level.verifier_lvl.toLowerCase();
             originalNames[verifier] = level.verifier_lvl;
-            if (!loadIgnoredNames.includes(verifier)) {
-                let score = getScore(level.position_lvl);
+            if (!loadIgnoredNames.includes(verifier)) 
+            {
+                let score = 0;
+                let levelIsLegacy = false;
+                if(level.position_lvl > mainListMaxPosition)
+                {
+                    levelIsLegacy = true;
+                }
+                if(!levelIsLegacy)
+                {
+                    score = getScore(level.position_lvl);
+                }
                 if (verifier in scores) {
                     scores[verifier] += score;
                 } else {
@@ -42,24 +54,22 @@ function processLevelData()
             originalNames[playerName] = player.player_name;
             if (!loadIgnoredNames.includes(playerName)) {
                 let level = levelDataLowercase.find(l => l.name_lvl === player.level_name.toLowerCase());
-                if (level) {
-                    if (player.progress >= 100) {
-                        let score = getScore(level.position_lvl);
-                        if (playerName in scores) {
-                            scores[playerName] += score;
-                        } else {
-                            scores[playerName] = score;
-                        }
-                    } // senão se progresso >= list% adicionar score progress 
-                    else if(player.progress >= levelData.find(l => l.name_lvl === player.level_name).listpct_lvl) {
-                        let score = getScoreProgress(level.position_lvl, player.progress);
-                        if (playerName in scores) {
-                            scores[playerName] += score;
-                        } else {
-                            scores[playerName] = score;
+                if (level) 
+                {
+                    let score = 0;
+                    if(level.position_lvl <= mainListMaxPosition)
+                    {
+                        if (player.progress >= 100) {
+                            score = getScore(level.position_lvl);
+                        } else if (player.progress >= levelData.find(l => l.name_lvl === player.level_name).listpct_lvl) {
+                            score = getScoreProgress(level.position_lvl, player.progress);
                         }
                     }
-
+                    if (playerName in scores) {
+                        scores[playerName] += score;
+                    } else {
+                        scores[playerName] = score;
+                    }
                 }
             }
         });
