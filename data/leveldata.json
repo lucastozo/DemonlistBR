@@ -1,5 +1,5 @@
 {
-  "GeradoEm": "18/3/2024 21:22:58",
+  "GeradoEm": "19/3/2024 13:45:38",
   "TipoData": "level",
   "Data": [
     {
@@ -271,70 +271,6 @@
     },
     {
       "position_lvl": 31,
-      "id_lvl": "96880081",
-      "name_lvl": "Barrel Fortress",
-      "creator_lvl": "vit12",
-      "verifier_lvl": "LunarSpark",
-      "video_lvl": "https://www.youtube.com/watch?v=-tL7QFQO7TU"
-    },
-    {
-      "position_lvl": 32,
-      "id_lvl": "65045892",
-      "name_lvl": "Mind Blowing",
-      "creator_lvl": "Yuuchouze",
-      "verifier_lvl": "Luqualizer",
-      "video_lvl": "https://youtu.be/TQ5kMyP2Ha0"
-    },
-    {
-      "position_lvl": 33,
-      "id_lvl": "93939369",
-      "name_lvl": "The Ultimate Demon",
-      "creator_lvl": "vit12",
-      "verifier_lvl": "LordVaderCraft",
-      "video_lvl": "https://youtu.be/-HYXf6jRPR8"
-    },
-    {
-      "position_lvl": 34,
-      "id_lvl": "87524727",
-      "name_lvl": "birds difficult 3",
-      "creator_lvl": "rafabirds",
-      "verifier_lvl": "RalucaGranola",
-      "video_lvl": "https://youtu.be/Wc0pWiGqI9E"
-    },
-    {
-      "position_lvl": 35,
-      "id_lvl": "50076317",
-      "name_lvl": "Blood Attack",
-      "creator_lvl": "LChaseR",
-      "verifier_lvl": "akaanee",
-      "video_lvl": "https://youtu.be/D-dBM5O52Ks"
-    },
-    {
-      "position_lvl": 36,
-      "id_lvl": "62290029",
-      "name_lvl": "Extermination Nation",
-      "creator_lvl": "Yuuchouze",
-      "verifier_lvl": "fakeblast",
-      "video_lvl": "https://youtu.be/Q2Syva4rS-s"
-    },
-    {
-      "position_lvl": 37,
-      "id_lvl": "97091006",
-      "name_lvl": "Doideira",
-      "creator_lvl": "RalucaGranola",
-      "verifier_lvl": "RalucaGranola",
-      "video_lvl": "https://youtu.be/h1X5jKJ14_E"
-    },
-    {
-      "position_lvl": 38,
-      "id_lvl": "63534667",
-      "name_lvl": "The Next Horizon",
-      "creator_lvl": "Onnerus1",
-      "verifier_lvl": "RalucaGranola",
-      "video_lvl": "https://youtu.be/LFbceikN0Ws"
-    },
-    {
-      "position_lvl": 39,
       "id_lvl": "92424054",
       "name_lvl": "narcissist",
       "creator_lvl": "Guill",
@@ -342,16 +278,71 @@
       "video_lvl": "https://youtu.be/IHOJ8DvKchA"
     },
     {
-      "position_lvl": 40,
-      "id_lvl": "95918210",
-      "name_lvl": "Fragile",
-      "creator_lvl": "maxfs",
-      "verifier_lvl": "Realiosteelio",
-      "video_lvl": "https://youtu.be/TuKmda_jwx4",
-      "publisher_lvl": "pointercrate19"
+      "position_lvl": 32,
+      "id_lvl": "96880081",
+      "name_lvl": "Barrel Fortress",
+      "creator_lvl": "vit12",
+      "verifier_lvl": "LunarSpark",
+      "video_lvl": "https://www.youtube.com/watch?v=-tL7QFQO7TU"
     },
     {
-      "position_lvl": 41,
+      "position_lvl": 33,
+      "id_lvl": "65045892",
+      "name_lvl": "Mind Blowing",
+      "creator_lvl": "Yuuchouze",
+      "verifier_lvl": "Luqualizer",
+      "video_lvl": "https://youtu.be/TQ5kMyP2Ha0"
+    },
+    {
+      "position_lvl": 34,
+      "id_lvl": "93939369",
+      "name_lvl": "The Ultimate Demon",
+      "creator_lvl": "vit12",
+      "verifier_lvl": "LordVaderCraft",
+      "video_lvl": "https://youtu.be/-HYXf6jRPR8"
+    },
+    {
+      "position_lvl": 35,
+      "id_lvl": "87524727",
+      "name_lvl": "birds difficult 3",
+      "creator_lvl": "rafabirds",
+      "verifier_lvl": "RalucaGranola",
+      "video_lvl": "https://youtu.be/Wc0pWiGqI9E"
+    },
+    {
+      "position_lvl": 36,
+      "id_lvl": "50076317",
+      "name_lvl": "Blood Attack",
+      "creator_lvl": "LChaseR",
+      "verifier_lvl": "akaanee",
+      "video_lvl": "https://youtu.be/D-dBM5O52Ks"
+    },
+    {
+      "position_lvl": 37,
+      "id_lvl": "62290029",
+      "name_lvl": "Extermination Nation",
+      "creator_lvl": "Yuuchouze",
+      "verifier_lvl": "fakeblast",
+      "video_lvl": "https://youtu.be/Q2Syva4rS-s"
+    },
+    {
+      "position_lvl": 38,
+      "id_lvl": "97091006",
+      "name_lvl": "Doideira",
+      "creator_lvl": "RalucaGranola",
+      "verifier_lvl": "RalucaGranola",
+      "video_lvl": "https://youtu.be/h1X5jKJ14_E"
+    },
+    {
+      "position_lvl": 39,
+      "id_lvl": "63534667",
+      "name_lvl": "The Next Horizon",
+      "creator_lvl": "Onnerus1",
+      "verifier_lvl": "RalucaGranola",
+      "video_lvl": "https://youtu.be/LFbceikN0Ws"
+    },
+    {
+      "position_lvl": 40,
       "id_lvl": "88854750",
       "name_lvl": "UNDERGROUND",
       "creator_lvl": "HugoLA",
@@ -359,12 +350,21 @@
       "video_lvl": "https://youtu.be/e0L2gkVmWy8"
     },
     {
-      "position_lvl": 42,
+      "position_lvl": 41,
       "id_lvl": "80966929",
       "name_lvl": "Eraser",
       "creator_lvl": "LChaseR",
       "verifier_lvl": "LChaseR",
       "video_lvl": "https://youtu.be/kJmqWS9iVyA"
+    },
+    {
+      "position_lvl": 42,
+      "id_lvl": "95918210",
+      "name_lvl": "Fragile",
+      "creator_lvl": "maxfs",
+      "verifier_lvl": "Realiosteelio",
+      "video_lvl": "https://youtu.be/TuKmda_jwx4",
+      "publisher_lvl": "pointercrate19"
     },
     {
       "position_lvl": 43,
