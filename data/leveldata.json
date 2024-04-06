@@ -1,5 +1,5 @@
 {
-  "GeradoEm": "29/3/2024 14:44:24",
+  "GeradoEm": "6/4/2024 20:19:18",
   "TipoData": "level",
   "Data": [
     {
@@ -203,6 +203,14 @@
     },
     {
       "position_lvl": 23,
+      "id_lvl": "64073938",
+      "name_lvl": "The Zodiac",
+      "creator_lvl": "RalucaGranola",
+      "verifier_lvl": "RalucaGranola",
+      "video_lvl": "https://youtu.be/gRsd4yiL_8c"
+    },
+    {
+      "position_lvl": 24,
       "id_lvl": "79660012",
       "name_lvl": "Purple Light ",
       "creator_lvl": "fellipe123446f",
@@ -211,7 +219,7 @@
       "listpct_lvl": 45
     },
     {
-      "position_lvl": 24,
+      "position_lvl": 25,
       "id_lvl": "96290402",
       "name_lvl": "Ultra Deadlocked",
       "creator_lvl": "vit12",
@@ -220,17 +228,16 @@
       "listpct_lvl": 55
     },
     {
-      "position_lvl": 25,
+      "position_lvl": 26,
       "id_lvl": "63524957",
       "name_lvl": "The Green",
       "creator_lvl": "yuuchouze",
       "verifier_lvl": "DibiiziCookie",
       "video_lvl": "https://youtu.be/ugZkRmwLGcw",
-      "publisher_lvl": "insist",
-      "listpct_lvl": 60
+      "publisher_lvl": "insist"
     },
     {
-      "position_lvl": 26,
+      "position_lvl": 27,
       "id_lvl": "95327529",
       "name_lvl": "Collapse",
       "creator_lvl": "fwefwe",
@@ -238,7 +245,7 @@
       "video_lvl": "https://youtu.be/ou94A4ErTSE"
     },
     {
-      "position_lvl": 27,
+      "position_lvl": 28,
       "id_lvl": "85288009",
       "name_lvl": "Dorabae choose way5",
       "creator_lvl": "fwefwe",
@@ -246,20 +253,12 @@
       "video_lvl": "https://youtu.be/d5r9kf2swH8"
     },
     {
-      "position_lvl": 28,
+      "position_lvl": 29,
       "id_lvl": "80814750",
       "name_lvl": "Convy",
       "creator_lvl": "rafabirds",
       "verifier_lvl": "L3on14az",
       "video_lvl": "https://youtu.be/mXzYW4rI0Pc"
-    },
-    {
-      "position_lvl": 29,
-      "id_lvl": "64073938",
-      "name_lvl": "The Zodiac",
-      "creator_lvl": "RalucaGranola",
-      "verifier_lvl": "RalucaGranola",
-      "video_lvl": "https://youtu.be/gRsd4yiL_8c"
     },
     {
       "position_lvl": 30,
