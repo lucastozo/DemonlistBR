@@ -1,42 +1,73 @@
-Promise.all
-([
-    fetch('data/leveldata.json').then(response => response.json()),
-    fetch('data/playerdata.json').then(response => response.json())
-]).then(([levelData, playerData]) => {
+export const mainListMaxPosition = 100;
+let legacyListHasLevels = false;
+
+fetch('/data/leveldata.json')
+.then(response => response.json())
+.then(levelData => {
     levelData.Data.sort((a, b) => a.position_lvl - b.position_lvl);
 
-    var contentDiv = document.getElementById('ListContent');
-    for (var i = 0; i < levelData.Data.length; i++) {
-        var section = document.createElement('section');
+    const contentDiv = document.getElementById('ListContent');
+    levelData.Data.forEach(level => {
+        const section = document.createElement('section');
         section.className = 'ListSection';
 
-        var videoDiv = document.createElement('div');
+        const videoDiv = document.createElement('div');
         videoDiv.className = 'video';
-        var videoId = ExtractVideoId(levelData.Data[i].video_lvl);
-        var thumbnailUrl = 'https://img.youtube.com/vi/' + videoId + '/0.jpg';
-        var videoUrl = 'https://youtu.be/' + videoId;
-        videoDiv.innerHTML = '<a href="' + videoUrl + '" target="_blank"><img src="' + thumbnailUrl + '"style="width:320px; height:180px; object-fit:cover;"></a>';
+        const videoId = ExtractVideoId(level.video_lvl);
+        const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/0.jpg`;
+        const videoUrl = `https://youtu.be/${videoId}`;
+        const thumbWidth = 320/1.3; const thumbHeight = 180/1.3;
+        videoDiv.innerHTML = `<a href="${videoUrl}" target="_blank"><img src="${thumbnailUrl}" style="width:${thumbWidth}px; height:${thumbHeight}px; object-fit:cover;" alt="Video Thumbnail"></a>`;
         section.appendChild(videoDiv);
 
-        //levelDetailPage = 'pages/levelDetails.html'
-        var textDiv = document.createElement('div');
+        const textDiv = document.createElement('div');
         textDiv.className = 'text';
-        textDiv.innerHTML = '<a href="pages/levelDetails.html?id=' + levelData.Data[i].id_lvl + '"><h2>' + levelData.Data[i].position_lvl + '. ' + levelData.Data[i].name_lvl + '</h2></a>' +
-                            '<p>Criador: ' + levelData.Data[i].creator_lvl + '</p>' +
-                            '<p>Verificador: ' + levelData.Data[i].verifier_lvl + '</p>';
-        if (levelData.Data[i].publisher_lvl) 
-        {
-            textDiv.innerHTML += '<p class="fw-lighter">Publicado por: ' + levelData.Data[i].publisher_lvl + '</p>';
-        }
+        textDiv.id = 'textDiv';
 
-        section.appendChild(textDiv);
-        contentDiv.appendChild(section);
+        const levelLink = document.createElement('a');
+        levelLink.href = `/pages/leveldetails.html?id=${level.id_lvl}`;
+        levelLink.id = 'levelLink';
+        const levelName = document.createElement('h2');
+
+        // adicionar posição do level no texto apenas se não for da legacylist
+        if(level.position_lvl <= mainListMaxPosition) {
+            levelName.textContent = `${level.position_lvl}. ${level.name_lvl}`;
+        } else {
+            levelName.textContent = level.name_lvl;
+        }
+        levelName.id = 'levelName';
+        levelLink.appendChild(levelName);
+
+        textDiv.appendChild(levelLink);
+        
+        const creatorParagraph = document.createElement('p');
+        creatorParagraph.textContent = `Criador: ${level.creator_lvl}`;
+        creatorParagraph.id = 'creatorParagraph';
+        textDiv.appendChild(creatorParagraph);
+
+        const path = window.location.pathname;
+        const page = path.split("/").pop();
+        if(page === "legacylist.html") {
+            if(level.position_lvl > mainListMaxPosition){
+                section.appendChild(textDiv);
+                contentDiv.appendChild(section);
+                legacyListHasLevels = true;
+            }
+        } else if(level.position_lvl <= mainListMaxPosition){
+            section.appendChild(textDiv);
+            contentDiv.appendChild(section);
+        }
+    });
+    if(!legacyListHasLevels){
+        const errorSection = document.getElementById('error-id-section');
+        errorSection.style.display = 'block';
     }
+
 });
 
 function ExtractVideoId(videoUrl){
     var videoId;
-    if(videoUrl == null || videoUrl == undefined || videoUrl == ''){
+    if(videoUrl == null || videoUrl === ''){
         return null;
     }
     if(videoUrl.includes('https://www.youtube.com/watch?v=')){
@@ -51,25 +82,20 @@ function ExtractVideoId(videoUrl){
     return videoId;
 }
 
-//back to top button
-document.addEventListener('DOMContentLoaded', (event) => {
-    let backToTopButton = document.querySelector("#btn-back-to-top");
+// Botão voltar ao topo
+document.addEventListener('DOMContentLoaded', () => {
+    const backToTopButton = document.querySelector("#btn-back-to-top");
 
-    window.onscroll = function(){
-        scrollFunction();
-    };
-
-    function scrollFunction(){
-        if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+    window.onscroll = () => {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             backToTopButton.style.display = "block";
         } else {
             backToTopButton.style.display = "none";
         }
-    }
+    };
 
-    backToTopButton.addEventListener("click", backToTop);
-    function backToTop(){
+    backToTopButton.addEventListener("click", () => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
-    }
+    });
 });

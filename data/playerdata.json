@@ -1,36 +1,18 @@
 {
-  "GeradoEm": "26/1/2024 13:30:41",
+  "GeradoEm": "15/2/2024 1:31:52",
   "TipoData": "record",
   "Data": [
-    {
-      "level_name": "Ascension",
-      "player_name": "Jobalho",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=2G48PqxFEH0"
-    },
-    {
-      "level_name": "Blood Attack",
-      "player_name": "Jobalho",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=P1gWVUCTLEg"
-    },
-    {
-      "level_name": "Extermination Nation",
-      "player_name": "Jobalho",
-      "progress": 100,
-      "video": "https://youtu.be/izJBNXoQrJQ"
-    },
-    {
-      "level_name": "Elusions",
-      "player_name": "Jobalho",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=iaeqdTpaYnY"
-    },
     {
       "level_name": "arcturus",
       "player_name": "DibiiziCookie",
       "progress": 100,
       "video": "https://youtu.be/AqKBny7eX5Q"
+    },
+    {
+      "level_name": "Ascension",
+      "player_name": "RalucaGranola",
+      "progress": 100,
+      "video": "https://www.youtube.com/watch?v=2G48PqxFEH0"
     },
     {
       "level_name": "Ascension",
@@ -49,6 +31,12 @@
       "player_name": "DibiiziCookie",
       "progress": 100,
       "video": "https://youtu.be/m4P-tlpIv6s"
+    },
+    {
+      "level_name": "Blood Attack",
+      "player_name": "RalucaGranola",
+      "progress": 100,
+      "video": "https://www.youtube.com/watch?v=P1gWVUCTLEg"
     },
     {
       "level_name": "CHALLUNGA FINALE",
@@ -73,6 +61,12 @@
       "player_name": "ultracauahd",
       "progress": 100,
       "video": "https://www.youtube.com/watch?v=wFUMv-OkRYw"
+    },
+    {
+      "level_name": "Collapse",
+      "player_name": "DibiiziCookie",
+      "progress": 100,
+      "video": "https://youtu.be/UGnvXgJx3Zk"
     },
     {
       "level_name": "Convy",
@@ -207,10 +201,22 @@
       "video": "https://www.youtube.com/watch?v=n4JMgWEgwWU"
     },
     {
+      "level_name": "Elusions",
+      "player_name": "RalucaGranola",
+      "progress": 100,
+      "video": "https://www.youtube.com/watch?v=iaeqdTpaYnY"
+    },
+    {
       "level_name": "Eraser",
       "player_name": "L3on14az",
       "progress": 100,
       "video": "https://www.youtube.com/watch?v=NBYNAZfi0SI"
+    },
+    {
+      "level_name": "Extermination Nation",
+      "player_name": "RalucaGranola",
+      "progress": 100,
+      "video": "https://youtu.be/izJBNXoQrJQ"
     },
     {
       "level_name": "Factory Realm X",
@@ -238,9 +244,15 @@
     },
     {
       "level_name": "Glacial Edge",
-      "player_name": "yuuchouze",
+      "player_name": "Yuuchouze",
       "progress": 100,
       "video": "https://www.youtube.com/watch?v=zI7CKOtUaqY"
+    },
+    {
+      "level_name": "Gusta Cyclone",
+      "player_name": "Gabryelsz",
+      "progress": 100,
+      "video": "https://youtu.be/9pB6l9veiWo"
     },
     {
       "level_name": "HellGate",
@@ -292,7 +304,7 @@
     },
     {
       "level_name": "Narcissist",
-      "player_name": "Jobalho",
+      "player_name": "RalucaGranola",
       "progress": 100,
       "video": "https://www.youtube.com/watch?v=BwcNQg6_irM "
     },
@@ -351,6 +363,18 @@
       "video": "https://youtu.be/rBzwfEy6Y9Q?si=3u6Dd9s6UyE_Y7Cc "
     },
     {
+      "level_name": "Nuclear Flash",
+      "player_name": "Yuuchouze",
+      "progress": 100,
+      "video": "https://youtu.be/4_iniWCXqF0"
+    },
+    {
+      "level_name": "Power Surge",
+      "player_name": "Gabryelsz",
+      "progress": 100,
+      "video": "https://youtu.be/supjNWvitG8"
+    },
+    {
       "level_name": "Rebirth II",
       "player_name": "Darkbbt",
       "progress": 100,
@@ -364,7 +388,7 @@
     },
     {
       "level_name": "Rebirth II",
-      "player_name": "yuuchouze",
+      "player_name": "Yuuchouze",
       "progress": 100,
       "video": "https://youtu.be/KUDXQ-YrJCs"
     },
@@ -436,9 +460,15 @@
     },
     {
       "level_name": "Thinking Space",
-      "player_name": "Jobalho",
+      "player_name": "RalucaGranola",
       "progress": 76,
       "video": "https://youtu.be/VTo5f6iJspo"
+    },
+    {
+      "level_name": "tipo B",
+      "player_name": "Yuuchouze",
+      "progress": 100,
+      "video": "https://youtu.be/mxThhliRDj4"
     },
     {
       "level_name": "Underground",

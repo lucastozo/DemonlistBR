@@ -11,7 +11,7 @@
     <link href="/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <script src="/assets/script/playerRanking.js"></script>
+    <script type="module" src="/assets/script/playerRanking.js"></script>
     <script src="/assets/script/getScore.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
@@ -66,24 +66,40 @@
                 <div class="modal-body text-center">
                     <h2>Sobre o Ranking</h2>
                     <p>O ranking é baseado na pontuação dos jogadores, que é calculada da seguinte forma:</p>
-                    <img src="/assets/img/scoreFormula.svg" style="width: 20%; margin-top: 20px; margin-bottom: 5px;"></img>
+                    <img id="score-formula-img" src="/assets/img/scoreFormula.svg" alt="Score Formula Image">
                     <p class="fw-light">onde
                         <math xmlns="http://www.w3.org/1998/Math/MathML">
                             <mi>P</mi>
-                            <mo>i</mo>
                         </math>
-                        é a posição do level.</p>
-                    <p class="fw-light">Ou seja, a pontuação de um level é dada por</p>
+                        são os pontos totais,
                         <math xmlns="http://www.w3.org/1998/Math/MathML">
-                            <mtext>Pontos do level = </mtext>
+                            <mi>X</mi>
+                        </math>
+                        é a posição do level e
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>L</mi>
+                        </math>
+                        é o conjunto de levels que o jogador completou.
+                    </p>
+                    <div>
+                        <iframe id="desmos-iframe" src="https://www.desmos.com/calculator/skm2djaush?embed" width="75%" height="30%"></iframe>
+                    </div>
+                    <p class="fw-light">Ou seja, a pontuação de um level é dada por
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
                             <mfrac>
-                              <mn>100</mn>
-                              <msqrt>
-                                <mi>P</mi>
-                                <mo>i</mo>
-                              </msqrt>
+                                <mn>200</mn>
+                                <mrow>
+                                    <msup>
+                                        <mi>e</mi>
+                                        <mfrac>
+                                            <mi>X</mi>
+                                            <mn>20</mn>
+                                        </mfrac>
+                                    </msup>
+                                </mrow>
                             </mfrac>
                         </math>
+                    </p>
                     <p class="fw-light">A pontuação de um progresso é dada por
                         <math xmlns="http://www.w3.org/1998/Math/MathML">
                             <mtext>Pontos do level</mtext>
@@ -93,9 +109,10 @@
                                 <mn>100</mn>
                             </mfrac>
                           </math>
-                        , onde p é o progresso feito.</p>                            
+                        , onde p é o progresso feito.</p>        
+                    <hr>                    
                     <p>Os jogadores são ordenados por pontuação, e em caso de empate, por ordem alfabética.</p>
-                    <p>Vale lembrar que o ranking não necessariamente reflete a habilidade dos jogadores, mas sim a quantidade de levels que eles completaram.</p>
+                    <p>Vale lembrar que o ranking não necessariamente reflete a habilidade dos jogadores.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>

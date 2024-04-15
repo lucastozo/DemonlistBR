@@ -11,7 +11,7 @@
     <link href="/assets/css/levelDetails.css" rel="stylesheet">
 </head>
 <body>
-    <script src="/assets/script/levelDetails.js"></script>
+    <script type="module" src="/assets/script/levelDetails.js"></script>
     <script src="/assets/script/getScore.js"></script>
 
     <script src="/assets/script/addNavbar.js"></script>
@@ -42,9 +42,9 @@
                             <p class="fw-bold">Dificuldade</p>
                             <p id="level-difficulty">difficulty_level</p>
                         </div>
-                        <div id="level-demonlist-div" class="col text-center" style="display: none;">
-                            <p class="fw-bold">Demonlist #</p>
-                            <p id="level-demonlist">demonlist_level</p>
+                        <div id="level-pointercrate-div" class="col text-center" style="display: none;">
+                            <p class="fw-bold">Pointercrate #</p>
+                            <p id="level-pointercrate">pointercrate_level</p>
                         </div>
                         <div class="col text-center">
                             <p class="fw-bold">Música</p>
@@ -56,12 +56,12 @@
                     <hr id="horizontal-line">
                     <div class="container">
                         <h2 class="text-center">Progressos</h2>
-                        <div class="row justify-content-center">
-                            <div class="col-3 p-3 mb-2 text-center">
+                        <div id="score-div" class="row justify-content-center">
+                            <div id="score-completion-div" class="col-3 p-3 mb-2 text-center">
                                 <p class="fw-bold">Pontos em Ranking (100%)</p>
                                 <p id="score-completion">score-completion</p>
                             </div>
-                            <div class="col-3 p-3 mb-2 text-center">
+                            <div id="score-listpct-div" class="col-3 p-3 mb-2 text-center">
                                 <p id="score-listpct-title" class="fw-bold">Pontos em Ranking (x%)</p>
                                 <p id="score-listpct">score-listpct</p>
                             </div>
@@ -81,6 +81,16 @@
                 </section>
             </div>
         </div>
+    </section>
+
+    <section id="error-id-section" class="text-center" style="display: none;">
+        <!-- https://media1.tenor.com/m/CseB-FToBcoAAAAC/404-error-404.gif -->
+        <!-- https://media1.tenor.com/m/qBbREqnOqtkAAAAC/fatal-error-turn-it-off.gif -->
+        <img id="error-id-img" src="https://media1.tenor.com/m/CseB-FToBcoAAAAC/404-error-404.gif" style="margin: 20px;" alt="Error Image">
+        <h3>ID não encontrado!</h3>
+        <p>A ID que você está procurando não existe na lista.</p>
+        <p class="fw-light fst-italic">você tentou inserir um ID manualmente na URL?</p>
+        <button class="btn btn-secondary" onclick="window.location.href = '/';">Voltar para a página inicial</button>
     </section>
 </body>
 </html>

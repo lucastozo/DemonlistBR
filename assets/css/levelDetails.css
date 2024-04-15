@@ -1,10 +1,24 @@
-#levelDetails
+#levelDetails, #error-id-section
 {
     padding: 50px;
-    margin: 50px;
+    margin: 20px;
     border-radius: 10px;
     border: 1px solid #474747;
     background-color: #212529;
+}
+@media (max-width: 1280px) {
+    #levelDetails
+    {
+        padding: 30px;
+        margin: 10px;
+    }
+}
+@media (max-width: 760px) {
+    #levelDetails
+    {
+        padding: 10px;
+        margin: 0;
+    }
 }
 
 #levelDetails p
@@ -34,4 +48,50 @@
 #level-info
 {
     padding: 30px;
+}
+
+#error-id-img
+{
+    width: 20%;
+    object-fit: cover;
+}
+
+@media (max-width: 550px) {
+    #level-info .row
+    {
+        /* mostrar em coluna */
+        display: block;
+    }
+    #level-info .col
+    {
+        margin-bottom: 15px;
+    }
+    #score-div
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    #score-completion-div
+    {
+        /* remover col-3 e p-3 */
+        width: 100%;
+        padding: 0 !important;
+    }
+    #score-listpct-div
+    {
+        /* remover col-3 e p-3 */
+        width: 100%;
+        padding: 0 !important;
+    }
+    #error-id-section
+    {
+        margin: 0;
+    }
+    #error-id-img
+    {
+        width: 50%;
+    }
 }

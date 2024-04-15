@@ -4,25 +4,30 @@ body
     color: #c1c0cc;
 }
 
+#ListContent
+{
+    width: 80%;
+}
+
 .ListSection 
 {
     background-color: #212529;
     border: 1px solid #474747;
     border-radius: 0.25rem;
-    margin: 0.8rem;
-    padding: 2rem;
-    width: 1200px;
+    margin: 0.6rem;
+    padding: 1rem;
+    max-width: 100%;
     display: flex;
     align-items: center;
 }
 
-.ListSection .video {
-    flex: 1;
+.ListSection .text {
+    flex: 3;
+    margin-left: 40px;
 }
 
-.ListSection .text {
-    flex: 2;
-    margin-left: 20px;
+.ListSection p {
+    margin-bottom: 7px;
 }
 
 .list
@@ -51,24 +56,24 @@ body
 }
 
 .PlayerSection {
-    background-color: #17191b; /* Cor de fundo da seção */
+    background-color: #17191b;
     border: 1px solid #363636;
     max-width: 1200px;
-    border-radius: 5px; /* Bordas arredondadas */
-    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .playerRecord {
-    font-size: 16px; /* Tamanho da fonte */
-    line-height: 1.5; /* Espaçamento entre linhas */
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .playerRecord a {
-    color: #fff; /* Cor do link */
+    color: #fff;
 }
 
 .playerRecord a:hover {
-    color: #008cff; /* Cor do link quando o mouse passa por cima */
+    color: #008cff;
     transition: 0.2s;
 }
 
@@ -95,10 +100,41 @@ body
     margin-bottom: 50px;
 }
 
+#score-formula-img
+{
+    width: 20%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
 #ranking-header
 {
     margin-top: 30px;
     margin-bottom: 50px;
+}
+
+#playerDetails-modal a
+{
+    text-decoration: none;
+    color: #c1c0cc;
+}
+
+#playerDetails-modal a:hover
+{
+    color: #f1f1f1;
+    transition: 0.2s;
+}
+
+#table-container
+{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#table-container table
+{
+    width: 100%;
+    border: 1px solid #474747;
 }
 
 .modal-body p
@@ -113,4 +149,118 @@ body
     right: 20px;
     display: none;
     border-radius: 50%;
+}
+
+#iconDLBR
+{
+    width: 150px;
+    margin-top: 25px;
+}
+
+.credits p
+{
+    margin-bottom: 0;
+}
+
+.btn-custom {
+    width: 200px;
+}
+
+#legacy-header
+{
+    padding: 20px;
+    background-color: #212529;
+}
+
+#legacy-header p
+{
+    margin-bottom: 0;
+}
+
+@media (max-width: 1280px) {
+    #ListContent
+    {
+        width: 100%;
+    }
+    #table-container
+    {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .ListSection {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+    #score-formula-img {
+        width: 30%;
+    }
+}
+
+@media (min-width: 992px)
+{
+    .navbar-expand-lg .navbar-nav .dropdown-menu 
+    {
+        position: absolute;
+        left: -60px;
+    }
+}
+
+@media (max-width: 760px) {
+    #ListContent
+    {
+        width: 100%;
+    }
+    .ListSection {
+        padding: 1rem;
+    }
+    .ListSection .video {
+        display: none;
+    }
+    .ListSection .text {
+        margin-left: 0;
+    }
+    #table-container
+    {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .text h2
+    {
+        font-size: 20px;
+    }
+    .text p
+    {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    #iconDLBR {
+        width: 100px;
+    }
+    .credits {
+        flex-direction: column !important;
+    }
+    .credits-div {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    #about-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #iconDLBR {
+        width: 80px;
+    }
+    .btn-custom {
+        width: 40px;
+    }
+    .btn-text {
+        display: none;
+    }
+    #score-formula-img {
+        width: 50%;
+    }
 }
