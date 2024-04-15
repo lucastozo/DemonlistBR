@@ -30,7 +30,9 @@ async function processScore() {
 
     // Process level data
     levelData.forEach(level => {
+        let creator = level.creator_lvl.toLowerCase();
         let verifier = level.verifier_lvl.toLowerCase();
+        originalNames[creator] = level.creator_lvl;
         originalNames[verifier] = level.verifier_lvl;
 
         // Check if verifier name is not in the ignored list
@@ -40,6 +42,10 @@ async function processScore() {
                 score = getScore(level.position_lvl);
             }
             scores[verifier] = (scores[verifier] || 0) + score;
+        }
+        // Check if creator name is not in the ignored list
+        if (!loadIgnoredNames.includes(creator)) {
+            scores[creator] = (scores[creator] || 0);
         }
         levelMap[level.name_lvl.toLowerCase()] = level;
     });
@@ -207,7 +213,7 @@ function fillPlayerList(players) {
        li.id = `player-${i}`;
        const pos = document.createElement('span');
        pos.id = 'player-pos';
-       pos.textContent = `#${i + 1}`;
+       player[1] > 0 ? pos.textContent = `#${i + 1}` : pos.textContent = '-';
        const name = document.createElement('span');
        name.id = 'player-name';
        name.textContent = player[0];
