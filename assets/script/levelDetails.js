@@ -170,7 +170,7 @@ function HideContentLoading(flag){
 }
 
 function idNotFound(){
-    levelDetails = document.getElementById("levelDetails");
+    const levelDetails = document.getElementById("levelDetails");
     levelDetails.style.display = 'none';
 
     // sortear um número pra decidir qual gif de erro mostrar, por que não?

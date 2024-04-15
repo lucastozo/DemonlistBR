@@ -9,219 +9,242 @@ async function loadIgnoredNames() {
 main();
 async function main() {
     loadIgnoredNames = await loadIgnoredNames();
-    processLevelData();
+    let scores = await processScore();
+    fillPlayerList(scores);
+    updatePlayerCard(scores[0][0]);
 }
 
-function processLevelData()
-{
-    let levelData;
+async function processScore() {
     let scores = {};
     let originalNames = {};
-    
-    fetch('/data/leveldata.json')
-    .then(response => response.json())
-    .then(data => {
-        levelData = data.Data;
-        levelData.forEach(level => {
-            let verifier = level.verifier_lvl.toLowerCase();
-            originalNames[verifier] = level.verifier_lvl;
-            if (!loadIgnoredNames.includes(verifier)) 
-            {
+    let levelMap = {};
+
+    // Fetch data together to reduce network overhead
+    const [levelResponse, playerResponse] = await Promise.all([
+        fetch('/data/leveldata.json'),
+        fetch('/data/playerdata.json')
+    ]);
+
+    const levelData = (await levelResponse.json()).Data;
+    const playerData = (await playerResponse.json()).Data;
+
+    // Process level data
+    levelData.forEach(level => {
+        let creator = level.creator_lvl.toLowerCase();
+        let verifier = level.verifier_lvl.toLowerCase();
+        originalNames[creator] = level.creator_lvl;
+        originalNames[verifier] = level.verifier_lvl;
+
+        // Check if verifier name is not in the ignored list
+        if (!loadIgnoredNames.includes(verifier)) {
+            let score = 0;
+            if (level.position_lvl <= mainListMaxPosition) {
+                score = getScore(level.position_lvl);
+            }
+            scores[verifier] = (scores[verifier] || 0) + score;
+        }
+        // Check if creator name is not in the ignored list
+        if (!loadIgnoredNames.includes(creator)) {
+            scores[creator] = (scores[creator] || 0);
+        }
+        levelMap[level.name_lvl.toLowerCase()] = level;
+    });
+
+    // Process player data
+    playerData.forEach(player => {
+        let playerName = player.player_name.toLowerCase();
+        originalNames[playerName] = player.player_name;
+
+        // Check if player name is not in the ignored list
+        if (!loadIgnoredNames.includes(playerName)) {
+            let level = levelMap[player.level_name.toLowerCase()];
+
+            // Check if level exists and meets conditions
+            if (level && level.position_lvl <= mainListMaxPosition) {
                 let score = 0;
-                let levelIsLegacy = false;
-                if(level.position_lvl > mainListMaxPosition)
-                {
-                    levelIsLegacy = true;
-                }
-                if(!levelIsLegacy)
-                {
+                if (player.progress >= 100) {
                     score = getScore(level.position_lvl);
+                } else if (player.progress >= level.listpct_lvl) {
+                    score = getScoreProgress(level.position_lvl, player.progress);
                 }
-                if (verifier in scores) {
-                    scores[verifier] += score;
-                } else {
-                    scores[verifier] = score;
-                }
+                scores[playerName] = (scores[playerName] || 0) + score;
             }
-        });
-        return fetch('/data/playerdata.json');
-    })
-    .then(response => response.json())
-    .then(playerData => {
-        playerData.Data.forEach(player => {
-            let playerName = player.player_name.toLowerCase();
-            let levelDataLowercase = levelData.map(l => ({...l, name_lvl: l.name_lvl.toLowerCase()}));
-            originalNames[playerName] = player.player_name;
-            if (!loadIgnoredNames.includes(playerName)) {
-                let level = levelDataLowercase.find(l => l.name_lvl === player.level_name.toLowerCase());
-                if (level) 
-                {
-                    let score = 0;
-                    if(level.position_lvl <= mainListMaxPosition)
-                    {
-                        if (player.progress >= 100) {
-                            score = getScore(level.position_lvl);
-                        } else if (player.progress >= levelData.find(l => l.name_lvl === player.level_name).listpct_lvl) {
-                            score = getScoreProgress(level.position_lvl, player.progress);
-                        }
-                    }
-                    if (playerName in scores) {
-                        scores[playerName] += score;
-                    } else {
-                        scores[playerName] = score;
-                    }
-                }
-            }
-        });
-        let sortedScores = Object.entries(scores).sort((a, b) => {
-            // First, compare the scores
+        }
+    });
+
+    // Sort scores based on scores and original names
+    let sortedScores = Object.entries(scores)
+        .sort((a, b) => {
             if (b[1] !== a[1]) {
                 return b[1] - a[1];
             }
-            // If the scores are equal, compare the player names
             return originalNames[a[0]].localeCompare(originalNames[b[0]]);
-        });
+        })
+        .map(score => [originalNames[score[0]], score[1]]);
 
-        let tableBody = document.getElementById('table-body');
-        let modalBody = document.querySelector('.modal-body');
-        let position = 1;
-        sortedScores.forEach(score => {
-            let row = document.createElement('tr');
-            let positionCell = document.createElement('td');
-            positionCell.innerText = '#' + position;
-            positionCell.classList.add('text-center');
-            row.appendChild(positionCell);
-            let playerCell = document.createElement('td');
-            playerCell.innerText = originalNames[score[0]];
-            playerCell.classList.add('text-center');
-            row.appendChild(playerCell);
-            let scoreCell = document.createElement('td');
-            scoreCell.innerText = score[1].toFixed(2);
-            scoreCell.classList.add('text-center');
-            row.appendChild(scoreCell);
-            let detailsCell = document.createElement('td');
-            detailsCell.classList.add('text-center');
-            let detailsButton = document.createElement('button');
-            detailsButton.innerHTML = '<i class="fas fa-eye"></i>';
-            detailsButton.setAttribute('data-bs-toggle', 'tooltip');
-            detailsButton.setAttribute('data-bs-placement', 'top');
-            detailsButton.setAttribute('title', 'Ver detalhes');
-            detailsButton.classList.add('btn', 'btn-primary', 'btn-sm');
-            detailsButton.setAttribute('data-bs-toggle', 'modal');
-            detailsButton.setAttribute('data-bs-target', '#playerDetails-modal');
-            detailsButton.addEventListener('click', () => {
-                let i;
-                modalBody.innerHTML = '';
-                const playerDetailsLabel = document.getElementById('playerDetailsLabel');
-                playerDetailsLabel.innerText = originalNames[score[0]];
+    // Return or process the sorted scores as needed
+    return sortedScores;
+}
 
-                //adicionar levels completados
-                let levelDataLowercase = levelData.map(l => ({...l, name_lvl: l.name_lvl.toLowerCase()}));
-                let playerLevels = playerData.Data.filter(p => {
-                    let playerName = p.player_name.toLowerCase();
-                    originalNames[playerName] = p.player_name;
-                    return playerName === score[0].toLowerCase() && p.progress === 100;
-                });
 
-                if (playerLevels.length > 0) {
-                    playerLevels.sort((a, b) => {
-                        let aLevelData = levelDataLowercase.find(l => l.name_lvl === a.level_name.toLowerCase());
-                        let bLevelData = levelDataLowercase.find(l => l.name_lvl === b.level_name.toLowerCase());
-                        if (aLevelData && bLevelData) {
-                            return aLevelData.position_lvl - bLevelData.position_lvl;
-                        } else {
-                            return 0;
-                        }
-                    });
+async function pickPlayerData(name, scores) {
+    // a função deve retornar um objeto com as seguintes propriedades:
+    // - name: nome do jogador
+    // - score: pontuação do jogador
+    // - position: posição do jogador no ranking
+    // - creations: todos os níveis criados pelo jogador
+    // - completions: todos os níveis completados pelo jogador
+    // - verifications: todos os níveis verificados pelo jogador
+    // - progresses: todos os níveis em progresso pelo jogador
 
-                    i = 0;
-                    playerLevels.forEach(() => {i++;});
-                    let levelsCompleted = document.createElement('h3');
-                    levelsCompleted.innerText = 'Demons completados (' + i + '):';
-                    modalBody.appendChild(levelsCompleted);
-                    playerLevels.forEach(level => {
-                        let levelDataItem = levelDataLowercase.find(l => l.name_lvl === level.level_name.toLowerCase());
-                        if (levelDataItem) {
-                            //get id_lvl
-                            level.id_lvl = levelDataItem.id_lvl;
+    let levelMap = {};
+    let originalNames = {};
 
-                            level.position_lvl = levelDataItem.position_lvl;
-                            let levelElement = document.createElement('a');
-                            levelElement.textContent = '#' + level.position_lvl + '. ' + level.level_name;
-                            levelElement.href = '/pages/leveldetails.html?id=' + level.id_lvl;
-                            let pElement = document.createElement('p');
-                            pElement.appendChild(levelElement);
-                            modalBody.appendChild(pElement);
-                        } else {
-                            console.log('Nenhum nível correspondente encontrado para:', level.level_name);
-                        }
-                    });
+    let player = {
+        name: name,
+        score: 0,
+        position: 0,
+        creations: [],
+        completions: [],
+        verifications: [],
+        progresses: []
+    };
+
+    name = name.toLowerCase();
+
+    // Find the player's score
+    let playerScore = scores.find(player => player[0].toLowerCase() === name);
+    if (playerScore) {
+        player.score = playerScore[1];
+        player.position = scores.indexOf(playerScore) + 1;
+    }
+
+    // get verifications and completions
+    const [levelResponse, playerResponse] = await Promise.all([
+        fetch('/data/leveldata.json'),
+        fetch('/data/playerdata.json')
+    ]);
+
+    const levelData = (await levelResponse.json()).Data;
+    const playerData = (await playerResponse.json()).Data;
+
+    levelData.forEach(level => {
+        let verifier = level.verifier_lvl.toLowerCase();
+        originalNames[verifier] = level.verifier_lvl;
+
+        if(level.creator_lvl.toLowerCase() === name) {
+            player.creations.push(level);
+        }
+
+        if (verifier === name) {
+            player.verifications.push(level);
+        }
+        levelMap[level.name_lvl.toLowerCase()] = level;
+    });
+
+    playerData.forEach(record => {
+        let playerName = record.player_name.toLowerCase();
+        originalNames[playerName] = record.player_name;
+        if (playerName === name) {
+            let level = levelMap[record.level_name.toLowerCase()];
+            if (level) {
+                if (record.progress >= 100) {
+                    player.completions.push(level);
+                } else if (record.progress >= level.listpct_lvl) {
+                    player.progresses.push({ level, progress: record.progress }); // push level + record.progress
                 }
+            }
+        }
+    });
+    return player;
+}
 
-                //adicionar levels verificados
-                let playerVerifiedLevels = levelData.filter(l => {
-                    let verifier = l.verifier_lvl.toLowerCase();
-                    originalNames[verifier] = l.verifier_lvl;
-                    return verifier === score[0].toLowerCase();
-                });
+function fillPlayerCard(player) {
+    const playerName = document.getElementById('card-player-name');
+    const playerPosition = document.getElementById('card-player-pos');
+    const playerScore = document.getElementById('card-player-score');
 
-                playerVerifiedLevels.sort((a, b) => a.position_lvl - b.position_lvl);
-                if (playerVerifiedLevels.length > 0) {
-                    i = 0;
-                    playerVerifiedLevels.forEach(() => {i++;});
-                    let levelsVerified = document.createElement('h3');
-                    levelsVerified.innerText = 'Demons verificados (' + i + '):';
-                    modalBody.appendChild(levelsVerified);
-                    playerVerifiedLevels.forEach(level => {
-                        //get id_lvl
-                        level.id_lvl = levelDataLowercase.find(l => l.name_lvl === level.name_lvl.toLowerCase()).id_lvl;
+    // Limpar os elementos
+    const elementsToClear = ['card-player-creations', 'card-player-completions', 'card-player-verifications', 'card-player-progresses'];
+    elementsToClear.forEach(elementId => {
+        const element = document.getElementById(elementId);
+        while (element.firstChild) {
+            element.removeChild(element.firstChild);
+        }
+    });
 
-                        let levelElement = document.createElement('a');
-                        levelElement.textContent = '#' + level.position_lvl + '. ' + level.name_lvl;
-                        levelElement.href = '/pages/leveldetails.html?id=' + level.id_lvl;
-                        let pElement = document.createElement('p');
-                        pElement.appendChild(levelElement);
-                        modalBody.appendChild(pElement);
-                    });
-                }
+    playerName.textContent = player.name;
+    playerPosition.textContent = `#${player.position}`;
+    playerScore.textContent = player.score.toFixed(2);
 
-                //adicionar levels em progresso
-                let playerProgressLevels = playerData.Data.filter(p => {
-                    let playerName = p.player_name.toLowerCase();
-                    originalNames[playerName] = p.player_name;
-                    return playerName === score[0].toLowerCase() && p.progress < 100;
-                });
-                if (playerProgressLevels.length > 0) {
-                    const listpct = levelDataLowercase.find(l => l.name_lvl === playerProgressLevels[0].level_name.toLowerCase()).listpct_lvl;
-                    if (playerProgressLevels.some(p => p.progress >= listpct)) {
-                        let levelsProgress = document.createElement('h3');
-                        levelsProgress.innerText = 'Progressos:';
-                        modalBody.appendChild(levelsProgress);
-                        playerProgressLevels.forEach(level => {
-                            let levelDataItem = levelDataLowercase.find(l => l.name_lvl === level.level_name.toLowerCase());
-                            if (levelDataItem) {
-                                //get id_lvl
-                                level.id_lvl = levelDataItem.id_lvl;
+    function createLinks(playerData, elementId, progress = false) {
+        const element = document.getElementById(elementId);
+        if (playerData.length === 0) {
+            element.textContent = 'Nenhum';
+            return;
+        }
+        for (const data of playerData) {
+            const a = document.createElement('a');
+            a.classList.add('small-margin-p');
+            a.href = `/pages/leveldetails.html?id=${data.level ? data.level.id_lvl : data.id_lvl}`;
+            a.style.textDecoration = 'none';
+            a.textContent = progress ? `${data.level.name_lvl} (${data.progress}%)` : data.name_lvl;
+            a.textContent = progress ? `#${data.level.position_lvl}. ${a.textContent}` : `#${data.position_lvl}. ${a.textContent}`
+            element.appendChild(a);
 
-                                level.position_lvl = levelDataItem.position_lvl;
-                                let levelElement = document.createElement('a');
-                                levelElement.textContent = '#' + level.position_lvl + '. ' + level.level_name + ', ' + level.progress + '%';
-                                levelElement.href = '/pages/leveldetails.html?id=' + level.id_lvl;
-                                let pElement = document.createElement('p');
-                                pElement.appendChild(levelElement);
-                                modalBody.appendChild(pElement);
-                            } else {
-                                console.log('Nenhum nível correspondente encontrado para:', level.level_name);
-                            }
-                        });
-                    }
-                }
-            });
-            detailsCell.appendChild(detailsButton);
-            row.appendChild(detailsCell);
-            
-            tableBody.appendChild(row);
-            position++;
-        });
-    })
+            const br = document.createElement('br');
+            element.appendChild(br);
+        }
+    }
+
+    createLinks(player.creations, 'card-player-creations');
+    createLinks(player.completions, 'card-player-completions');
+    createLinks(player.verifications, 'card-player-verifications');
+    createLinks(player.progresses, 'card-player-progresses', true);
+}
+
+function fillPlayerList(players) {
+    const playerList = document.getElementById('player-list');
+    for (let i = 0; i < players.length; i++) {
+       const player = players[i];
+       const li = document.createElement('li');
+       i === 0 ? li.classList.add('active') : null;
+       li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
+       li.id = `player-${i}`;
+       const pos = document.createElement('span');
+       pos.id = 'player-pos';
+       player[1] > 0 ? pos.textContent = `#${i + 1}` : pos.textContent = '-';
+       const name = document.createElement('span');
+       name.id = 'player-name';
+       name.textContent = player[0];
+       const score = document.createElement('span');
+       score.id = 'player-score';
+       score.classList.add('badge', 'text-bg-primary', 'rounded-pill');
+       score.textContent = player[1].toFixed(2);
+       li.appendChild(pos);
+       li.appendChild(name);
+       li.appendChild(score);
+       playerList.appendChild(li);
+
+       // Adicione um ouvinte de evento de clique ao elemento da lista
+       li.addEventListener('click', function() {
+            if (li.classList.contains('active')) return;
+            // Remover a classe 'active' de todos os elementos da lista
+            const listItems = playerList.getElementsByTagName('li');
+            for (let j = 0; j < listItems.length; j++) {
+                listItems[j].classList.remove('active');
+            }
+
+            // Adicionar a classe 'active' ao elemento clicado
+            li.classList.add('active');
+
+            updatePlayerCard(player[0]);
+       });
+    }
+}
+
+async function updatePlayerCard(name) {
+    let scores = await processScore();
+    let playerData = await pickPlayerData(name, scores);
+    fillPlayerCard(playerData);
 }

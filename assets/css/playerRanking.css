@@ -1,0 +1,49 @@
+.small-margin-p
+{
+    margin-bottom: 0;
+}
+
+#player-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#player-list .list-group-item:hover {
+    background-color: rgb(200, 212, 223);
+    color: black;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.card-demon-info {
+    background-color: #282d32;
+}
+
+@media (max-width: 1000px) {
+    #player-card {
+        width: 100%;
+    }
+    .col {
+        padding: 0px !important;
+    }
+    #player-list {
+        max-height: 200px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 550px) {
+    #div-player-pos-score
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    #div-player-pos, #div-player-score
+    {
+        padding: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}

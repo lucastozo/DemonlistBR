@@ -36,7 +36,6 @@ body
     justify-content: center;
 }
 
-
 .centeredElement
 {
     width: 100%;
@@ -53,28 +52,6 @@ body
     justify-content: space-around;
     min-width: 100%;
     margin-top: 0;
-}
-
-.PlayerSection {
-    background-color: #17191b;
-    border: 1px solid #363636;
-    max-width: 1200px;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.playerRecord {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.playerRecord a {
-    color: #fff;
-}
-
-.playerRecord a:hover {
-    color: #008cff;
-    transition: 0.2s;
 }
 
 .navbar-brand
@@ -113,33 +90,10 @@ body
     margin-bottom: 50px;
 }
 
-#playerDetails-modal a
-{
-    text-decoration: none;
-    color: #c1c0cc;
-}
-
-#playerDetails-modal a:hover
-{
-    color: #f1f1f1;
-    transition: 0.2s;
-}
-
-#table-container
-{
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
 #table-container table
 {
     width: 100%;
     border: 1px solid #474747;
-}
-
-.modal-body p
-{
-    margin-bottom: 5px;
 }
 
 #btn-back-to-top
@@ -182,11 +136,6 @@ body
     {
         width: 100%;
     }
-    #table-container
-    {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
     .ListSection {
         padding: 1rem;
         margin: 0.5rem;
@@ -218,11 +167,6 @@ body
     }
     .ListSection .text {
         margin-left: 0;
-    }
-    #table-container
-    {
-        padding-left: 0;
-        padding-right: 0;
     }
     .text h2
     {
