@@ -11,7 +11,10 @@ async function main() {
     loadIgnoredNames = await loadIgnoredNames();
     let scores = await processScore();
     fillPlayerList(scores);
-    updatePlayerCard(scores[0][0]);
+    await updatePlayerCard(scores[0][0]);
+
+    const playerRanking = document.getElementById('player-ranking');
+    playerRanking.style.visibility = 'visible';
 }
 
 async function processScore() {
