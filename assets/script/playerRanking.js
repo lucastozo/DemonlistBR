@@ -10,10 +10,8 @@ main();
 async function main() {
     loadIgnoredNames = await loadIgnoredNames();
     let scores = await processScore();
-    //console.log(scores);
-    let playerData = pickPlayerData('IcyWindy', scores);
-    console.log(playerData);
-    
+    fillPlayerList(scores);
+    updatePlayerCard(scores[0][0]);
 }
 
 async function processScore() {
@@ -75,7 +73,8 @@ async function processScore() {
                 return b[1] - a[1];
             }
             return originalNames[a[0]].localeCompare(originalNames[b[0]]);
-        });
+        })
+        .map(score => [originalNames[score[0]], score[1]]);
 
     // Return or process the sorted scores as needed
     return sortedScores;
@@ -94,11 +93,9 @@ async function pickPlayerData(name, scores) {
 
     let levelMap = {};
     let originalNames = {};
-    const ogName = name;
-    name = name.toLowerCase();
 
     let player = {
-        name: ogName,
+        name: name,
         score: 0,
         position: 0,
         creations: [],
@@ -107,8 +104,10 @@ async function pickPlayerData(name, scores) {
         progresses: []
     };
 
+    name = name.toLowerCase();
+
     // Find the player's score
-    let playerScore = scores.find(player => player[0] === name);
+    let playerScore = scores.find(player => player[0].toLowerCase() === name);
     if (playerScore) {
         player.score = playerScore[1];
         player.position = scores.indexOf(playerScore) + 1;
@@ -152,4 +151,94 @@ async function pickPlayerData(name, scores) {
         }
     });
     return player;
+}
+
+function fillPlayerCard(player) {
+    const playerName = document.getElementById('card-player-name');
+    const playerPosition = document.getElementById('card-player-pos');
+    const playerScore = document.getElementById('card-player-score');
+
+    // Limpar os elementos
+    const elementsToClear = ['card-player-creations', 'card-player-completions', 'card-player-verifications', 'card-player-progresses'];
+    elementsToClear.forEach(elementId => {
+        const element = document.getElementById(elementId);
+        while (element.firstChild) {
+            element.removeChild(element.firstChild);
+        }
+    });
+
+    playerName.textContent = player.name;
+    playerPosition.textContent = `#${player.position}`;
+    playerScore.textContent = player.score.toFixed(2);
+
+    function createLinks(playerData, elementId, progress = false) {
+        const element = document.getElementById(elementId);
+        if (playerData.length === 0) {
+            element.textContent = 'Nenhum';
+            return;
+        }
+        for (const data of playerData) {
+            const a = document.createElement('a');
+            a.classList.add('small-margin-p');
+            a.href = `/pages/leveldetails.html?id=${data.level ? data.level.id_lvl : data.id_lvl}`;
+            a.style.textDecoration = 'none';
+            a.textContent = progress ? `${data.level.name_lvl} (${data.progress}%)` : data.name_lvl;
+            a.textContent = progress ? `#${data.level.position_lvl}. ${a.textContent}` : `#${data.position_lvl}. ${a.textContent}`
+            element.appendChild(a);
+
+            const br = document.createElement('br');
+            element.appendChild(br);
+        }
+    }
+
+    createLinks(player.creations, 'card-player-creations');
+    createLinks(player.completions, 'card-player-completions');
+    createLinks(player.verifications, 'card-player-verifications');
+    createLinks(player.progresses, 'card-player-progresses', true);
+}
+
+function fillPlayerList(players) {
+    const playerList = document.getElementById('player-list');
+    for (let i = 0; i < players.length; i++) {
+       const player = players[i];
+       const li = document.createElement('li');
+       i === 0 ? li.classList.add('active') : null;
+       li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
+       li.id = `player-${i}`;
+       const pos = document.createElement('span');
+       pos.id = 'player-pos';
+       pos.textContent = `#${i + 1}`;
+       const name = document.createElement('span');
+       name.id = 'player-name';
+       name.textContent = player[0];
+       const score = document.createElement('span');
+       score.id = 'player-score';
+       score.classList.add('badge', 'text-bg-primary', 'rounded-pill');
+       score.textContent = player[1].toFixed(2);
+       li.appendChild(pos);
+       li.appendChild(name);
+       li.appendChild(score);
+       playerList.appendChild(li);
+
+       // Adicione um ouvinte de evento de clique ao elemento da lista
+       li.addEventListener('click', function() {
+            if (li.classList.contains('active')) return;
+            // Remover a classe 'active' de todos os elementos da lista
+            const listItems = playerList.getElementsByTagName('li');
+            for (let j = 0; j < listItems.length; j++) {
+                listItems[j].classList.remove('active');
+            }
+
+            // Adicionar a classe 'active' ao elemento clicado
+            li.classList.add('active');
+
+            updatePlayerCard(player[0]);
+       });
+    }
+}
+
+async function updatePlayerCard(name) {
+    let scores = await processScore();
+    let playerData = await pickPlayerData(name, scores);
+    fillPlayerCard(playerData);
 }

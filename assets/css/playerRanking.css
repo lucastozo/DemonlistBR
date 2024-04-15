@@ -1,0 +1,16 @@
+.small-margin-p
+{
+    margin-bottom: 0;
+}
+
+#player-list {
+    max-height: 410px;
+    overflow-y: auto;
+}
+
+#player-list .list-group-item:hover {
+    background-color: rgb(200, 212, 223);
+    color: black;
+    cursor: pointer;
+    transition: 0.1s;
+}
