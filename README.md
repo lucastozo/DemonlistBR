@@ -12,7 +12,7 @@ Lista de fases brasileiras mais difíceis do Geometry Dash.
 
 Criado em junho de 2020 por yuuchouze/lucastozo, a Demonlist BR, inspirada em demais listas de Geometry Dash como Pointercrate Demonlist, tinha como propósito classificar as fases brasileiras mais difíceis do jogo. O projeto inicial era básico e feito usando Google Sites, o que tornava o site extremamente lento e impossível de escalar e manter, levando o projeto à morte poucos meses depois. O projeto foi refeito em 2021 por outras pessoas, mas como possuia os mesmos problemas, também se tornou inativo.
 
-Em 2024, o projeto foi refeito totalmente do zero por yuuchouze, porém dessa vez com a proposta de ser feito para ser facilmente mantível, escalável, e mais rápido do que um site feito com Google Sites, sendo atualmente o projeto de Demonlist BR mais completo atualmente.
+No final de 2023, o projeto foi refeito totalmente do zero por yuuchouze, porém dessa vez com a proposta de ser feito para ser facilmente mantível, escalável, e mais rápido do que um site feito com Google Sites, sendo atualmente o projeto de Demonlist BR mais completo atualmente.
 
 
 ## Contribuidores ⛏
