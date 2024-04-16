@@ -6,8 +6,14 @@ fetch('/data/leveldata.json')
 .then(levelData => {
     levelData.Data.sort((a, b) => a.position_lvl - b.position_lvl);
 
+    const path = window.location.pathname;
+    const page = path.split("/").pop();
+
     const contentDiv = document.getElementById('ListContent');
     levelData.Data.forEach(level => {
+        if(page === "legacylist.html" && level.position_lvl <= mainListMaxPosition) return;
+        if(path === "/" && level.position_lvl > mainListMaxPosition) return;
+
         const section = document.createElement('section');
         section.className = 'ListSection';
 
@@ -45,24 +51,24 @@ fetch('/data/leveldata.json')
         creatorParagraph.id = 'creatorParagraph';
         textDiv.appendChild(creatorParagraph);
 
-        const path = window.location.pathname;
-        const page = path.split("/").pop();
         if(page === "legacylist.html") {
             if(level.position_lvl > mainListMaxPosition){
-                section.appendChild(textDiv);
-                contentDiv.appendChild(section);
+                addLevelCard(textDiv, section);
                 legacyListHasLevels = true;
+                return;
             }
-        } else if(level.position_lvl <= mainListMaxPosition){
+            return;
+        }
+        level.position_lvl <= mainListMaxPosition ? addLevelCard(textDiv, section): null;
+        function addLevelCard(textDiv, section) {
             section.appendChild(textDiv);
             contentDiv.appendChild(section);
         }
     });
-    if(!legacyListHasLevels){
+    if(page === "legacylist.html" && !legacyListHasLevels){
         const errorSection = document.getElementById('error-id-section');
         errorSection.style.display = 'block';
     }
-
 });
 
 function ExtractVideoId(videoUrl){

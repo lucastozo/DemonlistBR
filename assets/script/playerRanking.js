@@ -166,8 +166,6 @@ async function pickPlayerData(name, scores) {
 }
 
 function fillPlayerCard(player) {
-    console.log(player);
-
     const playerName = document.getElementById('card-player-name');
     const playerPosition = document.getElementById('card-player-pos');
     const playerScore = document.getElementById('card-player-score');
