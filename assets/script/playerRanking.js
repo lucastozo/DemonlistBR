@@ -159,10 +159,15 @@ async function pickPlayerData(name, scores) {
             }
         }
     });
+    player.completions.sort((a, b) => a.position_lvl - b.position_lvl);
+    player.verifications.sort((a, b) => a.position_lvl - b.position_lvl);
+
     return player;
 }
 
 function fillPlayerCard(player) {
+    console.log(player);
+
     const playerName = document.getElementById('card-player-name');
     const playerPosition = document.getElementById('card-player-pos');
     const playerScore = document.getElementById('card-player-score');
