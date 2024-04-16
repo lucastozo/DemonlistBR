@@ -180,7 +180,7 @@ function fillPlayerCard(player) {
     });
 
     playerName.textContent = player.name;
-    playerPosition.textContent = `#${player.position}`;
+    player.score > 0 ? playerPosition.textContent = `#${player.position}` : playerPosition.textContent = '-';
     playerScore.textContent = player.score.toFixed(2);
 
     function createLinks(playerData, elementId, progress = false) {
