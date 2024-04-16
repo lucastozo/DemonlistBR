@@ -18,8 +18,8 @@ At the end of 2023, the project was completely redone from scratch by yuuchouze,
 
 ## Contributors ⛏
 
-- [@lucastozo](https://www.github.com/lucastozo) - mantenedor do código do site
-- [@slinky](https://github.com/slinkygmd) - moderador do conteúdo da lista
+- [@lucastozo](https://www.github.com/lucastozo) - website code maintainer
+- [@slinky](https://github.com/slinkygmd) - list content moderator
 
 
 ## Links 🔗
