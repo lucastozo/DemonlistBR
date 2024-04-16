@@ -8,6 +8,9 @@
 <img src="https://raw.githubusercontent.com/lucastozo/DemonlistBR/main/assets/img/iconDLBR.png" width=25%>
 
 Lista de fases brasileiras mais difíceis do Geometry Dash.
+<hr>
+To read the README in English, click [here](https://github.com/lucastozo/DemonlistBR/blob/main/docs/README_en.md)
+
 ## Background 📄
 
 Criado em junho de 2020 por yuuchouze/lucastozo, a Demonlist BR, inspirada em demais listas de Geometry Dash como Pointercrate Demonlist, tinha como propósito classificar as fases brasileiras mais difíceis do jogo. O projeto inicial era básico e feito usando Google Sites, o que tornava o site extremamente lento e impossível de escalar e manter, levando o projeto à morte poucos meses depois. O projeto foi refeito em 2021 por outras pessoas, mas como possuia os mesmos problemas, também se tornou inativo.
