@@ -8,7 +8,9 @@
 <img src="https://raw.githubusercontent.com/lucastozo/DemonlistBR/main/assets/img/iconDLBR.png" width=25%>
 
 Lista de fases brasileiras mais difíceis do Geometry Dash.
+
 <hr>
+
 To read the README in English, click [here](https://github.com/lucastozo/DemonlistBR/blob/main/docs/README_en.md)
 
 ## Background 📄
