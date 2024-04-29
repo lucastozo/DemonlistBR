@@ -1,7 +1,13 @@
 {
-  "GeradoEm": "15/2/2024 1:31:52",
+  "GeradoEm": "29/4/2024 19:26:21",
   "TipoData": "record",
   "Data": [
+    {
+      "level_name": "arcturus",
+      "player_name": "zGabriel",
+      "progress": 100,
+      "video": "https://www.twitch.tv/videos/2114935488"
+    },
     {
       "level_name": "arcturus",
       "player_name": "DibiiziCookie",
@@ -124,7 +130,7 @@
     },
     {
       "level_name": "Cursed Nightmare",
-      "player_name": "Már",
+      "player_name": "MÃ¡r",
       "progress": 100,
       "video": "https://www.youtube.com/watch?v=mFjjmQEtMpQ "
     },
