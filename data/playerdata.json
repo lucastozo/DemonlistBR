@@ -1,18 +1,30 @@
 {
-  "GeradoEm": "29/4/2024 19:26:21",
+  "GeradoEm": "13/5/2024 0:39:22",
   "TipoData": "record",
   "Data": [
     {
-      "level_name": "arcturus",
-      "player_name": "zGabriel",
+      "level_name": "Brasil Level",
+      "player_name": "UHbatatadoce",
       "progress": 100,
-      "video": "https://www.twitch.tv/videos/2114935488"
+      "video": "https://youtu.be/lMMONdPIkzU"
+    },
+    {
+      "level_name": "vinistep",
+      "player_name": "UHbatatadoce",
+      "progress": 100,
+      "video": "https://youtu.be/TkRxP62PaWI"
     },
     {
       "level_name": "arcturus",
       "player_name": "DibiiziCookie",
       "progress": 100,
       "video": "https://youtu.be/AqKBny7eX5Q"
+    },
+    {
+      "level_name": "arcturus",
+      "player_name": "zGabriel",
+      "progress": 100,
+      "video": "https://www.twitch.tv/videos/2114935488"
     },
     {
       "level_name": "Ascension",
@@ -67,6 +79,12 @@
       "player_name": "ultracauahd",
       "progress": 100,
       "video": "https://www.youtube.com/watch?v=wFUMv-OkRYw"
+    },
+    {
+      "level_name": "CHALLUNGA FINALE",
+      "player_name": "UHbatatadoce",
+      "progress": 100,
+      "video": "https://youtu.be/zAGFxTno0eI?si=J-8FKoCCYYX04Qv0"
     },
     {
       "level_name": "Collapse",
@@ -130,7 +148,7 @@
     },
     {
       "level_name": "Cursed Nightmare",
-      "player_name": "MÃ¡r",
+      "player_name": "MÃÂ¡r",
       "progress": 100,
       "video": "https://www.youtube.com/watch?v=mFjjmQEtMpQ "
     },
