@@ -1,18 +1,24 @@
 {
-  "GeradoEm": "13/5/2024 0:39:22",
+  "GeradoEm": "23/5/2024 12:58:24",
   "TipoData": "record",
   "Data": [
     {
-      "level_name": "Brasil Level",
-      "player_name": "UHbatatadoce",
+      "level_name": "arcturus",
+      "player_name": "gotsmile",
       "progress": 100,
-      "video": "https://youtu.be/lMMONdPIkzU"
+      "video": "https://youtu.be/XUSUFzRiC6E"
     },
     {
-      "level_name": "vinistep",
-      "player_name": "UHbatatadoce",
+      "level_name": "Thinking Space",
+      "player_name": "DibiiziCookie",
       "progress": 100,
-      "video": "https://youtu.be/TkRxP62PaWI"
+      "video": "https://youtu.be/Oh-5Alk_Eq0"
+    },
+    {
+      "level_name": "Extermination Nation",
+      "player_name": "DibiiziCookie",
+      "progress": 100,
+      "video": "https://youtu.be/YuGxI3L9TvE"
     },
     {
       "level_name": "arcturus",
@@ -55,6 +61,12 @@
       "player_name": "RalucaGranola",
       "progress": 100,
       "video": "https://www.youtube.com/watch?v=P1gWVUCTLEg"
+    },
+    {
+      "level_name": "Brasil Level",
+      "player_name": "UHbatatadoce",
+      "progress": 100,
+      "video": "https://youtu.be/lMMONdPIkzU"
     },
     {
       "level_name": "CHALLUNGA FINALE",
@@ -148,7 +160,7 @@
     },
     {
       "level_name": "Cursed Nightmare",
-      "player_name": "MÃÂ¡r",
+      "player_name": "MÃÂÃÂ¡r",
       "progress": 100,
       "video": "https://www.youtube.com/watch?v=mFjjmQEtMpQ "
     },
@@ -511,6 +523,12 @@
       "player_name": "DibiiziCookie",
       "progress": 100,
       "video": "https://youtu.be/ChFW56r1fsU?si=5Kna6pQv4qYjCng2 "
+    },
+    {
+      "level_name": "vinistep",
+      "player_name": "UHbatatadoce",
+      "progress": 100,
+      "video": "https://youtu.be/TkRxP62PaWI"
     }
   ]
 }
