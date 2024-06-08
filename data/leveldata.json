@@ -1,5 +1,5 @@
 {
-  "GeradoEm": "7/6/2024 3:17:21",
+  "GeradoEm": "8/6/2024 2:3:38",
   "TipoData": "level",
   "Data": [
     {
@@ -360,6 +360,14 @@
     },
     {
       "position_lvl": 42,
+      "id_lvl": "61830500",
+      "name_lvl": "Death Machine",
+      "creator_lvl": "Yuuchouze",
+      "verifier_lvl": "RyuDieDragon",
+      "video_lvl": "https://youtu.be/gT--CLIBvsQ"
+    },
+    {
+      "position_lvl": 43,
       "id_lvl": "50076317",
       "name_lvl": "Blood Attack",
       "creator_lvl": "LChaseR",
@@ -367,7 +375,7 @@
       "video_lvl": "https://youtu.be/D-dBM5O52Ks"
     },
     {
-      "position_lvl": 43,
+      "position_lvl": 44,
       "id_lvl": "62290029",
       "name_lvl": "Extermination Nation",
       "creator_lvl": "Yuuchouze",
@@ -375,7 +383,15 @@
       "video_lvl": "https://youtu.be/Q2Syva4rS-s"
     },
     {
-      "position_lvl": 44,
+      "position_lvl": 45,
+      "id_lvl": "96454896",
+      "name_lvl": "ASAP",
+      "creator_lvl": "Yuuchouze",
+      "verifier_lvl": "DibiiziCookie",
+      "video_lvl": "https://youtu.be/NSAIjPU-cAA"
+    },
+    {
+      "position_lvl": 46,
       "id_lvl": "97091006",
       "name_lvl": "Doideira",
       "creator_lvl": "RalucaGranola",
@@ -383,7 +399,7 @@
       "video_lvl": "https://youtu.be/h1X5jKJ14_E"
     },
     {
-      "position_lvl": 45,
+      "position_lvl": 47,
       "id_lvl": "63534667",
       "name_lvl": "The Next Horizon",
       "creator_lvl": "Onnerus1",
@@ -391,7 +407,7 @@
       "video_lvl": "https://youtu.be/LFbceikN0Ws"
     },
     {
-      "position_lvl": 46,
+      "position_lvl": 48,
       "id_lvl": "88854750",
       "name_lvl": "UNDERGROUND",
       "creator_lvl": "HugoLA",
@@ -399,7 +415,7 @@
       "video_lvl": "https://youtu.be/e0L2gkVmWy8"
     },
     {
-      "position_lvl": 47,
+      "position_lvl": 49,
       "id_lvl": "95918210",
       "name_lvl": "Fragile",
       "creator_lvl": "maxfs",
@@ -408,15 +424,15 @@
       "publisher_lvl": "pointercrate19"
     },
     {
-      "position_lvl": 48,
+      "position_lvl": 50,
       "id_lvl": "101548261",
       "name_lvl": "Sakupen gates",
       "creator_lvl": "Thebrozen",
-      "verifier_lvl": "FelpsMiner",
+      "verifier_lvl": "FelpsMiner2106",
       "video_lvl": "https://youtu.be/xM29TbGUqMQ?si=op50Hs5w1JASdV9M"
     },
     {
-      "position_lvl": 49,
+      "position_lvl": 51,
       "id_lvl": "85386027",
       "name_lvl": "Extreme Ship Level",
       "creator_lvl": "Petalite",
@@ -424,15 +440,7 @@
       "video_lvl": "https://youtu.be/7s2cp76g0SQ"
     },
     {
-      "position_lvl": 50,
-      "id_lvl": "101284159",
-      "name_lvl": "Faithful Constance",
-      "creator_lvl": "TeamArgo",
-      "verifier_lvl": "Yuuchouze",
-      "video_lvl": "https://youtu.be/cGd7v6ZswPU"
-    },
-    {
-      "position_lvl": 51,
+      "position_lvl": 52,
       "id_lvl": "80966929",
       "name_lvl": "Eraser",
       "creator_lvl": "LChaseR",
@@ -440,20 +448,12 @@
       "video_lvl": "https://youtu.be/kJmqWS9iVyA"
     },
     {
-      "position_lvl": 52,
-      "id_lvl": "61830500",
-      "name_lvl": "Death Machine",
-      "creator_lvl": "Yuuchouze",
-      "verifier_lvl": "RyuDieDragon",
-      "video_lvl": "https://youtu.be/gT--CLIBvsQ"
-    },
-    {
       "position_lvl": 53,
-      "id_lvl": "96454896",
-      "name_lvl": "ASAP",
-      "creator_lvl": "Yuuchouze",
-      "verifier_lvl": "DibiiziCookie",
-      "video_lvl": "https://youtu.be/NSAIjPU-cAA"
+      "id_lvl": "101284159",
+      "name_lvl": "Faithful Constance",
+      "creator_lvl": "TeamArgo",
+      "verifier_lvl": "Yuuchouze",
+      "video_lvl": "https://youtu.be/cGd7v6ZswPU"
     },
     {
       "position_lvl": 54,
