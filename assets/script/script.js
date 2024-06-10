@@ -1,4 +1,4 @@
-export const mainListMaxPosition = 100;
+export const listMaxPosition = 100;
 let legacyListHasLevels = false;
 
 fetch('/data/leveldata.json')
@@ -11,23 +11,32 @@ fetch('/data/leveldata.json')
 
     const contentDiv = document.getElementById('ListContent');
     levelData.Data.forEach(level => {
-        if(page === "legacylist.html" && level.position_lvl <= mainListMaxPosition) return;
-        if(path === "/" && level.position_lvl > mainListMaxPosition) return;
+        if(page === "legacylist.html" && level.position_lvl <= listMaxPosition) return;
+        if(path === "/" && level.position_lvl > listMaxPosition) return;
 
+        function isLevelInList(level) {
+            return level.position_lvl <= listMaxPosition;
+        }
+        const levelIsInList = isLevelInList(level);
+        
         const section = document.createElement('section');
         section.className = 'ListSection';
+        levelIsInList ? null : section.classList.add('text-center');
 
-        const videoDiv = document.createElement('div');
-        videoDiv.className = 'video';
-        const videoId = ExtractVideoId(level.video_lvl);
-        const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/0.jpg`;
-        const videoUrl = `https://youtu.be/${videoId}`;
-        const thumbWidth = 320/1.3; const thumbHeight = 180/1.3;
-        videoDiv.innerHTML = `<a href="${videoUrl}" target="_blank"><img src="${thumbnailUrl}" style="width:${thumbWidth}px; height:${thumbHeight}px; object-fit:cover;" alt="Video Thumbnail"></a>`;
-        section.appendChild(videoDiv);
+        if(levelIsInList){
+            const videoDiv = document.createElement('div');
+            videoDiv.className = 'video';
+            const videoId = ExtractVideoId(level.video_lvl);
+            const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/0.jpg`;
+            const videoUrl = `https://youtu.be/${videoId}`;
+            const thumbWidth = 320/1.3; const thumbHeight = 180/1.3;
+            videoDiv.innerHTML = `<a href="${videoUrl}" target="_blank"><img src="${thumbnailUrl}" style="width:${thumbWidth}px; height:${thumbHeight}px; object-fit:cover;" alt="Video Thumbnail"></a>`;
+            section.appendChild(videoDiv);
+        }
 
         const textDiv = document.createElement('div');
         textDiv.className = 'text';
+        levelIsInList ? textDiv.classList.add('textLevelIsInList') : null;
         textDiv.id = 'textDiv';
 
         const levelLink = document.createElement('a');
@@ -36,7 +45,7 @@ fetch('/data/leveldata.json')
         const levelName = document.createElement('h2');
 
         // adicionar posição do level no texto apenas se não for da legacylist
-        if(level.position_lvl <= mainListMaxPosition) {
+        if(level.position_lvl <= listMaxPosition) {
             levelName.textContent = `${level.position_lvl}. ${level.name_lvl}`;
         } else {
             levelName.textContent = level.name_lvl;
@@ -51,19 +60,10 @@ fetch('/data/leveldata.json')
         creatorParagraph.id = 'creatorParagraph';
         textDiv.appendChild(creatorParagraph);
 
-        if(page === "legacylist.html") {
-            if(level.position_lvl > mainListMaxPosition){
-                addLevelCard(textDiv, section);
-                legacyListHasLevels = true;
-                return;
-            }
-            return;
-        }
-        level.position_lvl <= mainListMaxPosition ? addLevelCard(textDiv, section): null;
-        function addLevelCard(textDiv, section) {
-            section.appendChild(textDiv);
-            contentDiv.appendChild(section);
-        }
+        if(page === "legacylist.html" && level.position_lvl > listMaxPosition){ legacyListHasLevels = true; }
+        
+        section.appendChild(textDiv);
+        contentDiv.appendChild(section);
     });
     if(page === "legacylist.html" && !legacyListHasLevels){
         const errorSection = document.getElementById('error-id-section');

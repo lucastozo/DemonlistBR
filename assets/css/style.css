@@ -22,7 +22,11 @@ body
 }
 
 .ListSection .text {
-    flex: 3;
+    flex: 1;
+}
+
+.textLevelIsInList
+{
     margin-left: 40px;
 }
 

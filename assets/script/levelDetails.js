@@ -1,4 +1,4 @@
-import { mainListMaxPosition } from "./script.js";
+import { listMaxPosition } from "./script.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     let params = new URLSearchParams(window.location.search);
@@ -108,7 +108,7 @@ function LoadProgress(data) {
     const tableBody = document.getElementById('table-body');
     let listpct = 100;
 
-    if (data.position_lvl <= mainListMaxPosition) {
+    if (data.position_lvl <= listMaxPosition) {
         scoreCompletion.textContent = getScore(data.position_lvl).toFixed(2);
         if (data.listpct_lvl) {
             scoreListpctTitle.textContent = `Pontos em Ranking (${data.listpct_lvl}%)`;

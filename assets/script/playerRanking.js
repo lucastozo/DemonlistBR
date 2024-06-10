@@ -1,4 +1,4 @@
-import { mainListMaxPosition } from "./script.js";
+import { listMaxPosition } from "./script.js";
 
 async function loadIgnoredNames() {
     const response = await fetch('/data/ignoredNames.txt');
@@ -41,7 +41,7 @@ async function processScore() {
         // Check if verifier name is not in the ignored list
         if (!loadIgnoredNames.includes(verifier)) {
             let score = 0;
-            if (level.position_lvl <= mainListMaxPosition) {
+            if (level.position_lvl <= listMaxPosition) {
                 score = getScore(level.position_lvl);
             }
             scores[verifier] = (scores[verifier] || 0) + score;
@@ -63,7 +63,7 @@ async function processScore() {
             let level = levelMap[player.level_name.toLowerCase()];
 
             // Check if level exists and meets conditions
-            if (level && level.position_lvl <= mainListMaxPosition) {
+            if (level && level.position_lvl <= listMaxPosition) {
                 let score = 0;
                 if (player.progress >= 100) {
                     score = getScore(level.position_lvl);
