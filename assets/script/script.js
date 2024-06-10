@@ -1,11 +1,16 @@
 export const listMaxPosition = 100;
 let legacyListHasLevels = false;
 
+let data;
 fetch('/data/leveldata.json')
 .then(response => response.json())
 .then(levelData => {
     levelData.Data.sort((a, b) => a.position_lvl - b.position_lvl);
+    data = levelData;
+    buildList(levelData);
+})
 
+function buildList(levelData){
     const path = window.location.pathname;
     const page = path.split("/").pop();
 
@@ -69,7 +74,7 @@ fetch('/data/leveldata.json')
         const errorSection = document.getElementById('error-id-section');
         errorSection.style.display = 'block';
     }
-});
+}
 
 function ExtractVideoId(videoUrl){
     var videoId;
