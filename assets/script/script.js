@@ -1,14 +1,30 @@
 export const listMaxPosition = 100;
 let legacyListHasLevels = false;
+let timeWarp = false;
 
-let data;
-fetch('/data/leveldata.json')
-.then(response => response.json())
-.then(levelData => {
-    levelData.Data.sort((a, b) => a.position_lvl - b.position_lvl);
-    data = levelData;
-    buildList(levelData);
-})
+if(window.location.pathname === "/" || window.location.pathname === "/legacylist.html"){
+    passLevelData();
+}
+
+function passLevelData(){
+    if(!timeWarp){
+        fetch('/data/leveldata.json')
+        .then(response => response.json())
+        .then(levelData => {
+            levelData.Data.sort((a, b) => a.position_lvl - b.position_lvl);
+            buildList(levelData);
+        })
+    } else {
+        let date = "2024-12-30";
+        let version;
+        getCommitHash(date).then(hash => {
+            version = hash;
+            getData(version).then(data => {
+                buildList(data);
+            });
+        });
+    }
+}
 
 function buildList(levelData){
     const path = window.location.pathname;
