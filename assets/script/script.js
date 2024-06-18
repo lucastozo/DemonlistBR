@@ -26,7 +26,7 @@ function passLevelData(){
             version = hash;
             getData(version).then(data => {
                 if(data === null){
-                    //passCurrentData();
+                    passCurrentData();
                     return;
                 }
                 buildList(data);
