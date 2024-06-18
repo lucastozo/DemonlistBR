@@ -4,6 +4,16 @@ body
     color: #c1c0cc;
 }
 
+#timeWarp
+{
+    background-color: #212529;
+}
+
+#timeWarpPicker
+{
+    padding: 5px;
+}
+
 #ListContent
 {
     width: 80%;

@@ -5,18 +5,52 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Lista de fases brasileiras mais difíceis de Geometry Dash.">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <script type="module" src="assets/script/script.js"></script>
-    <script src="assets/script/previousVersions.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
     <script src="assets/script/addNavbar.js"></script>
     <section id="navbar"></section>
+
+    <div id="timeWarp" class="d-flex flex-column align-items-center">
+        <div>
+            <p id="timeWarp-tip">Você está vendo a lista atual, para ver as versões anteriores, selecione uma data abaixo e clique no botão.</p>
+        </div>
+        <div class="input-group mb-3 justify-content-center">
+            <input type="date" id="timeWarpPicker" class="border rounded-start" value="1970-01-01" min="yyyy-MM-dd" max="yyyy-MM-dd"/>
+            <button class="btn btn-primary" id="timeWarpButton" type="button" data-bs-toggle="tooltip" title="Ver lista nessa data" onclick="triggerWarp()">
+                <i class="fa-solid fa-clock"></i>
+            </button>
+        </div>
+    </div>
+    <script>
+        function getToday(){
+            let date = new Date();
+            let year = date.getFullYear();
+            let month = date.getMonth() + 1;
+            let day = date.getDate();
+            return `${year}-${month < 10 ? '0' + month : month}-${day < 10 ? '0' + day : day}`;
+        }
+        function triggerWarp(){
+            const params = new URLSearchParams(window.location.search);
+            const date = document.getElementById("timeWarpPicker").value;
+            if(date === getToday() && !params.has("date")) return;
+            if(date === getToday() && params.has("date"))
+            {
+                window.location.href = "/";
+                return;
+            }
+            window.location.href = `/?date=${date}`;
+        }
+    </script>
+
+    <section class="list">
+        <div id="ListContent"></div>
+    </section>
 
     <button
         type="button"
@@ -25,9 +59,8 @@
         >
         <i class="fas fa-arrow-up"></i>
     </button>
-    
-    <section class="list">
-        <div id="ListContent"></div>
-    </section>
+
+    <script type="module" src="assets/script/script.js"></script>
+    <script src="/assets/script/previousVersions.js"></script>
 </body>
 </html>
