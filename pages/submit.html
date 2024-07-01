@@ -27,8 +27,10 @@
             const level = window.location.search.substring(1);
             if (level === 'level') {
                 document.getElementById('levelsubmit').style.display = 'block';
+                document.title = 'Demonlist BR - Envio de Levels'
             } else if (level === 'record') {
                 document.getElementById('recordsubmit').style.display = 'block';
+                document.title = 'Demonlist BR - Envio de Records'
             }
         });
     </script>

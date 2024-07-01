@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function LoadLevelInfo(data){
-    console.log(data);
+    document.title = '#' + data.position_lvl + '. ' + data.name;
     const levelName = document.getElementById("level-name");
     levelName.innerHTML = data.name;
     //se não existir publisher: criado por: creator, se existir: criado por: creator, publicado por: publisher
