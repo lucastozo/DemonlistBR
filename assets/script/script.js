@@ -31,6 +31,8 @@ function passLevelData(){
                 }
                 buildList(data);
                 changeTimeWarpTip(date);
+                let dateFormatted = date.split('-').reverse().join('/');
+                document.title = "Demonlist BR (" + dateFormatted + ")";
             });
         });
     }
