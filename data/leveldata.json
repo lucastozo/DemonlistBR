@@ -1,6 +1,6 @@
 {
-  "UltimoEditor": "yuuchouze",
-  "GeradoEm": "10/08/2024, 03:45:07",
+  "UltimoEditor": "RalucaGranola",
+  "GeradoEm": "11/08/2024, 15:09:39",
   "TipoData": "level",
   "Data": [
     {
@@ -105,15 +105,6 @@
     },
     {
       "position_lvl": 12,
-      "id_lvl": "77016475",
-      "name_lvl": "Beyond Hell",
-      "creator_lvl": "fakeblast",
-      "verifier_lvl": "fakeblast",
-      "video_lvl": "https://youtu.be/Q6GCkukQabQ",
-      "listpct_lvl": 61
-    },
-    {
-      "position_lvl": 13,
       "id_lvl": "108426292",
       "name_lvl": "The Hell Tribute",
       "creator_lvl": "fakeblast",
@@ -122,7 +113,7 @@
       "listpct_lvl": 63
     },
     {
-      "position_lvl": 14,
+      "position_lvl": 13,
       "id_lvl": "105926759",
       "name_lvl": "Last Prom",
       "creator_lvl": "NAJU62",
@@ -132,13 +123,22 @@
       "listpct_lvl": 41
     },
     {
-      "position_lvl": 15,
+      "position_lvl": 14,
       "id_lvl": "101136767",
       "name_lvl": "CDG",
       "creator_lvl": "RalucaGranola",
       "verifier_lvl": "RalucaGranola",
       "video_lvl": "https://youtu.be/Hs1y1KypIkU",
       "listpct_lvl": 38
+    },
+    {
+      "position_lvl": 15,
+      "id_lvl": "77016475",
+      "name_lvl": "Beyond Hell",
+      "creator_lvl": "fakeblast",
+      "verifier_lvl": "fakeblast",
+      "video_lvl": "https://youtu.be/Q6GCkukQabQ",
+      "listpct_lvl": 61
     },
     {
       "position_lvl": 16,
