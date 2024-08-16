@@ -122,7 +122,7 @@ function LoadProgress(data) {
         scoreListpctDiv.style.display = 'none';
     }
 
-    const playerRecords = data.Data.filter(record => record.level_name.toLowerCase() === data.name.toLowerCase());
+    const playerRecords = data.Data.filter(record => record.id_lvl === data.id_lvl);
     playerRecords.sort((a, b) => b.progress - a.progress);
 
     playerRecords.forEach(record => {

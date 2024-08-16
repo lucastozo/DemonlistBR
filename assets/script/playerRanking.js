@@ -22,7 +22,6 @@ async function processScore() {
     let originalNames = {};
     let levelMap = {};
 
-    // Fetch data together to reduce network overhead
     const [levelResponse, playerResponse] = await Promise.all([
         fetch('/data/leveldata.json'),
         fetch('/data/playerdata.json')
@@ -38,7 +37,6 @@ async function processScore() {
         originalNames[creator] = level.creator_lvl;
         originalNames[verifier] = level.verifier_lvl;
 
-        // Check if verifier name is not in the ignored list
         if (!loadIgnoredNames.includes(verifier)) {
             let score = 0;
             if (level.position_lvl <= listMaxPosition) {
@@ -46,11 +44,10 @@ async function processScore() {
             }
             scores[verifier] = (scores[verifier] || 0) + score;
         }
-        // Check if creator name is not in the ignored list
         if (!loadIgnoredNames.includes(creator)) {
             scores[creator] = (scores[creator] || 0);
         }
-        levelMap[level.name_lvl.toLowerCase()] = level;
+        levelMap[level.id_lvl] = level;
     });
 
     // Process player data
@@ -58,11 +55,9 @@ async function processScore() {
         let playerName = player.player_name.toLowerCase();
         originalNames[playerName] = player.player_name;
 
-        // Check if player name is not in the ignored list
         if (!loadIgnoredNames.includes(playerName)) {
-            let level = levelMap[player.level_name.toLowerCase()];
+            let level = levelMap[player.id_lvl];
 
-            // Check if level exists and meets conditions
             if (level && level.position_lvl <= listMaxPosition) {
                 let score = 0;
                 if (player.progress >= 100) {
@@ -75,7 +70,7 @@ async function processScore() {
         }
     });
 
-    // Sort scores based on scores and original names
+    // sort
     let sortedScores = Object.entries(scores)
         .sort((a, b) => {
             if (b[1] !== a[1]) {
@@ -85,10 +80,8 @@ async function processScore() {
         })
         .map(score => [originalNames[score[0]], score[1]]);
 
-    // Return or process the sorted scores as needed
     return sortedScores;
 }
-
 
 async function pickPlayerData(name, scores) {
     // a função deve retornar um objeto com as seguintes propriedades:
@@ -114,8 +107,7 @@ async function pickPlayerData(name, scores) {
     };
 
     name = name.toLowerCase();
-
-    // Find the player's score
+    
     let playerScore = scores.find(player => player[0].toLowerCase() === name);
     if (playerScore) {
         player.score = playerScore[1];
@@ -142,14 +134,15 @@ async function pickPlayerData(name, scores) {
         if (verifier === name) {
             player.verifications.push(level);
         }
-        levelMap[level.name_lvl.toLowerCase()] = level;
+        levelMap[level.id_lvl] = level;
     });
 
     playerData.forEach(record => {
         let playerName = record.player_name.toLowerCase();
         originalNames[playerName] = record.player_name;
         if (playerName === name) {
-            let level = levelMap[record.level_name.toLowerCase()];
+            let level = levelMap[record.id_lvl];
+            console.log(level);
             if (level) {
                 if (record.progress >= 100) {
                     player.completions.push(level);
@@ -161,7 +154,7 @@ async function pickPlayerData(name, scores) {
     });
     player.completions.sort((a, b) => a.position_lvl - b.position_lvl);
     player.verifications.sort((a, b) => a.position_lvl - b.position_lvl);
-
+    
     return player;
 }
 
@@ -232,18 +225,14 @@ function fillPlayerList(players) {
        li.appendChild(score);
        playerList.appendChild(li);
 
-       // Adicione um ouvinte de evento de clique ao elemento da lista
        li.addEventListener('click', function() {
             if (li.classList.contains('active')) return;
-            // Remover a classe 'active' de todos os elementos da lista
             const listItems = playerList.getElementsByTagName('li');
             for (let j = 0; j < listItems.length; j++) {
                 listItems[j].classList.remove('active');
             }
-
-            // Adicionar a classe 'active' ao elemento clicado
             li.classList.add('active');
-
+            
             updatePlayerCard(player[0]);
        });
     }
