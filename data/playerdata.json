@@ -1,12 +1,13 @@
 {
-  "GeradoEm": "31/7/2024 13:27:39",
+  "UltimoEditor": "RalucaGranola",
+  "GeradoEm": "19/08/2024, 20:25:32",
   "TipoData": "record",
   "Data": [
     {
-      "id_lvl": "64612787",
-      "player_name": "xEssencia",
+      "id_lvl": "97091006",
+      "player_name": "xbow",
       "progress": 100,
-      "video": "https://youtu.be/YjyMsro_6mw?si=o6Jqr_Zp2nDwF77T"
+      "video": "https://youtu.be/p8FjCr_p9qE"
     },
     {
       "id_lvl": "72315402",
@@ -523,6 +524,12 @@
       "player_name": "UHbatatadoce",
       "progress": 100,
       "video": "https://youtu.be/TkRxP62PaWI"
+    },
+    {
+      "id_lvl": "64612787",
+      "player_name": "xEssencia",
+      "progress": 100,
+      "video": "https://youtu.be/YjyMsro_6mw?si=o6Jqr_Zp2nDwF77T"
     }
   ]
 }
