@@ -42,7 +42,7 @@
                     <h1 style="margin-bottom: 1rem;">Envio de levels</h1>
                     <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalRulesLevel">Regras</button>
                 </div>
-                <form action="https://docs.google.com/forms/d/e/1FAIpQLSfCMxt_b52-KFSZ1Pps2H21-Qlb7uL9Uw9AfcjazABIJjWluQ/formResponse" class="g-3">
+                <form id="formLevel" action="https://docs.google.com/forms/d/e/1FAIpQLSfCMxt_b52-KFSZ1Pps2H21-Qlb7uL9Uw9AfcjazABIJjWluQ/formResponse" class="g-3">
 
                     <div class="form-floating mb-3">
                         <input type="text" name="entry.2094889751" class="form-control" id="txtLevel" required placeholder="Nome do Level:">
@@ -50,7 +50,7 @@
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="text" name="entry.6149458" class="form-control" id="txtID" required placeholder="ID do Level:">
+                        <input type="text" name="entry.6149458" class="form-control" id="txtIdLevel" required placeholder="ID do Level:">
                         <label for="txtID">ID do Level:</label>
                     </div>
 
@@ -83,11 +83,11 @@
                     <h1 style="margin-bottom: 1rem;">Envio de records</h1>
                     <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalRulesRecord">Regras</button>
                 </div>
-                <form action="https://docs.google.com/forms/d/e/1FAIpQLSdznu2KnlWwS4hxyDoFNor-euzIhLIeOCFzqLQfVlzA_6mslg/formResponse" class="g-3">
+                <form id="formRecord" action="https://docs.google.com/forms/d/e/1FAIpQLSdznu2KnlWwS4hxyDoFNor-euzIhLIeOCFzqLQfVlzA_6mslg/formResponse" class="g-3">
 
                     <div class="form-floating mb-3">
-                        <input type="text" name="entry.609629322" class="form-control" id="txtLevel" required placeholder="Nome do Level:">
-                        <label for="txtLevel">Nome do Level:</label>
+                        <input type="text" name="entry.609629322" class="form-control" id="txtIdRecord" required placeholder="Nome do Level:">
+                        <label for="txtLevel">ID do Level:</label>
                     </div>
 
                     <div class="form-floating mb-3">
@@ -110,12 +110,48 @@
                         <label for="txtObs">Observações (opcional):</label>
                     </div>
                     <div>
-                        <button type="submit" formtarget="_blank" class="btn btn-primary">Enviar</button>
+                        <button id="submitFormRecord" formtarget="_blank" class="btn btn-primary">Enviar</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+    <script>
+        async function getLevelById(id) {
+            const response = await fetch('/data/leveldata.json');
+            const data = await response.json();
+            const levels = data.Data;
+            const level = levels.find(l => l.id_lvl === id);
+            return level;
+        }
+        function isRecordAcceptable(level, progress) {
+            const listpct = level.listpct_lvl;
+            if ((progress < listpct) || (progress > 100)) return false;
+            return true;
+        }
+    
+        // mandar o form
+        document.getElementById('submitFormRecord').addEventListener('submit', async function(event) {
+            event.preventDefault();
+    
+            var id = document.getElementById('txtIdRecord').value;
+            var level = await getLevelById(id);
+            if (!level) {
+                alert('Level não encontrado');
+                return;
+            } 
+            var progress = document.getElementById('txtProgress').value;
+            var isAcceptable = isRecordAcceptable(level, progress);
+            if (!isAcceptable) {
+                alert('Progresso inválido ou inferior ao list% do level');
+                return;
+            }
+            document.getElementById('txtIdRecord').value = level.name_lvl; // substituir o campo id pelo nome do level para o form
+            document.getElementById('formRecord').submit();
+            document.getElementById('txtIdRecord').value = id; // voltar o campo id para o valor original
+        });
+    </script>
 
     <div class="modal fade" id="modalRulesLevel" tabindex="-1" aria-labelledby="modalRulesLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
