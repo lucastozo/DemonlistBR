@@ -1,5 +1,5 @@
 export const listMaxPosition = 100;
-
+if(window.location.pathname === "/index.html") window.location.pathname = "/";
 if(window.location.pathname === "/" || window.location.pathname === "/pages/legacylist.html"){
     prepararPagina();
     passLevelData();
