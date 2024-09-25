@@ -1,623 +1,617 @@
-{
-  "UltimoEditor": "yuuchouze",
-  "GeradoEm": "23/08/2024, 23:02:52",
-  "TipoData": "record",
-  "Data": [
-    {
-      "id_lvl": "72315402",
-      "name_lvl": "arcturus",
-      "player_name": "gotsmile",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=XUSUFzRiC6E"
-    },
-    {
-      "id_lvl": "72315402",
-      "name_lvl": "arcturus",
-      "player_name": "L3on41az",
-      "progress": 100,
-      "video": "https://youtu.be/TlOh8cvjjtE"
-    },
-    {
-      "id_lvl": "72315402",
-      "name_lvl": "arcturus",
-      "player_name": "DibiiziCookie",
-      "progress": 100,
-      "video": "https://youtu.be/AqKBny7eX5Q"
-    },
-    {
-      "id_lvl": "72315402",
-      "name_lvl": "arcturus",
-      "player_name": "zGabriel",
-      "progress": 100,
-      "video": "https://www.twitch.tv/videos/2114935488"
-    },
-    {
-      "id_lvl": "44507360",
-      "name_lvl": "Ascension",
-      "player_name": "RalucaGranola",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=2G48PqxFEH0"
-    },
-    {
-      "id_lvl": "44507360",
-      "name_lvl": "Ascension",
-      "player_name": "Darkbbt",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=fP90yMTTH5g "
-    },
-    {
-      "id_lvl": "77016475",
-      "name_lvl": "Beyond Hell",
-      "player_name": "Paip",
-      "progress": 100,
-      "video": "https://youtu.be/INDySkUYxtk"
-    },
-    {
-      "id_lvl": "77016475",
-      "name_lvl": "Beyond Hell",
-      "player_name": "DibiiziCookie",
-      "progress": 100,
-      "video": "https://youtu.be/m4P-tlpIv6s"
-    },
-    {
-      "id_lvl": "50076317",
-      "name_lvl": "Blood Attack",
-      "player_name": "RalucaGranola",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=P1gWVUCTLEg"
-    },
-    {
-      "id_lvl": "90163362",
-      "name_lvl": "Brasil Level",
-      "player_name": "UHbatatadoce",
-      "progress": 100,
-      "video": "https://youtu.be/lMMONdPIkzU"
-    },
-    {
-      "id_lvl": "90451473",
-      "name_lvl": "CHALLUNGA FINALE",
-      "player_name": "DibiiziCookie",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=YK8wWmn4YqQ"
-    },
-    {
-      "id_lvl": "90451473",
-      "name_lvl": "CHALLUNGA FINALE",
-      "player_name": "Moogers",
-      "progress": 100,
-      "video": "https://youtu.be/cD-MtSK_JZw?si=xeF3GZ5eHGeEu4Eo"
-    },
-    {
-      "id_lvl": "90451473",
-      "name_lvl": "CHALLUNGA FINALE",
-      "player_name": "Paip",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=TPDK9GG_5j4"
-    },
-    {
-      "id_lvl": "90451473",
-      "name_lvl": "CHALLUNGA FINALE",
-      "player_name": "ultrakawaHD",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=wFUMv-OkRYw"
-    },
-    {
-      "id_lvl": "90451473",
-      "name_lvl": "CHALLUNGA FINALE",
-      "player_name": "UHbatatadoce",
-      "progress": 100,
-      "video": "https://youtu.be/zAGFxTno0eI?si=J-8FKoCCYYX04Qv0"
-    },
-    {
-      "id_lvl": "95327529",
-      "name_lvl": "Collapse",
-      "player_name": "DibiiziCookie",
-      "progress": 100,
-      "video": "https://youtu.be/UGnvXgJx3Zk"
-    },
-    {
-      "id_lvl": "80814750",
-      "name_lvl": "Convy",
-      "player_name": "Moogers",
-      "progress": 100,
-      "video": "https://youtu.be/l-ysuLCv_6A"
-    },
-    {
-      "id_lvl": "2487191",
-      "name_lvl": "Creeper Force",
-      "player_name": "Darkbbt",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=uSp4RFiQZgk"
-    },
-    {
-      "id_lvl": "63245954",
-      "name_lvl": "Cursed Nightmare",
-      "player_name": "DibiiziCookie",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=XrB6yrotaqg"
-    },
-    {
-      "id_lvl": "63245954",
-      "name_lvl": "Cursed Nightmare",
-      "player_name": "Manuca",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=jqb3aAj5PAs"
-    },
-    {
-      "id_lvl": "63245954",
-      "name_lvl": "Cursed Nightmare",
-      "player_name": "Darkbbt",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=7qPqN9gi3BM"
-    },
-    {
-      "id_lvl": "63245954",
-      "name_lvl": "Cursed Nightmare",
-      "player_name": "Teris700",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=9dixzKLsuuU"
-    },
-    {
-      "id_lvl": "63245954",
-      "name_lvl": "Cursed Nightmare",
-      "player_name": "shinnshonn",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=Nmb5einJgYE"
-    },
-    {
-      "id_lvl": "63245954",
-      "name_lvl": "Cursed Nightmare",
-      "player_name": "LKLOCO",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=bcY0wCyPt1I"
-    },
-    {
-      "id_lvl": "63245954",
-      "name_lvl": "Cursed Nightmare",
-      "player_name": "TheftGD",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=8FxxOl86Cfc"
-    },
-    {
-      "id_lvl": "63245954",
-      "name_lvl": "Cursed Nightmare",
-      "player_name": "marciosobel",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=mFjjmQEtMpQ "
-    },
-    {
-      "id_lvl": "97091006",
-      "name_lvl": "Doideira",
-      "player_name": "xbow",
-      "progress": 100,
-      "video": "https://youtu.be/p8FjCr_p9qE"
-    },
-    {
-      "id_lvl": "58417850",
-      "name_lvl": "Dolos",
-      "player_name": "Iago Fazbear",
-      "progress": 58,
-      "video": "https://youtu.be/IrP2kfzVuAM "
-    },
-    {
-      "id_lvl": "58417850",
-      "name_lvl": "Dolos",
-      "player_name": "fakeblast",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=1HdykIVdGFc"
-    },
-    {
-      "id_lvl": "58417850",
-      "name_lvl": "Dolos",
-      "player_name": "Samamba",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=0huTLaCoId8"
-    },
-    {
-      "id_lvl": "58417850",
-      "name_lvl": "Dolos",
-      "player_name": "Mxteus",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=GgYrcOhbg70"
-    },
-    {
-      "id_lvl": "58417850",
-      "name_lvl": "Dolos",
-      "player_name": "Zerum",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=JCPjy6-K-LA "
-    },
-    {
-      "id_lvl": "58417850",
-      "name_lvl": "Dolos",
-      "player_name": "shinnshonn",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=NBdnsj5ov8U"
-    },
-    {
-      "id_lvl": "58417850",
-      "name_lvl": "Dolos",
-      "player_name": "Crankz",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=M_vyuH9EjFE"
-    },
-    {
-      "id_lvl": "58417850",
-      "name_lvl": "Dolos",
-      "player_name": "Paip",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=0DXmR_eBrNY"
-    },
-    {
-      "id_lvl": "58417850",
-      "name_lvl": "Dolos",
-      "player_name": "Spyrosh",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=VhIW_uWIDck"
-    },
-    {
-      "id_lvl": "58417850",
-      "name_lvl": "Dolos",
-      "player_name": "Carlera",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=NDktoF9Wh-k"
-    },
-    {
-      "id_lvl": "58417850",
-      "name_lvl": "Dolos",
-      "player_name": "DibiiziCookie",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=MhHPhDCzCqA"
-    },
-    {
-      "id_lvl": "58417850",
-      "name_lvl": "Dolos",
-      "player_name": "ultrakawaHD",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=n4JMgWEgwWU"
-    },
-    {
-      "id_lvl": "48091316",
-      "name_lvl": "Elusions",
-      "player_name": "RalucaGranola",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=iaeqdTpaYnY"
-    },
-    {
-      "id_lvl": "80966929",
-      "name_lvl": "Eraser",
-      "player_name": "L3on14az",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=NBYNAZfi0SI"
-    },
-    {
-      "id_lvl": "62290029",
-      "name_lvl": "Extermination Nation",
-      "player_name": "RalucaGranola",
-      "progress": 100,
-      "video": "https://youtu.be/izJBNXoQrJQ"
-    },
-    {
-      "id_lvl": "37792861",
-      "name_lvl": "Factory Realm X",
-      "player_name": "ultrakawaHD",
-      "progress": 100,
-      "video": "https://youtu.be/nz9549EGcaQ"
-    },
-    {
-      "id_lvl": "37792861",
-      "name_lvl": "Factory Realm X",
-      "player_name": "DibiiziCookie",
-      "progress": 100,
-      "video": "https://youtu.be/xvSTS40wsfE"
-    },
-    {
-      "id_lvl": "37792861",
-      "name_lvl": "Factory Realm X",
-      "player_name": "AoZoX",
-      "progress": 100,
-      "video": "https://youtu.be/paa5cGWxob8"
-    },
-    {
-      "id_lvl": "91293455",
-      "name_lvl": "Glacial Edge",
-      "player_name": "MrTopson",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=Lyyz9o6rJZ4"
-    },
-    {
-      "id_lvl": "91293455",
-      "name_lvl": "Glacial Edge",
-      "player_name": "Yuuchouze",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=zI7CKOtUaqY"
-    },
-    {
-      "id_lvl": "88851982",
-      "name_lvl": "Gusta Cyclone",
-      "player_name": "Gabryelsz",
-      "progress": 100,
-      "video": "https://youtu.be/9pB6l9veiWo"
-    },
-    {
-      "id_lvl": "54789455",
-      "name_lvl": "Hellgate",
-      "player_name": "Enzeux",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=EJigM8Eq4s0"
-    },
-    {
-      "id_lvl": "54789455",
-      "name_lvl": "Hellgate",
-      "player_name": "fakeblast",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=7UVvF6JIVqQ"
-    },
-    {
-      "id_lvl": "89298291",
-      "name_lvl": "HuShErr",
-      "player_name": "UHbatatadoce",
-      "progress": 100,
-      "video": "https://youtu.be/hXWs_yzMrt0"
-    },
-    {
-      "id_lvl": "89298291",
-      "name_lvl": "HuShErr",
-      "player_name": "L3on14az",
-      "progress": 100,
-      "video": "https://youtu.be/NBYNAZfi0SI"
-    },
-    {
-      "id_lvl": "78119012",
-      "name_lvl": "ILOVECYAN",
-      "player_name": "Paip",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=Y-8jbM1QZKU"
-    },
-    {
-      "id_lvl": "78119012",
-      "name_lvl": "ILOVECYAN",
-      "player_name": "ultrakawaHD",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=FwoMqMbNX5U"
-    },
-    {
-      "id_lvl": "62489808",
-      "name_lvl": "MEMORY ZONE",
-      "player_name": "Darkbbt",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=kl_Fad0ViKE "
-    },
-    {
-      "id_lvl": "65045892",
-      "name_lvl": "Mind Blowing",
-      "player_name": "Niik",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=P8CN_KAFsH4 "
-    },
-    {
-      "id_lvl": "92424054",
-      "name_lvl": "narcissist",
-      "player_name": "RalucaGranola",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=BwcNQg6_irM "
-    },
-    {
-      "id_lvl": "33383668",
-      "name_lvl": "NecroDynamix",
-      "player_name": "Enzeux",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=py_x43iPqhk"
-    },
-    {
-      "id_lvl": "33383668",
-      "name_lvl": "NecroDynamix",
-      "player_name": "Neutrik",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=FqzFJ_HKkBM"
-    },
-    {
-      "id_lvl": "33383668",
-      "name_lvl": "NecroDynamix",
-      "player_name": "Taves",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=E6spf0933kY "
-    },
-    {
-      "id_lvl": "33383668",
-      "name_lvl": "NecroDynamix",
-      "player_name": "MrTopson",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=ySKri1iXmiA"
-    },
-    {
-      "id_lvl": "33383668",
-      "name_lvl": "NecroDynamix",
-      "player_name": "ultrakawaHD",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=wHRnXM9g-tA"
-    },
-    {
-      "id_lvl": "33383668",
-      "name_lvl": "NecroDynamix",
-      "player_name": "Darkbbt",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=GugErD3LZ_o"
-    },
-    {
-      "id_lvl": "33383668",
-      "name_lvl": "NecroDynamix",
-      "player_name": "Nysinr",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=oyBNNpuMmZE"
-    },
-    {
-      "id_lvl": "33383668",
-      "name_lvl": "NecroDynamix",
-      "player_name": "Qwarty",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=2dclWxfrIIk"
-    },
-    {
-      "id_lvl": "33383668",
-      "name_lvl": "NecroDynamix",
-      "player_name": "fakeblast",
-      "progress": 100,
-      "video": "https://youtu.be/rBzwfEy6Y9Q?si=3u6Dd9s6UyE_Y7Cc "
-    },
-    {
-      "id_lvl": "91261175",
-      "name_lvl": "Nuclear Flash",
-      "player_name": "Yuuchouze",
-      "progress": 100,
-      "video": "https://youtu.be/4_iniWCXqF0"
-    },
-    {
-      "id_lvl": "14594318",
-      "name_lvl": "Power Surge",
-      "player_name": "Gabryelsz",
-      "progress": 100,
-      "video": "https://youtu.be/supjNWvitG8"
-    },
-    {
-      "id_lvl": "43118149",
-      "name_lvl": "Rebirth II",
-      "player_name": "Darkbbt",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=E8hJw9_acjU"
-    },
-    {
-      "id_lvl": "43118149",
-      "name_lvl": "Rebirth II",
-      "player_name": "fakeblast",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=Dmi3iYd01fM "
-    },
-    {
-      "id_lvl": "43118149",
-      "name_lvl": "Rebirth II",
-      "player_name": "Yuuchouze",
-      "progress": 100,
-      "video": "https://youtu.be/KUDXQ-YrJCs"
-    },
-    {
-      "id_lvl": "77853681",
-      "name_lvl": "SOOO CRAZY",
-      "player_name": "GDPatos",
-      "progress": 100,
-      "video": "https://youtu.be/Dp1vCzA5J2k"
-    },
-    {
-      "id_lvl": "93939369",
-      "name_lvl": "The Ultimate Demon",
-      "player_name": "Paip",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=y-gXmzP1ttM "
-    },
-    {
-      "id_lvl": "93939369",
-      "name_lvl": "The Ultimate Demon",
-      "player_name": "FelpsMiner [GD]",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=4rh20kV8wj0 "
-    },
-    {
-      "id_lvl": "93939369",
-      "name_lvl": "The Ultimate Demon",
-      "player_name": "ultrakawaHD",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=0WytF0XFQRQ "
-    },
-    {
-      "id_lvl": "64073938",
-      "name_lvl": "The Zodiac",
-      "player_name": "Paip",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=6r6dBH-DEDA"
-    },
-    {
-      "id_lvl": "64073938",
-      "name_lvl": "The Zodiac",
-      "player_name": "L3on14az",
-      "progress": 100,
-      "video": "https://youtu.be/ffTKSv1DABg"
-    },
-    {
-      "id_lvl": "56893115",
-      "name_lvl": "Theory of Cody",
-      "player_name": "fakeblast",
-      "progress": 100,
-      "video": "https://youtu.be/W5ASvDEPKlo"
-    },
-    {
-      "id_lvl": "54953085",
-      "name_lvl": "Thinking Space",
-      "player_name": "L3on14az",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=XS1zt6mdX1s"
-    },
-    {
-      "id_lvl": "54953085",
-      "name_lvl": "Thinking Space",
-      "player_name": "LHenrique",
-      "progress": 100,
-      "video": "https://youtu.be/VyzpeLDrmks"
-    },
-    {
-      "id_lvl": "54953085",
-      "name_lvl": "Thinking Space",
-      "player_name": "tayrr",
-      "progress": 76,
-      "video": "https://youtu.be/zbkAWl23hpo"
-    },
-    {
-      "id_lvl": "54953085",
-      "name_lvl": "Thinking Space",
-      "player_name": "RalucaGranola",
-      "progress": 76,
-      "video": "https://youtu.be/VTo5f6iJspo"
-    },
-    {
-      "id_lvl": "94563744",
-      "name_lvl": "tipo B",
-      "player_name": "Yuuchouze",
-      "progress": 100,
-      "video": "https://youtu.be/mxThhliRDj4"
-    },
-    {
-      "id_lvl": "88854750",
-      "name_lvl": "UNDERGROUND",
-      "player_name": "lm8",
-      "progress": 100,
-      "video": "https://youtu.be/RB8y8kZUvdM"
-    },
-    {
-      "id_lvl": "89819173",
-      "name_lvl": "Underwater Caves",
-      "player_name": "L3on14az",
-      "progress": 100,
-      "video": "https://www.youtube.com/watch?v=JTSqdXERIWY "
-    },
-    {
-      "id_lvl": "89819173",
-      "name_lvl": "Underwater Caves",
-      "player_name": "DibiiziCookie",
-      "progress": 100,
-      "video": "https://youtu.be/ChFW56r1fsU?si=5Kna6pQv4qYjCng2 "
-    },
-    {
-      "id_lvl": "79848867",
-      "name_lvl": "vinistep",
-      "player_name": "UHbatatadoce",
-      "progress": 100,
-      "video": "https://youtu.be/TkRxP62PaWI"
-    },
-    {
-      "id_lvl": "64612787",
-      "name_lvl": "Zacarias",
-      "player_name": "xEssencia",
-      "progress": 100,
-      "video": "https://youtu.be/YjyMsro_6mw?si=o6Jqr_Zp2nDwF77T"
-    }
-  ]
-}
+[
+  {
+    "id_lvl": "72315402",
+    "name_lvl": "arcturus",
+    "player_name": "gotsmile",
+    "progress": 100,
+    "video": "https://youtu.be/XUSUFzRiC6E"
+  },
+  {
+    "id_lvl": "72315402",
+    "name_lvl": "arcturus",
+    "player_name": "L3on41az",
+    "progress": 100,
+    "video": "https://youtu.be/TlOh8cvjjtE"
+  },
+  {
+    "id_lvl": "72315402",
+    "name_lvl": "arcturus",
+    "player_name": "DibiiziCookie",
+    "progress": 100,
+    "video": "https://youtu.be/AqKBny7eX5Q"
+  },
+  {
+    "id_lvl": "72315402",
+    "name_lvl": "arcturus",
+    "player_name": "zGabriel",
+    "progress": 100
+  },
+  {
+    "id_lvl": "44507360",
+    "name_lvl": "Ascension",
+    "player_name": "RalucaGranola",
+    "progress": 100,
+    "video": "https://youtu.be/2G48PqxFEH0"
+  },
+  {
+    "id_lvl": "44507360",
+    "name_lvl": "Ascension",
+    "player_name": "Darkbbt",
+    "progress": 100,
+    "video": "https://youtu.be/fP90yMTTH5g"
+  },
+  {
+    "id_lvl": "77016475",
+    "name_lvl": "Beyond Hell",
+    "player_name": "Paip",
+    "progress": 100,
+    "video": "https://youtu.be/INDySkUYxtk"
+  },
+  {
+    "id_lvl": "77016475",
+    "name_lvl": "Beyond Hell",
+    "player_name": "DibiiziCookie",
+    "progress": 100,
+    "video": "https://youtu.be/m4P-tlpIv6s"
+  },
+  {
+    "id_lvl": "50076317",
+    "name_lvl": "Blood Attack",
+    "player_name": "RalucaGranola",
+    "progress": 100,
+    "video": "https://youtu.be/P1gWVUCTLEg"
+  },
+  {
+    "id_lvl": "90163362",
+    "name_lvl": "Brasil Level",
+    "player_name": "UHbatatadoce",
+    "progress": 100,
+    "video": "https://youtu.be/lMMONdPIkzU"
+  },
+  {
+    "id_lvl": "90451473",
+    "name_lvl": "CHALLUNGA FINALE",
+    "player_name": "DibiiziCookie",
+    "progress": 100,
+    "video": "https://youtu.be/YK8wWmn4YqQ"
+  },
+  {
+    "id_lvl": "90451473",
+    "name_lvl": "CHALLUNGA FINALE",
+    "player_name": "Moogers",
+    "progress": 100,
+    "video": "https://youtu.be/cD-MtSK_JZw"
+  },
+  {
+    "id_lvl": "90451473",
+    "name_lvl": "CHALLUNGA FINALE",
+    "player_name": "Paip",
+    "progress": 100,
+    "video": "https://youtu.be/TPDK9GG_5j4"
+  },
+  {
+    "id_lvl": "90451473",
+    "name_lvl": "CHALLUNGA FINALE",
+    "player_name": "ultrakawaHD",
+    "progress": 100,
+    "video": "https://youtu.be/wFUMv-OkRYw"
+  },
+  {
+    "id_lvl": "90451473",
+    "name_lvl": "CHALLUNGA FINALE",
+    "player_name": "UHbatatadoce",
+    "progress": 100,
+    "video": "https://youtu.be/zAGFxTno0eI"
+  },
+  {
+    "id_lvl": "95327529",
+    "name_lvl": "Collapse",
+    "player_name": "DibiiziCookie",
+    "progress": 100,
+    "video": "https://youtu.be/UGnvXgJx3Zk"
+  },
+  {
+    "id_lvl": "80814750",
+    "name_lvl": "Convy",
+    "player_name": "Moogers",
+    "progress": 100,
+    "video": "https://youtu.be/l-ysuLCv_6A"
+  },
+  {
+    "id_lvl": "2487191",
+    "name_lvl": "Creeper Force",
+    "player_name": "Darkbbt",
+    "progress": 100,
+    "video": "https://youtu.be/uSp4RFiQZgk"
+  },
+  {
+    "id_lvl": "63245954",
+    "name_lvl": "Cursed Nightmare",
+    "player_name": "DibiiziCookie",
+    "progress": 100,
+    "video": "https://youtu.be/XrB6yrotaqg"
+  },
+  {
+    "id_lvl": "63245954",
+    "name_lvl": "Cursed Nightmare",
+    "player_name": "Manuca",
+    "progress": 100,
+    "video": "https://youtu.be/jqb3aAj5PAs"
+  },
+  {
+    "id_lvl": "63245954",
+    "name_lvl": "Cursed Nightmare",
+    "player_name": "Darkbbt",
+    "progress": 100,
+    "video": "https://youtu.be/7qPqN9gi3BM"
+  },
+  {
+    "id_lvl": "63245954",
+    "name_lvl": "Cursed Nightmare",
+    "player_name": "Teris700",
+    "progress": 100,
+    "video": "https://youtu.be/9dixzKLsuuU"
+  },
+  {
+    "id_lvl": "63245954",
+    "name_lvl": "Cursed Nightmare",
+    "player_name": "shinnshonn",
+    "progress": 100,
+    "video": "https://youtu.be/Nmb5einJgYE"
+  },
+  {
+    "id_lvl": "63245954",
+    "name_lvl": "Cursed Nightmare",
+    "player_name": "LKLOCO",
+    "progress": 100,
+    "video": "https://youtu.be/bcY0wCyPt1I"
+  },
+  {
+    "id_lvl": "63245954",
+    "name_lvl": "Cursed Nightmare",
+    "player_name": "TheftGD",
+    "progress": 100,
+    "video": "https://youtu.be/8FxxOl86Cfc"
+  },
+  {
+    "id_lvl": "63245954",
+    "name_lvl": "Cursed Nightmare",
+    "player_name": "marciosobel",
+    "progress": 100,
+    "video": "https://youtu.be/mFjjmQEtMpQ"
+  },
+  {
+    "id_lvl": "97091006",
+    "name_lvl": "Doideira",
+    "player_name": "xbow",
+    "progress": 100,
+    "video": "https://youtu.be/p8FjCr_p9qE"
+  },
+  {
+    "id_lvl": "58417850",
+    "name_lvl": "Dolos",
+    "player_name": "Iago Fazbear",
+    "progress": 58,
+    "video": "https://youtu.be/IrP2kfzVuAM"
+  },
+  {
+    "id_lvl": "58417850",
+    "name_lvl": "Dolos",
+    "player_name": "fakeblast",
+    "progress": 100,
+    "video": "https://youtu.be/1HdykIVdGFc"
+  },
+  {
+    "id_lvl": "58417850",
+    "name_lvl": "Dolos",
+    "player_name": "Samamba",
+    "progress": 100,
+    "video": "https://youtu.be/0huTLaCoId8"
+  },
+  {
+    "id_lvl": "58417850",
+    "name_lvl": "Dolos",
+    "player_name": "Mxteus",
+    "progress": 100,
+    "video": "https://youtu.be/GgYrcOhbg70"
+  },
+  {
+    "id_lvl": "58417850",
+    "name_lvl": "Dolos",
+    "player_name": "Zerum",
+    "progress": 100,
+    "video": "https://youtu.be/JCPjy6-K-LA"
+  },
+  {
+    "id_lvl": "58417850",
+    "name_lvl": "Dolos",
+    "player_name": "shinnshonn",
+    "progress": 100,
+    "video": "https://youtu.be/NBdnsj5ov8U"
+  },
+  {
+    "id_lvl": "58417850",
+    "name_lvl": "Dolos",
+    "player_name": "Crankz",
+    "progress": 100,
+    "video": "https://youtu.be/M_vyuH9EjFE"
+  },
+  {
+    "id_lvl": "58417850",
+    "name_lvl": "Dolos",
+    "player_name": "Paip",
+    "progress": 100,
+    "video": "https://youtu.be/0DXmR_eBrNY"
+  },
+  {
+    "id_lvl": "58417850",
+    "name_lvl": "Dolos",
+    "player_name": "Spyrosh",
+    "progress": 100,
+    "video": "https://youtu.be/VhIW_uWIDck"
+  },
+  {
+    "id_lvl": "58417850",
+    "name_lvl": "Dolos",
+    "player_name": "Carlera",
+    "progress": 100,
+    "video": "https://youtu.be/NDktoF9Wh-k"
+  },
+  {
+    "id_lvl": "58417850",
+    "name_lvl": "Dolos",
+    "player_name": "DibiiziCookie",
+    "progress": 100,
+    "video": "https://youtu.be/MhHPhDCzCqA"
+  },
+  {
+    "id_lvl": "58417850",
+    "name_lvl": "Dolos",
+    "player_name": "ultrakawaHD",
+    "progress": 100,
+    "video": "https://youtu.be/n4JMgWEgwWU"
+  },
+  {
+    "id_lvl": "48091316",
+    "name_lvl": "Elusions",
+    "player_name": "RalucaGranola",
+    "progress": 100,
+    "video": "https://youtu.be/iaeqdTpaYnY"
+  },
+  {
+    "id_lvl": "80966929",
+    "name_lvl": "Eraser",
+    "player_name": "L3on14az",
+    "progress": 100,
+    "video": "https://youtu.be/NBYNAZfi0SI"
+  },
+  {
+    "id_lvl": "62290029",
+    "name_lvl": "Extermination Nation",
+    "player_name": "RalucaGranola",
+    "progress": 100,
+    "video": "https://youtu.be/izJBNXoQrJQ"
+  },
+  {
+    "id_lvl": "37792861",
+    "name_lvl": "Factory Realm X",
+    "player_name": "ultrakawaHD",
+    "progress": 100,
+    "video": "https://youtu.be/nz9549EGcaQ"
+  },
+  {
+    "id_lvl": "37792861",
+    "name_lvl": "Factory Realm X",
+    "player_name": "DibiiziCookie",
+    "progress": 100,
+    "video": "https://youtu.be/xvSTS40wsfE"
+  },
+  {
+    "id_lvl": "37792861",
+    "name_lvl": "Factory Realm X",
+    "player_name": "AoZoX",
+    "progress": 100,
+    "video": "https://youtu.be/paa5cGWxob8"
+  },
+  {
+    "id_lvl": "91293455",
+    "name_lvl": "Glacial Edge",
+    "player_name": "MrTopson",
+    "progress": 100,
+    "video": "https://youtu.be/Lyyz9o6rJZ4"
+  },
+  {
+    "id_lvl": "91293455",
+    "name_lvl": "Glacial Edge",
+    "player_name": "Yuuchouze",
+    "progress": 100,
+    "video": "https://youtu.be/zI7CKOtUaqY"
+  },
+  {
+    "id_lvl": "88851982",
+    "name_lvl": "Gusta Cyclone",
+    "player_name": "Gabryelsz",
+    "progress": 100,
+    "video": "https://youtu.be/9pB6l9veiWo"
+  },
+  {
+    "id_lvl": "54789455",
+    "name_lvl": "Hellgate",
+    "player_name": "Enzeux",
+    "progress": 100,
+    "video": "https://youtu.be/EJigM8Eq4s0"
+  },
+  {
+    "id_lvl": "54789455",
+    "name_lvl": "Hellgate",
+    "player_name": "fakeblast",
+    "progress": 100,
+    "video": "https://youtu.be/7UVvF6JIVqQ"
+  },
+  {
+    "id_lvl": "89298291",
+    "name_lvl": "HuShErr",
+    "player_name": "UHbatatadoce",
+    "progress": 100,
+    "video": "https://youtu.be/hXWs_yzMrt0"
+  },
+  {
+    "id_lvl": "89298291",
+    "name_lvl": "HuShErr",
+    "player_name": "L3on14az",
+    "progress": 100,
+    "video": "https://youtu.be/NBYNAZfi0SI"
+  },
+  {
+    "id_lvl": "78119012",
+    "name_lvl": "ILOVECYAN",
+    "player_name": "Paip",
+    "progress": 100,
+    "video": "https://youtu.be/Y-8jbM1QZKU"
+  },
+  {
+    "id_lvl": "78119012",
+    "name_lvl": "ILOVECYAN",
+    "player_name": "ultrakawaHD",
+    "progress": 100,
+    "video": "https://youtu.be/FwoMqMbNX5U"
+  },
+  {
+    "id_lvl": "62489808",
+    "name_lvl": "MEMORY ZONE",
+    "player_name": "Darkbbt",
+    "progress": 100,
+    "video": "https://youtu.be/kl_Fad0ViKE"
+  },
+  {
+    "id_lvl": "65045892",
+    "name_lvl": "Mind Blowing",
+    "player_name": "Niik",
+    "progress": 100,
+    "video": "https://youtu.be/P8CN_KAFsH4"
+  },
+  {
+    "id_lvl": "92424054",
+    "name_lvl": "narcissist",
+    "player_name": "RalucaGranola",
+    "progress": 100,
+    "video": "https://youtu.be/BwcNQg6_irM"
+  },
+  {
+    "id_lvl": "33383668",
+    "name_lvl": "NecroDynamix",
+    "player_name": "Enzeux",
+    "progress": 100,
+    "video": "https://youtu.be/py_x43iPqhk"
+  },
+  {
+    "id_lvl": "33383668",
+    "name_lvl": "NecroDynamix",
+    "player_name": "Neutrik",
+    "progress": 100,
+    "video": "https://youtu.be/FqzFJ_HKkBM"
+  },
+  {
+    "id_lvl": "33383668",
+    "name_lvl": "NecroDynamix",
+    "player_name": "Taves",
+    "progress": 100,
+    "video": "https://youtu.be/E6spf0933kY"
+  },
+  {
+    "id_lvl": "33383668",
+    "name_lvl": "NecroDynamix",
+    "player_name": "MrTopson",
+    "progress": 100,
+    "video": "https://youtu.be/ySKri1iXmiA"
+  },
+  {
+    "id_lvl": "33383668",
+    "name_lvl": "NecroDynamix",
+    "player_name": "ultrakawaHD",
+    "progress": 100,
+    "video": "https://youtu.be/wHRnXM9g-tA"
+  },
+  {
+    "id_lvl": "33383668",
+    "name_lvl": "NecroDynamix",
+    "player_name": "Darkbbt",
+    "progress": 100,
+    "video": "https://youtu.be/GugErD3LZ_o"
+  },
+  {
+    "id_lvl": "33383668",
+    "name_lvl": "NecroDynamix",
+    "player_name": "Nysinr",
+    "progress": 100,
+    "video": "https://youtu.be/oyBNNpuMmZE"
+  },
+  {
+    "id_lvl": "33383668",
+    "name_lvl": "NecroDynamix",
+    "player_name": "Qwarty",
+    "progress": 100,
+    "video": "https://youtu.be/2dclWxfrIIk"
+  },
+  {
+    "id_lvl": "33383668",
+    "name_lvl": "NecroDynamix",
+    "player_name": "fakeblast",
+    "progress": 100,
+    "video": "https://youtu.be/rBzwfEy6Y9Q"
+  },
+  {
+    "id_lvl": "91261175",
+    "name_lvl": "Nuclear Flash",
+    "player_name": "Yuuchouze",
+    "progress": 100,
+    "video": "https://youtu.be/4_iniWCXqF0"
+  },
+  {
+    "id_lvl": "14594318",
+    "name_lvl": "Power Surge",
+    "player_name": "Gabryelsz",
+    "progress": 100,
+    "video": "https://youtu.be/supjNWvitG8"
+  },
+  {
+    "id_lvl": "43118149",
+    "name_lvl": "Rebirth II",
+    "player_name": "Darkbbt",
+    "progress": 100,
+    "video": "https://youtu.be/E8hJw9_acjU"
+  },
+  {
+    "id_lvl": "43118149",
+    "name_lvl": "Rebirth II",
+    "player_name": "fakeblast",
+    "progress": 100,
+    "video": "https://youtu.be/Dmi3iYd01fM"
+  },
+  {
+    "id_lvl": "43118149",
+    "name_lvl": "Rebirth II",
+    "player_name": "Yuuchouze",
+    "progress": 100,
+    "video": "https://youtu.be/KUDXQ-YrJCs"
+  },
+  {
+    "id_lvl": "77853681",
+    "name_lvl": "SOOO CRAZY",
+    "player_name": "GDPatos",
+    "progress": 100,
+    "video": "https://youtu.be/Dp1vCzA5J2k"
+  },
+  {
+    "id_lvl": "93939369",
+    "name_lvl": "The Ultimate Demon",
+    "player_name": "Paip",
+    "progress": 100,
+    "video": "https://youtu.be/y-gXmzP1ttM"
+  },
+  {
+    "id_lvl": "93939369",
+    "name_lvl": "The Ultimate Demon",
+    "player_name": "FelpsMiner [GD]",
+    "progress": 100,
+    "video": "https://youtu.be/4rh20kV8wj0"
+  },
+  {
+    "id_lvl": "93939369",
+    "name_lvl": "The Ultimate Demon",
+    "player_name": "ultrakawaHD",
+    "progress": 100,
+    "video": "https://youtu.be/0WytF0XFQRQ"
+  },
+  {
+    "id_lvl": "64073938",
+    "name_lvl": "The Zodiac",
+    "player_name": "Paip",
+    "progress": 100,
+    "video": "https://youtu.be/6r6dBH-DEDA"
+  },
+  {
+    "id_lvl": "64073938",
+    "name_lvl": "The Zodiac",
+    "player_name": "L3on14az",
+    "progress": 100,
+    "video": "https://youtu.be/ffTKSv1DABg"
+  },
+  {
+    "id_lvl": "56893115",
+    "name_lvl": "Theory of Cody",
+    "player_name": "fakeblast",
+    "progress": 100,
+    "video": "https://youtu.be/W5ASvDEPKlo"
+  },
+  {
+    "id_lvl": "54953085",
+    "name_lvl": "Thinking Space",
+    "player_name": "L3on14az",
+    "progress": 100,
+    "video": "https://youtu.be/XS1zt6mdX1s"
+  },
+  {
+    "id_lvl": "54953085",
+    "name_lvl": "Thinking Space",
+    "player_name": "LHenrique",
+    "progress": 100,
+    "video": "https://youtu.be/VyzpeLDrmks"
+  },
+  {
+    "id_lvl": "54953085",
+    "name_lvl": "Thinking Space",
+    "player_name": "tayrr",
+    "progress": 76,
+    "video": "https://youtu.be/zbkAWl23hpo"
+  },
+  {
+    "id_lvl": "54953085",
+    "name_lvl": "Thinking Space",
+    "player_name": "RalucaGranola",
+    "progress": 76,
+    "video": "https://youtu.be/VTo5f6iJspo"
+  },
+  {
+    "id_lvl": "94563744",
+    "name_lvl": "tipo B",
+    "player_name": "Yuuchouze",
+    "progress": 100,
+    "video": "https://youtu.be/mxThhliRDj4"
+  },
+  {
+    "id_lvl": "88854750",
+    "name_lvl": "UNDERGROUND",
+    "player_name": "lm8",
+    "progress": 100,
+    "video": "https://youtu.be/RB8y8kZUvdM"
+  },
+  {
+    "id_lvl": "89819173",
+    "name_lvl": "Underwater Caves",
+    "player_name": "L3on14az",
+    "progress": 100,
+    "video": "https://youtu.be/JTSqdXERIWY"
+  },
+  {
+    "id_lvl": "89819173",
+    "name_lvl": "Underwater Caves",
+    "player_name": "DibiiziCookie",
+    "progress": 100,
+    "video": "https://youtu.be/ChFW56r1fsU"
+  },
+  {
+    "id_lvl": "79848867",
+    "name_lvl": "vinistep",
+    "player_name": "UHbatatadoce",
+    "progress": 100,
+    "video": "https://youtu.be/TkRxP62PaWI"
+  },
+  {
+    "id_lvl": "64612787",
+    "name_lvl": "Zacarias",
+    "player_name": "xEssencia",
+    "progress": 100,
+    "video": "https://youtu.be/YjyMsro_6mw"
+  }
+]
