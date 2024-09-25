@@ -1,6 +1,6 @@
 {
   "UltimoEditor": "yuuchouze",
-  "GeradoEm": "25/09/2024, 00:36:38",
+  "GeradoEm": "25/09/2024, 00:42:55",
   "TipoData": "level",
   "Data": [
     {
@@ -282,7 +282,7 @@
       "name_lvl": "Dolos",
       "creator_lvl": "Enzeux",
       "verifier_lvl": "Enzeux",
-      "video_lvl": "https://youtu.be/false",
+      "video_lvl": false,
       "listpct_lvl": 51
     },
     {
@@ -1172,7 +1172,7 @@
       "name_lvl": "Star Apart",
       "creator_lvl": "HidekiX",
       "verifier_lvl": "HidekiX",
-      "video_lvl": "https://youtu.be/false"
+      "video_lvl": false
     },
     {
       "position_lvl": 139,
