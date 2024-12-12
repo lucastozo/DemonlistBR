@@ -87,7 +87,7 @@ function buildList(levelData){
         textDiv.id = 'textDiv';
 
         const levelLink = document.createElement('a');
-        levelLink.href = `/pages/leveldetails.html?id=${level.id_lvl}`;
+        levelLink.href = `/DemonlistBR/pages/leveldetails.html?id=${level.id_lvl}`;
         levelLink.id = 'levelLink';
         const levelName = document.createElement('h2');
 
