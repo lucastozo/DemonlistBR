@@ -1,6 +1,6 @@
 export const listMaxPosition = 100;
-if(window.location.pathname === "/index.html") window.location.pathname = "/";
-if(window.location.pathname === "/" || window.location.pathname === "/pages/legacylist.html"){
+if(window.location.pathname === "/DemonlistBR/index.html") window.location.pathname = "/";
+if(window.location.pathname === "/" || window.location.pathname === "/DemonlistBR/pages/legacylist.html"){
     prepararPagina();
     passLevelData();
 }
@@ -13,7 +13,7 @@ function passLevelData(){
     timeWarpPickerValues(timeWarpParam);
 
     function passCurrentData(){
-        fetch('/data/leveldata.json')
+        fetch('/DemonlistBR/data/leveldata.json')
         .then(response => response.json())
         .then(levelData => {
             levelData.Data.sort((a, b) => a.position_lvl - b.position_lvl);
