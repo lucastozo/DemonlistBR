@@ -1,6 +1,6 @@
 export const listMaxPosition = 100;
-if(window.location.pathname === "/DemonlistBR/index.html") window.location.pathname = "/";
-if(window.location.pathname === "/" || window.location.pathname === "/DemonlistBR/pages/legacylist.html"){
+if(window.location.pathname === "/DemonlistBR/index.html") window.location.pathname = "/DemonlistBR";
+if(window.location.pathname === "/DemonlistBR" || window.location.pathname === "/DemonlistBR/pages/legacylist.html"){
     prepararPagina();
     passLevelData();
 }
