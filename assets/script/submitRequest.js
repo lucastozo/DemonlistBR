@@ -102,7 +102,7 @@ async function goodToGo(dataMode)
 
     // check 3: level is beyond extended list
     if (dataMode === 'record') {
-        const response = await fetch('/data/listsettings.json');
+        const response = await fetch('data/listsettings.json');
         const data = await response.json();
         const extendedList = data.ExtendedList;
         if (levelGotByID.id_lvl > extendedList) {
@@ -126,7 +126,7 @@ async function goodToGo(dataMode)
 }
 
 async function getLevelById(id) {
-    const response = await fetch('/data/leveldata.json');
+    const response = await fetch('data/leveldata.json');
     const data = await response.json();
     const levels = data.Data;
     const level = levels.find(l => l.id_lvl === id);
