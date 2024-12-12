@@ -1,4 +1,4 @@
-import { listMaxPosition } from "./script.js";
+import { listMaxPosition } from "/DemonlistBR/assets/script/script.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     let params = new URLSearchParams(window.location.search);

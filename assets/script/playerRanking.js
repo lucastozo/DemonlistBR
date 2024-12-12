@@ -1,7 +1,7 @@
-import { listMaxPosition } from "./script.js";
+import { listMaxPosition } from "/DemonlistBR/assets/script/script.js";
 
 async function loadIgnoredNames() {
-    const response = await fetch('/data/ignoredNames.txt');
+    const response = await fetch('/DemonlistBR/data/ignoredNames.txt');
     const data = await response.text();
     return data.split('\n').map(name => name.trim().toLowerCase());
 }
@@ -23,8 +23,8 @@ async function processScore() {
     let levelMap = {};
 
     const [levelResponse, playerResponse] = await Promise.all([
-        fetch('/data/leveldata.json'),
-        fetch('/data/playerdata.json')
+        fetch('/DemonlistBR/data/leveldata.json'),
+        fetch('/DemonlistBR/data/playerdata.json')
     ]);
 
     const levelData = (await levelResponse.json()).Data;
