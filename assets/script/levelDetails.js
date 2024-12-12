@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let levelId = params.get('id');
 
     //percorrer json e ver se existe o id, se não, mostrar mensagem de erro
-    fetch('data/leveldata.json')
+    fetch('/data/leveldata.json')
     .then(response => response.json())
     .then(levelDataJson => {
         const levelData = levelDataJson.Data.find(level => level.id_lvl === levelId)
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch(`https://gdbrowser.com/api/level/${levelId}`);
             const data = await response.json();
 
-            const responseLevelData = await fetch('data/leveldata.json');
+            const responseLevelData = await fetch('/data/leveldata.json');
             const levelDataJson = await responseLevelData.json();
             const levelData = levelDataJson.Data.find(level => level.id_lvl === levelId)
 
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //chamada playerdata
     async function getPlayerData(levelDataGDB, levelDataJson) {
         try {
-            const response = await fetch('data/playerdata.json');
+            const response = await fetch('/data/playerdata.json');
             const playerData = await response.json();
             const combinedData = {...playerData, ...levelDataGDB, ...levelDataJson};
             LoadProgress(combinedData);

@@ -1,6 +1,6 @@
 export const listMaxPosition = 100;
 if(window.location.pathname === "/index.html") window.location.pathname = "/";
-if(window.location.pathname === "/" || window.location.pathname === "pages/legacylist.html"){
+if(window.location.pathname === "/" || window.location.pathname === "/pages/legacylist.html"){
     prepararPagina();
     passLevelData();
 }
@@ -13,7 +13,7 @@ function passLevelData(){
     timeWarpPickerValues(timeWarpParam);
 
     function passCurrentData(){
-        fetch('data/leveldata.json')
+        fetch('/data/leveldata.json')
         .then(response => response.json())
         .then(levelData => {
             levelData.Data.sort((a, b) => a.position_lvl - b.position_lvl);
@@ -87,7 +87,7 @@ function buildList(levelData){
         textDiv.id = 'textDiv';
 
         const levelLink = document.createElement('a');
-        levelLink.href = `pages/leveldetails.html?id=${level.id_lvl}`;
+        levelLink.href = `/pages/leveldetails.html?id=${level.id_lvl}`;
         levelLink.id = 'levelLink';
         const levelName = document.createElement('h2');
 

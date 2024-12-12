@@ -1,7 +1,7 @@
 import { listMaxPosition } from "./script.js";
 
 async function loadIgnoredNames() {
-    const response = await fetch('data/ignoredNames.txt');
+    const response = await fetch('/data/ignoredNames.txt');
     const data = await response.text();
     return data.split('\n').map(name => name.trim().toLowerCase());
 }
@@ -23,8 +23,8 @@ async function processScore() {
     let levelMap = {};
 
     const [levelResponse, playerResponse] = await Promise.all([
-        fetch('data/leveldata.json'),
-        fetch('data/playerdata.json')
+        fetch('/data/leveldata.json'),
+        fetch('/data/playerdata.json')
     ]);
 
     const levelData = (await levelResponse.json()).Data;
@@ -116,8 +116,8 @@ async function pickPlayerData(name, scores) {
 
     // get verifications and completions
     const [levelResponse, playerResponse] = await Promise.all([
-        fetch('data/leveldata.json'),
-        fetch('data/playerdata.json')
+        fetch('/data/leveldata.json'),
+        fetch('/data/playerdata.json')
     ]);
 
     const levelData = (await levelResponse.json()).Data;
@@ -185,7 +185,7 @@ function fillPlayerCard(player) {
         for (const data of playerData) {
             const a = document.createElement('a');
             a.classList.add('small-margin-p');
-            a.href = `pages/leveldetails.html?id=${data.level ? data.level.id_lvl : data.id_lvl}`;
+            a.href = `/pages/leveldetails.html?id=${data.level ? data.level.id_lvl : data.id_lvl}`;
             a.style.textDecoration = 'none';
             a.textContent = progress ? `${data.level.name_lvl} (${data.progress}%)` : data.name_lvl;
             a.textContent = progress ? `#${data.level.position_lvl}. ${a.textContent}` : `#${data.position_lvl}. ${a.textContent}`
