@@ -23,6 +23,6 @@ No final de 2023, o projeto foi refeito com a proposta de ser feito para ser fac
 
 ## Links 🔗
 
-- [Demonlist BR](https://demonlistbr.online)
+- [Demonlist BR](https://lucastozo.github.io/DemonlistBR/)
 - Servidor [Discord](https://discord.com/invite/vK72KfSpHm)
 - Comprar [Geometry Dash](https://store.steampowered.com/app/322170)
