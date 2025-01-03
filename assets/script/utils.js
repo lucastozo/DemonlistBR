@@ -29,3 +29,9 @@ function ExtractVideoId(url) {
     var match = url.match(regExp);
     return (match && match[1].length == 11) ? match[1] : false;
 }
+
+async function getCollaborators() {
+    const response = await fetch(LIST_SETTINGS_PATH);
+    const data = await response.json();
+    return data.collaborators;
+}

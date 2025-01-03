@@ -52,16 +52,68 @@
 
         <h1 class="fs-4 fw-bold" style="margin-bottom: 30px; margin-top: 50px;">Créditos</h1>
         <div class="credits">
-            <div class="credits-div">
+            <div class="credits-div" id="credits-developers">
                 <h1 class="fs-6">Programação e ideia</h1>
-                <p class="fw-lighter">yuuchouze</p>
             </div>
-            <div class="credits-div">
-                <h1 class="fs-6">Colaboradores</h1>
-                <p class="fw-lighter">Jobalho, list mod</p>
+            <div class="credits-div" id="credits-admins">
+                <h1 class="fs-6">Administradores</h1>
+            </div>
+            <div class="credits-div" id="credits-moderators">
+                <h1 class="fs-6">Moderadores</h1>
             </div>
         </div>
     </section>
 
+    <script src="/DemonlistBR/assets/script/utils.js"></script>
+    <script>
+        // add colaboradores na credits-div. dados: data/listsettings.json
+        /*
+        calling getCollaborators() returns:
+        admins: 
+        []
+        developers: 
+        []
+        moderators: 
+        []
+
+        add model:  <p class="fw-lighter">username</p>
+        */
+        main();
+        async function main() {
+            const collaborators = await getCollaborators();
+            const developers = collaborators.developers;
+            const admins = collaborators.admins;
+            const moderators = collaborators.moderators;
+
+            const creditsDevelopers = document.getElementById("credits-developers");
+            const creditsAdmins = document.getElementById("credits-admins");
+            const creditsModerators = document.getElementById("credits-moderators");
+
+            if (developers.length <= 0) creditsDevelopers.style.display = "none"
+            if (admins.length <= 0) creditsAdmins.style.display = "none"
+            if (moderators.length <= 0) creditsModerators.style.display = "none"
+
+            developers.forEach(developer => {
+                const p = document.createElement("p");
+                p.classList.add("fw-lighter");
+                p.textContent = developer;
+                creditsDevelopers.appendChild(p);
+            });
+
+            admins.forEach(admin => {
+                const p = document.createElement("p");
+                p.classList.add("fw-lighter");
+                p.textContent = admin;
+                creditsAdmins.appendChild(p);
+            });
+
+            moderators.forEach(moderator => {
+                const p = document.createElement("p");
+                p.classList.add("fw-lighter");
+                p.textContent = moderator;
+                creditsModerators.appendChild(p);
+            });
+        }
+    </script>
 </body>
 </html>

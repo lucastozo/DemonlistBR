@@ -1,4 +1,18 @@
 {
     "mainList": 50,
-    "extendedList": 100
+    "extendedList": 100,
+    "collaborators":{
+        "developers":
+        [
+            "lucastozo"
+        ],
+        "admins":
+        [
+
+        ],
+        "moderators":
+        [
+            "RalucaGranola"
+        ]
+    }
 }
