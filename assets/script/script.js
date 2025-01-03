@@ -4,9 +4,9 @@ if(window.location.pathname === "/DemonlistBR/index.html") window.location.pathn
 main();
 async function main()
 {
+    prepararPagina();
     EXTENDED_LIST_VALUE = await getExtendedListValue();
     passLevelData();
-    prepararPagina();
 }
 
 function passLevelData(){
@@ -126,4 +126,9 @@ function prepararPagina(){
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     })
+
+    // Video-Background
+    const URL_VIDEO_BACKGROUND = 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/items/787070/22151511912509a1fc55d69280ae401d62a89afc.webm';
+    const video_background = document.getElementById('video-background');
+    video_background.src = URL_VIDEO_BACKGROUND;
 }
