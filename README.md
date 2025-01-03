@@ -2,7 +2,7 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-<img src="https://raw.githubusercontent.com/lucastozo/DemonlistBR/main/assets/img/iconDLBR.png" width=25%>
+<img src="https://raw.githubusercontent.com/lucastozo/DemonlistBR/main/assets/img/iconDLBR.png" width=15%>
 
 Lista de fases brasileiras mais difíceis do Geometry Dash.
 
