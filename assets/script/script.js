@@ -106,21 +106,19 @@ function buildList(levelData){
 
 function prepararPagina(){
     // Botão voltar ao topo
-    document.addEventListener('DOMContentLoaded', () => {
-        const backToTopButton = document.querySelector("#btn-back-to-top");
+    const backToTopButton = document.querySelector("#btn-back-to-top");
 
-        window.onscroll = () => {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
-            }
-        };
+    window.onscroll = () => {
+        if (document.documentElement.scrollTop > 100) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
 
-        backToTopButton.addEventListener("click", () => {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        });
+    backToTopButton.addEventListener("click", () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     });
 
     // Tooltips botões
