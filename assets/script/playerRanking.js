@@ -1,13 +1,8 @@
-import { listMaxPosition } from "/DemonlistBR/assets/script/script.js";
-
-async function loadIgnoredNames() {
-    const response = await fetch('/DemonlistBR/data/ignoredNames.txt');
-    const data = await response.text();
-    return data.split('\n').map(name => name.trim().toLowerCase());
-}
+let EXTENDED_LIST_VALUE;
 
 main();
 async function main() {
+    EXTENDED_LIST_VALUE = await getExtendedListValue();
     loadIgnoredNames = await loadIgnoredNames();
     let scores = await processScore();
     fillPlayerList(scores);
@@ -15,6 +10,12 @@ async function main() {
 
     const playerRanking = document.getElementById('player-ranking');
     playerRanking.style.visibility = 'visible';
+}
+
+async function loadIgnoredNames() {
+    const response = await fetch('/DemonlistBR/data/ignoredNames.txt');
+    const data = await response.text();
+    return data.split('\n').map(name => name.trim().toLowerCase());
 }
 
 async function processScore() {
@@ -39,7 +40,7 @@ async function processScore() {
 
         if (!loadIgnoredNames.includes(verifier)) {
             let score = 0;
-            if (level.position_lvl <= listMaxPosition) {
+            if (level.position_lvl <= EXTENDED_LIST_VALUE) {
                 score = getScore(level.position_lvl);
             }
             scores[verifier] = (scores[verifier] || 0) + score;
@@ -58,7 +59,7 @@ async function processScore() {
         if (!loadIgnoredNames.includes(playerName)) {
             let level = levelMap[player.id_lvl];
 
-            if (level && level.position_lvl <= listMaxPosition) {
+            if (level && level.position_lvl <= EXTENDED_LIST_VALUE) {
                 let score = 0;
                 if (player.progress >= 100) {
                     score = getScore(level.position_lvl);

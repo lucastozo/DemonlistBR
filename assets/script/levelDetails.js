@@ -1,6 +1,8 @@
-import { listMaxPosition } from "/DemonlistBR/assets/script/script.js";
+let EXTENDED_LIST_VALUE;
 
-document.addEventListener('DOMContentLoaded', () => {
+main();
+async function main() {
+    EXTENDED_LIST_VALUE = await getExtendedListValue();
     let params = new URLSearchParams(window.location.search);
     let levelId = params.get('id');
 
@@ -49,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error(error);
         }
     }
-});
+};
 
 function LoadLevelInfo(data){
     document.title = '#' + data.position_lvl + '. ' + data.name;
@@ -108,7 +110,7 @@ function LoadProgress(data) {
     const tableBody = document.getElementById('table-body');
     let listpct = 100;
 
-    if (data.position_lvl <= listMaxPosition) {
+    if (data.position_lvl <= EXTENDED_LIST_VALUE) {
         scoreCompletion.textContent = getScore(data.position_lvl).toFixed(2);
         if (data.listpct_lvl) {
             scoreListpctTitle.textContent = `Pontos em Ranking (${data.listpct_lvl}%)`;
@@ -137,23 +139,6 @@ function LoadProgress(data) {
             tableBody.appendChild(row);
         }
     });
-}
-
-function ExtractVideoId(videoUrl){
-    let videoId;
-    if(videoUrl == null || videoUrl === ''){
-        return null;
-    }
-    if(videoUrl.includes('https://www.youtube.com/watch?v=')){
-        videoId = videoUrl.split('https://www.youtube.com/watch?v=')[1];
-    } else if(videoUrl.includes('https://youtu.be/')){
-        videoId = videoUrl.split('https://youtu.be/')[1].split('?')[0];
-    } else if(videoUrl.includes('https://m.youtube.com/watch?v=')){
-        videoId = videoUrl.split('https://m.youtube.com/watch?v=')[1];
-    } else if(videoUrl.includes('https://youtu.be/')){
-        videoId = videoUrl.split('https://youtu.be/')[1];
-    }
-    return videoId;
 }
 
 function HideContentLoading(flag){

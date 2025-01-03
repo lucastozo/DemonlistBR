@@ -1,8 +1,12 @@
-export const listMaxPosition = 100;
+let EXTENDED_LIST_VALUE;
 if(window.location.pathname === "/DemonlistBR/index.html") window.location.pathname = "/DemonlistBR/";
-if(window.location.pathname === "/DemonlistBR/" || window.location.pathname === "/DemonlistBR/pages/legacylist.html"){
-    prepararPagina();
+
+main();
+async function main()
+{
+    EXTENDED_LIST_VALUE = await getExtendedListValue();
     passLevelData();
+    prepararPagina();
 }
 
 function passLevelData(){
@@ -44,32 +48,14 @@ function buildList(levelData){
 
     const contentDiv = document.getElementById('ListContent');
     levelData.Data.forEach(level => {
-        if ((page === "legacylist.html" && level.position_lvl <= listMaxPosition) || (page === "" && level.position_lvl > listMaxPosition)) return;
+        if ((page === "legacylist.html" && level.position_lvl <= EXTENDED_LIST_VALUE) || (page === "" && level.position_lvl > EXTENDED_LIST_VALUE)) return;
 
-        function isLevelInList(level) { return level.position_lvl <= listMaxPosition; }
-        const levelIsInList = isLevelInList(level);
+        const levelIsInList = level.position_lvl <= EXTENDED_LIST_VALUE;
         
         const section = document.createElement('section');
         section.className = 'ListSection';
         levelIsInList ? null : section.classList.add('text-center');
-
-        function ExtractVideoId(videoUrl){
-            var videoId;
-            if(videoUrl == null || videoUrl === ''){
-                return null;
-            }
-            if(videoUrl.includes('https://www.youtube.com/watch?v=')){
-                videoId = videoUrl.split('https://www.youtube.com/watch?v=')[1];
-            } else if(videoUrl.includes('https://youtu.be/')){
-                videoId = videoUrl.split('https://youtu.be/')[1].split('?')[0];
-            } else if(videoUrl.includes('https://m.youtube.com/watch?v=')){
-                videoId = videoUrl.split('https://m.youtube.com/watch?v=')[1];
-            } else if(videoUrl.includes('https://youtu.be/')){
-                videoId = videoUrl.split('https://youtu.be/')[1];
-            }
-            return videoId;
-        }
-
+        
         if(levelIsInList){
             const videoDiv = document.createElement('div');
             videoDiv.className = 'video';
@@ -92,7 +78,7 @@ function buildList(levelData){
         const levelName = document.createElement('h2');
 
         // adicionar posição do level no texto apenas se não for da legacylist
-        if(level.position_lvl <= listMaxPosition) {
+        if(level.position_lvl <= EXTENDED_LIST_VALUE) {
             levelName.textContent = `${level.position_lvl}. ${level.name_lvl}`;
         } else {
             levelName.textContent = level.name_lvl;
@@ -107,7 +93,7 @@ function buildList(levelData){
         creatorParagraph.id = 'creatorParagraph';
         textDiv.appendChild(creatorParagraph);
 
-        if(page === "legacylist.html" && level.position_lvl > listMaxPosition){ legacyListHasLevels = true; }
+        if(page === "legacylist.html" && level.position_lvl > EXTENDED_LIST_VALUE){ legacyListHasLevels = true; }
         
         section.appendChild(textDiv);
         contentDiv.appendChild(section);
