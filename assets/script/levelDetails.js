@@ -130,12 +130,19 @@ function LoadProgress(data) {
     playerRecords.forEach(record => {
         if(record.progress >= listpct){
             const row = document.createElement('tr');
+            
             const playerNameCell = document.createElement('td');
-            playerNameCell.textContent = record.player_name;
+            const playerNameLink = document.createElement('a');
+            playerNameLink.textContent = record.player_name;
+            playerNameLink.href = '/DemonlistBR/pages/playerranking.html?player='+record.player_name;
+            playerNameLink.target = '_blank';
+            playerNameCell.appendChild(playerNameLink);
             row.appendChild(playerNameCell);
+            
             const progressCell = document.createElement('td');
             progressCell.innerHTML = `<a href='${record.video}' target='_blank'>${record.progress}%</a>`;
             row.appendChild(progressCell);
+            
             tableBody.appendChild(row);
         }
     });

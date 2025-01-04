@@ -6,7 +6,9 @@ async function main() {
     loadIgnoredNames = await loadIgnoredNames();
     let scores = await processScore();
     fillPlayerList(scores);
+    
     await updatePlayerCard(scores[0][0]);
+    await selectPlayerFromURL();
 
     const playerRanking = document.getElementById('player-ranking');
     playerRanking.style.visibility = 'visible';
@@ -143,7 +145,6 @@ async function pickPlayerData(name, scores) {
         originalNames[playerName] = record.player_name;
         if (playerName === name) {
             let level = levelMap[record.id_lvl];
-            console.log(level);
             if (level) {
                 if (record.progress >= 100) {
                     player.completions.push(level);
@@ -243,4 +244,30 @@ async function updatePlayerCard(name) {
     let scores = await processScore();
     let playerData = await pickPlayerData(name, scores);
     fillPlayerCard(playerData);
+}
+
+async function selectPlayerFromURL()
+{
+    /*
+    Get 'player' param from URL and fill player card with the player's data
+    */
+
+    const params = new URLSearchParams(window.location.search);
+    const playerName = params.get('player');
+
+    const playerList = document.getElementById('player-list');
+    const listItems = playerList.getElementsByTagName('li');
+
+    // Try to match 'player' param with a player in the list
+    for (let i = 0; i < listItems.length; i++) {
+        const player = listItems[i];
+        if (player.getElementsByTagName('span')[1].textContent.toLowerCase() === playerName.toLowerCase()) {
+            player.click();
+            player.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+            return;
+        }
+    }
 }
