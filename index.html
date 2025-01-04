@@ -40,13 +40,23 @@
         function triggerWarp(){
             const params = new URLSearchParams(window.location.search);
             const date = document.getElementById("timeWarpPicker").value;
+            if (!isValidDate(date)) return;
             if(date === getToday() && !params.has("date")) return;
             if(date === getToday() && params.has("date"))
             {
                 window.location.href = "/DemonlistBR/";
                 return;
             }
-            window.location.href = `/DemonlistBR/?date=${date}`;
+            window.location.href = `/DemonlistBR/?date=${encodeURIComponent(date)}`;
+        }
+
+        function isValidDate(dateString) {
+            const regex = /^\d{4}-\d{2}-\d{2}$/;
+            if (!dateString.match(regex)) return false;
+            const date = new Date(dateString);
+            const timestamp = date.getTime();
+            if (typeof timestamp !== 'number' || Number.isNaN(timestamp)) return false;
+            return dateString === date.toISOString().split('T')[0];
         }
     </script>
 
