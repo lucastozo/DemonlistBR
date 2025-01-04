@@ -255,6 +255,8 @@ async function selectPlayerFromURL()
     const params = new URLSearchParams(window.location.search);
     const playerName = params.get('player');
 
+    if (!playerName) return;
+
     const playerList = document.getElementById('player-list');
     const listItems = playerList.getElementsByTagName('li');
 
