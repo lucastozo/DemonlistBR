@@ -1,6 +1,6 @@
 {
   "UltimoEditor": "RalucaGranola",
-  "GeradoEm": "29/01/2025, 14:04:07",
+  "GeradoEm": "29/01/2025, 14:06:23",
   "TipoData": "record",
   "Data": [
     {
@@ -552,13 +552,6 @@
     {
       "id_lvl": "54953085",
       "name_lvl": "Thinking Space",
-      "player_name": "RalucaGranola",
-      "progress": 100,
-      "video": "https://youtu.be/2GSWhHgN7OI"
-    },
-    {
-      "id_lvl": "54953085",
-      "name_lvl": "Thinking Space",
       "player_name": "L3on14az",
       "progress": 100,
       "video": "https://youtu.be/XS1zt6mdX1s"
@@ -573,16 +566,16 @@
     {
       "id_lvl": "54953085",
       "name_lvl": "Thinking Space",
-      "player_name": "tayrr",
-      "progress": 76,
-      "video": "https://youtu.be/zbkAWl23hpo"
+      "player_name": "RalucaGranola",
+      "progress": 100,
+      "video": "https://youtu.be/2GSWhHgN7OI"
     },
     {
       "id_lvl": "54953085",
       "name_lvl": "Thinking Space",
-      "player_name": "RalucaGranola",
+      "player_name": "tayrr",
       "progress": 76,
-      "video": "https://youtu.be/VTo5f6iJspo"
+      "video": "https://youtu.be/zbkAWl23hpo"
     },
     {
       "id_lvl": "94563744",
