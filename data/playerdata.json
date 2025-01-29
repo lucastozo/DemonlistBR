@@ -1,6 +1,6 @@
 {
   "UltimoEditor": "RalucaGranola",
-  "GeradoEm": "29/01/2025, 14:06:23",
+  "GeradoEm": "29/01/2025, 14:18:50",
   "TipoData": "record",
   "Data": [
     {
@@ -583,6 +583,13 @@
       "player_name": "Yuuchouze",
       "progress": 100,
       "video": "https://youtu.be/mxThhliRDj4"
+    },
+    {
+      "id_lvl": "112967772",
+      "name_lvl": "Ultra Kira",
+      "player_name": "RalucaGranola",
+      "progress": 100,
+      "video": "https://youtu.be/Kg6tK9Yy-5w"
     },
     {
       "id_lvl": "88854750",
